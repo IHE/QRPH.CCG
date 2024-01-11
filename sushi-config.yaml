@@ -7,7 +7,7 @@ canonical: https://profiles.ihe.net/QRPH/CCG
 version: 0.0.1-current
 name: IHE_QRPH_CCG
 title: "Computable Care Guidelines"
-description: Computable Care Guidelines
+description: The IHE CCG Profile distills and constrains relevant underlying standards (e.g. FHIR, SNOMED, etc.) as a normative interoperability spec. The spec defines a CCG grammar and stipulates normative actor behaviours that operationalize CCG publishing and transaction processing. The conformance tests for this spec will be published and incorporated by IHE Catalyst into IHE’s test tooling (Gazelle).
 releaseLabel: ci-build
 #releaseLabel: ballot
 #releaseLabel: trial-use
