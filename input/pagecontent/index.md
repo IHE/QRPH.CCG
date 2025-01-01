@@ -3,6 +3,8 @@
 
 **TODO: Write your executive overview here. Usually a one paragraph explanation of what problem this implementation guide solves.**
 
+The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar and a normative transaction processing model that allows evidence-based care recommendations to be expressed in a way that a digital health solution can ingest and operationalize. This is an implementable and conformance-testable specification. It is targeted to regulated healthcare markets where the support for multiple conditions is an important requirement. The CCG Profile supports jurisdictions that want to leverage digital health to systemically improve the adoption of guideline-adherent best practices across an entire care delivery network. 
+
 <div markdown="1" class="stu-note">
 
 | [Significant Changes, Open and Closed Issues](issues.html) |
@@ -16,12 +18,6 @@ This guide is organized into the following sections:
 
 1. Volume 1:
    1. [Introduction](volume-1.html)
-   1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
-   1. [Actor Options](volume-1.html#actor-options)
-   1. [Actor Required Groupings](volume-1.html#required-groupings)
-   1. [Overview](volume-1.html#overview)
-   1. [Security Considerations](volume-1.html#security-considerations)
-   1. [Cross Profile Considerations](volume-1.html#other-grouping)
    1. **TODO: point to the Volume 1 Appendix if there is one**
 2. Volume 2: Transaction Detail
    1. [ToDo do \[domain-YY\]](domain-YY.html)
