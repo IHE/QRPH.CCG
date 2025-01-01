@@ -127,7 +127,7 @@ annually[^6] and that the direct costs of chronic disease management
 account for **58% of Canada’s total healthcare spend**.[^7]
 
 <figure>
-<img src="../images/image2.png" style="width:3.88537in;height:3.15686in"
+<img src="image2.png" style="width:3.88537in;height:3.15686in"
 alt="A graph of a number of people with numbers and a number of people with numbers Description automatically generated with medium confidence" />
 <figcaption><p>- Co-morbidities in Canadians over 35 years of
 age</p></figcaption>
@@ -192,7 +192,7 @@ CCG, including bibliographic citations of the clinical research of
 narrative (L1) care guidelines that inform the CCG’s recommendations.
 
 <figure>
-<img src="../images/image3.png"
+<img src="image3.png"
 style="width:5.34028in;height:3.62014in" />
 <figcaption><p>- US ONC regulations related to Evidence-based
 DSI</p></figcaption>
@@ -247,7 +247,7 @@ of a CCG as a set of care recommendations where each recommendation is
 described by a **CARD**. This metaphor is illustrated in Figure 6.
 
 <figure>
-<img src="../images/image4.png"
+<img src="image4.png"
 style="width:5.05347in;height:2.07361in" />
 <figcaption><p>- Folder-and-CARDs Metaphor</p></figcaption>
 </figure>
@@ -343,7 +343,7 @@ approach, as illustrated by Figure 7 and Figure 8. Figure 7 illustrates
 a flowchart centric approach for describing a CCG.
 
 <figure>
-<img src="../images/image5.png"
+<img src="image5.png"
 style="width:6.50069in;height:3.61389in" />
 <figcaption><p>- Flowchart-centric CCG expressions</p></figcaption>
 </figure>
@@ -358,7 +358,7 @@ in the workflow occurs; otherwise, the trigger events will not fire
 true.
 
 <figure>
-<img src="../images/image6.png"
+<img src="image6.png"
 style="width:6.44722in;height:3.92708in" />
 <figcaption><p>- Flattened Folder-and-CARDs CCG
 expression</p></figcaption>
@@ -457,7 +457,7 @@ sections of this specification. These participants, together,
 operationalize an ***ecosystem*** that supports the patient-safe
 execution of CCG-supported care encounters, at scale.
 
-<img src="../images/image7.png"
+<img src="image7.png"
 style="width:6.50069in;height:3.95347in" />
 
 \- Graphical Depiction of Use Cases 1, 2 & 3
@@ -488,7 +488,7 @@ Figure 10. From Figure 9 we can note the following:
   subject’s Care Plan **(State-C)**.
 
 <figure>
-<img src="../images/image8.png"
+<img src="image8.png"
 style="width:6.50069in;height:3.47361in" />
 <figcaption><p>- Graphical Depiction of a CCG-supported Care
 Encounter</p></figcaption>
@@ -555,7 +555,7 @@ documents its national core data model. This **domestic health data
 model** is the basis for CCGs that will be published by the ACE.
 
 <figure>
-<img src="../images/image9.png"
+<img src="image9.png"
 style="width:6.50069in;height:3.62014in" />
 <figcaption><p>- MOH-supported CCG Ecosystem</p></figcaption>
 </figure>
@@ -648,7 +648,7 @@ plans to leverage CCGs as a foundational element in its Learning Health
 System[^21] (LHS) strategy.
 
 <figure>
-<img src="../images/image10.png"
+<img src="image10.png"
 style="width:5.53403in;height:2.70694in" />
 <figcaption><p>- Learning Health System</p></figcaption>
 </figure>
@@ -692,7 +692,7 @@ four** of the key use cases IHE CCG Profile:
   including a simplified UI for capturing ICF codes.
 
 <figure>
-<img src="../images/image11.png"
+<img src="image11.png"
 style="width:5.46736in;height:2.37361in" />
 <figcaption><p>- Analyses of Data Outside the "Green
 Zone"</p></figcaption>
@@ -726,7 +726,7 @@ in her practice and she has determined that the first year of incentives
 will fund her plans to implement a new EMR.
 
 <figure>
-<img src="../images/image12.png"
+<img src="image12.png"
 style="width:5.07361in;height:3.04028in" />
 <figcaption><p>- Reducing Cognitive Load</p></figcaption>
 </figure>
