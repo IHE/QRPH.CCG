@@ -67,14 +67,14 @@ realized.
 <figure>
 <img src="image1.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><p>- Care Delivery in the "Green" Zone</p></figcaption>
+<figcaption><p>Figure 1 - Care Delivery in the "Green" Zone</p></figcaption>
 </figure>
 
 We are better and better able to collect information about **what
 happened** on a client’s health journey. This can be illustrated,
-graphically, by the yellow circle in Figure 3. However, we do not yet
+graphically, by the yellow circle in Figure 1. However, we do not yet
 (today) have a way to broadly share a machine-processable description of
-**what *should* happen** (the blue circle in Figure 3) and to leverage
+**what *should* happen** (the blue circle in Figure 1) and to leverage
 digital health investments to **systemically close the “know-do gap”**
 between what *was* done and what *should have been* done (illustrated by
 the “**green zone**” in the figure). A machine-processable description
@@ -83,7 +83,7 @@ guideline, or **CCG**.
 
 Closing the know-do gap will enable us to reap the significant health
 outcome improvements that accrue from stronger guideline adherence. As
-may be noted in Figure 3, evidence shows that errors of omission greatly
+may be noted in Figure 1, evidence shows that errors of omission greatly
 outnumber errors of commission. These are difficult errors to catch and
 to address. But by describing what *should* happen, CCGs afford us way
 to treat the absence of a signal as a signal.
@@ -121,15 +121,15 @@ patients with multiple chronic conditions, addresses a **big and
 expensive problem**. In Canada, for example, 73% of persons over 65
 years of age suffer from at least one chronic condition[^5], and 30% of
 Canadians over 35 years of age suffer two or more conditions (note
-Figure 4). It is estimated the burden of chronic disease represents a
+Figure 2). It is estimated the burden of chronic disease represents a
 cost to the Canadian economy of more than **\$190 billion (CAD)**
 annually[^6] and that the direct costs of chronic disease management
 account for **58% of Canada’s total healthcare spend**.[^7]
 
 <figure>
-<img src="image2.png" style="width:3.88537in;height:3.15686in"
-alt="A graph of a number of people with numbers and a number of people with numbers Description automatically generated with medium confidence" />
-<figcaption><p>- Co-morbidities in Canadians over 35 years of
+<img src="image2.png" style="height: 100%; width: 100%; object-fit: contain"
+ />
+<figcaption><p>Figure 2 - Co-morbidities in Canadians over 35 years of
 age</p></figcaption>
 </figure>
 
@@ -183,7 +183,7 @@ this IHE CCG Profile is influenced by the **US ASTP/ONC’s guidance §
 digital health solutions that provide Evidence-based Decision Support
 Interventions \[NOTE: this guidance was current as of October 2024\].
 Sections (iii)(A) and (iv)(A) of this ONC guidance are shown in Figure
-5. From the figure it may be noted that evidence-based CCGs shall
+3. From the figure it may be noted that evidence-based CCGs shall
 leverage a **constrained common data set** defined in the US Core Data
 for Interoperability[^11] specification. It can also be noted that,
 under this ONC regulation, a software solution provider must provide an
@@ -193,8 +193,8 @@ narrative (L1) care guidelines that inform the CCG’s recommendations.
 
 <figure>
 <img src="image3.png"
-style="width:5.34028in;height:3.62014in" />
-<figcaption><p>- US ONC regulations related to Evidence-based
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 3 - US ONC regulations related to Evidence-based
 DSI</p></figcaption>
 </figure>
 
@@ -244,12 +244,12 @@ person-centric health data sharing infrastructure.
 To support the concurrent execution of multiple CCGs, a Folder-and-CARDs
 metaphor is adopted by this IHE CCG Profile. Notionally, one can think
 of a CCG as a set of care recommendations where each recommendation is
-described by a **CARD**. This metaphor is illustrated in Figure 6.
+described by a **CARD**. This metaphor is illustrated in Figure 4.
 
 <figure>
 <img src="image4.png"
-style="width:5.05347in;height:2.07361in" />
-<figcaption><p>- Folder-and-CARDs Metaphor</p></figcaption>
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 4 - Folder-and-CARDs Metaphor</p></figcaption>
 </figure>
 
 Here, CARD is an acronym. The recommendation is ***applicable*** when a
@@ -338,14 +338,14 @@ below:
 
 ### Stack-of-CARDs Processing Metaphor
 
-The Folder-and-CARDs approach may be contrasted with a “flowchart”
-approach, as illustrated by Figure 7 and Figure 8. Figure 7 illustrates
+The Folder-and-CARDs "flattened stack" approach may be contrasted with a “flowchart”
+approach, as illustrated by Figure 5 and Figure 6. Figure 5 illustrates
 a flowchart centric approach for describing a CCG.
 
 <figure>
 <img src="image5.png"
-style="width:6.50069in;height:3.61389in" />
-<figcaption><p>- Flowchart-centric CCG expressions</p></figcaption>
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 5 - Flowchart-centric CCG expressions</p></figcaption>
 </figure>
 
 In this approach, **trigger** events are associated with workflow
@@ -359,17 +359,17 @@ true.
 
 <figure>
 <img src="image6.png"
-style="width:6.44722in;height:3.92708in" />
-<figcaption><p>- Flattened Folder-and-CARDs CCG
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 6 - Flattened Folder-and-CARDs CCG
 expression</p></figcaption>
 </figure>
 
-Figure 8 illustrates the “flattened stack” of CARDs resulting from the
+Figure 6 illustrates the “flattened stack” of CARDs resulting from the
 Folder-and-CARDs CCG expression. For each CARD, the trigger event is
 omitted and only the condition statements are defined. Such an approach
 de-couples the CCG recommendations from the workflow. This greatly
 simplifies the concurrent processing of multiple CCGs (e.g. Folders F1
-and F2, as illustrated in Figure 7 and Figure 8).
+and F2, as illustrated in Figure 5 and Figure 6).
 
 Notionally, we can think of associating a set of relevant Folders with a
 care subject. During a care encounter, the CARDs from all relevant
@@ -378,7 +378,7 @@ a ***single stack***.
 
 The stack-of-CARDs metaphor is a key simplification to support
 ***concurrently processing multiple CCGs***. For example, there will be
-a CARD for each patient vital sign that should be measured at every care
+a CARD for each vital sign that should be measured at every care
 encounter (weight, temperature, heartrate, blood pressure, spirometry,
 etc.). Other CARDs will describe lab tests that should be ordered on a
 regular basis (every six months, for example) or procedures that should
@@ -399,7 +399,7 @@ every CARD whose condition statement(s) evaluate to TRUE, either the
 recommended action is taken, or a reason code is recorded to indicate
 why the action is *not* to be taken.
 
-For each CARD whose action is taken, there is new ***resulting data***.
+For each CARD, there is new ***resulting data***.
 This new data is taken into account as the entire stack-of-CARDs is
 again processed. This is illustrated by the successive invocations of
 \$apply in Figure 8. Based on the blood pressure reading, for example,
@@ -409,14 +409,14 @@ why the action is *not* to be taken. This iterative process continues
 until ***zero*** new CARDs fire TRUE.
 
 Of course, the ***capabilities*** are different within different care
-**contexts**. These realities can be reflected in more sophisticated
+**contexts**. Such realities can be reflected in more sophisticated
 CARD condition logic statements. If a community health worker at a
 remote health outpost has recorded an elevated blood pressure, for
 example, it could cause a “care escalation” CARD to fire TRUE. At a
 subsequent encounter, with a provider who has drug prescribing in their
 scope of practice, the “order medications” CARD may fire TRUE. It is for
-this reason that select Encounter content is included in the CCG “input”
-data bundle and may be referenced when defining CARD condition
+this reason that contextual Encounter information is included in the CCG “input”
+data bundle. These contextual data  may be referenced when defining CARD condition
 statements.
 
 ## Use Cases
@@ -457,13 +457,14 @@ sections of this specification. These participants, together,
 operationalize an ***ecosystem*** that supports the patient-safe
 execution of CCG-supported care encounters, at scale.
 
+<figure>
 <img src="image7.png"
-style="width:6.50069in;height:3.95347in" />
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 7 - Graphical Depiction of Use Cases 1, 2 & 3</p></figcaption>
+</figure>
 
-\- Graphical Depiction of Use Cases 1, 2 & 3
-
-The operation of this ecosystem is pictorially depicted in Figure 9 and
-Figure 10. From Figure 9 we can note the following:
+The operation of this ecosystem is pictorially depicted in Figure 7 and
+Figure 8. From Figure 7 we can note the following:
 
 - In use case 1 (UC-1), a Guideline Publisher actor executes the
   transaction processing needed to author or update a well-formed CCG.
@@ -480,22 +481,20 @@ Figure 10. From Figure 9 we can note the following:
 
 - In UC-3, a digital health solution (playing the role of a Care Plan
   Contributor actor) creates or updates a subject’s Care Plan (persisted
-  and managed by the Care Plan Service actor). As may be noted from
-  Figure 2, the Care Plan Contributor obtains a list of available CCGs
-  through an out-of-band process not defined by the IHE CCG Profile. At
+  and managed by the Care Plan Service actor). At
   the successful conclusion of UC-3’s workflow, one or more CCGs have
   been associated with the care subject and are referenced in the
   subject’s Care Plan **(State-C)**.
 
 <figure>
 <img src="image8.png"
-style="width:6.50069in;height:3.47361in" />
-<figcaption><p>- Graphical Depiction of a CCG-supported Care
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 8 - Graphical Depiction of a CCG-supported Care
 Encounter</p></figcaption>
 </figure>
 
 The activities relevant to the CCG-supported care encounter are
-illustrated by Figure 10. From this figure, we can note the following:
+illustrated by Figure 8. From this figure, we can note the following:
 
 - The execution of CCG-informed care cannot happen until UC-1, UC-2 and
   UC-3 have successfully occurred. In some situations, UC-3 may be
@@ -556,8 +555,8 @@ model** is the basis for CCGs that will be published by the ACE.
 
 <figure>
 <img src="image9.png"
-style="width:6.50069in;height:3.62014in" />
-<figcaption><p>- MOH-supported CCG Ecosystem</p></figcaption>
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 9 - MOH-supported CCG Ecosystem</p></figcaption>
 </figure>
 
 Amalgaland’s MOH wishes to leverage its CCG initiative, alongside its
@@ -589,8 +588,8 @@ demonstrate:
     evidence-based recommendations across their patient cohorts.
 
 To operationalize its plans, the ACE decides to adopt an open-source CCG
-authoring tool (a **Guideline Publisher**, as referenced in Figure 9 and
-Figure 10). They leverage technical resources within the Digital Health
+authoring tool (a **Guideline Publisher**, as referenced in Figure 7 and
+Figure 8). They leverage technical resources within the Digital Health
 Agency to become source code contributors on the project. They augment
 the tool with features important to their intended use cases and they
 develop a national language version of the product.
@@ -622,7 +621,7 @@ called by an authenticated digital health solution.
 
 Leveraging its **MOH-led approach**, Amalgaland ensures that it can
 establish the key foundational elements needed to support its VBHS
-agenda. Referencing Figure 9, the MOH has made strategic investments to
+agenda. Referencing Figure 7, the MOH has made strategic investments to
 support getting to:
 
 - **State-A**: Well-formed CCGs are available in a Guideline Repository;
@@ -649,8 +648,8 @@ System[^21] (LHS) strategy.
 
 <figure>
 <img src="image10.png"
-style="width:5.53403in;height:2.70694in" />
-<figcaption><p>- Learning Health System</p></figcaption>
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 10 - Learning Health System</p></figcaption>
 </figure>
 
 As an integrated provider, IH will operationalize and govern **all
@@ -693,8 +692,8 @@ four** of the key use cases IHE CCG Profile:
 
 <figure>
 <img src="image11.png"
-style="width:5.46736in;height:2.37361in" />
-<figcaption><p>- Analyses of Data Outside the "Green
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 11 - Analyses of Data Outside the "Green
 Zone"</p></figcaption>
 </figure>
 
@@ -727,8 +726,8 @@ will fund her plans to implement a new EMR.
 
 <figure>
 <img src="image12.png"
-style="width:5.07361in;height:3.04028in" />
-<figcaption><p>- Reducing Cognitive Load</p></figcaption>
+style="height: 100%; width: 100%; object-fit: contain" />
+<figcaption><p>Figure 12 - Reducing Cognitive Load</p></figcaption>
 </figure>
 
 Dr. Black appreciates there will be two complementary aspects to
@@ -757,6 +756,8 @@ motivated her to enter medicine in the first place. Importantly, she
 knows from the evidence that more consistently adhering to
 guideline-based care will improve health outcomes for Mr. Blue and for
 all her patients.
+
+**Footnotes**
 
 [^1]: The four levels of knowledge representation are described in the
     CPG-on-FHIR IG:
