@@ -65,7 +65,7 @@ transformative value of these digital systems has not yet been fully
 realized.
 
 <figure>
-<img src="../images/image1.png"
+<img src="image1.png"
 style="width:4.39375in;height:2.43333in" />
 <figcaption><p>- Care Delivery in the "Green" Zone</p></figcaption>
 </figure>
