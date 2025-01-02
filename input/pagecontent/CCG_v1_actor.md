@@ -3,7 +3,7 @@
 The digital health ecosystem of CCG actors and transactions is designed
 to satisfy four use cases:
 
-1.  **UC-1**: A person who is a guideline *author* uses a digital health
+1.  **UC-1 (Green)**: A person who is a guideline *author* uses a digital health
     tool (which plays the role of a **CCG Publisher** actor) to retrieve
     and edit an existing CCG or to create a brand-new CCG
     (L3)[<sup>1</sup>](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v1_over.html#fn:1) artefact.
@@ -11,16 +11,16 @@ to satisfy four use cases:
     recommendation). She then **publishes the CCG (L3) artefact** to
     a **CCG Repository** actor.
 
-2.  **UC-2**: A person who uses a digital health solution (e.g. a local
+2.  **UC-2 (Yellow)**: A person who uses a digital health solution (e.g. a local
     EMR, playing the role of a **CCG Engine** actor) to execute
     CCGs **refreshes the local cache** of CCGs from a **CCG
     Repository** actor.
 
-3.  **UC-3**: A person who is a care provider leverages her digital
+3.  **UC-3 (Red)**: A person who is a care provider leverages her digital
     health solution (e.g. an EMR) to **enroll a patient** in one or more
     CCG-supported, evidence-based care programmes.
 
-4.  **UC-4**: A person who is a care provider has an ambulatory
+4.  **UC-4 (Blue)**: A person who is a care provider has an ambulatory
     encounter with a patient who is enrolled in one or more
     CCG-supported care plans. During the encounter, she leverages her
     digital health solution (e.g. EMR, playing the role of a **Guideline
@@ -29,7 +29,7 @@ to satisfy four use cases:
     acts upon the recommendations to provide person-centric,
     guideline-adherent care.
 
-The actors that participate in operationalizing the four use cases are
+The actors that participate in operationalizing the four colour-coded use cases are
 pictorially illustrated by Figure 13.
 
 <figure>
@@ -76,8 +76,35 @@ Patient Care Coordination (PCC) technical committee:
 The conformance-testable behaviours of the Care Plan Contributor and
 Care Plan Service actors are described in the IHE PCC Dynamic Care
 Planning Profile and a description of these behaviours is not
-replicated, here. The *new* CCG actors are further described in the
-following subsections.
+replicated, here. 
+
+The *new* CCG actors and their transactions are listed in Table 1 and further described in the following subsections.
+
+| **Actor** | **Transaction** | **Optionality** |
+|----|----|----|
+| Guideline Publisher | X1: Search for Guidelines \[as originator\] | O |
+|  | X2: Retrieve Guideline \[as originator\] | O |
+|  | X3: Publish Guideline \[as originator\] | R Note-1 |
+| Guideline Repository | X1: Search for Guidelines \[as responder\] | R |
+|  | X2: Retrieve Guideline \[as responder\] | R |
+| Guideline Performer | X4: Apply Guideline \[as originator\] | R Note-2 |
+| Guideline Engine | X1: Search for Guidelines \[as originator\] | R |
+|  | X2: Retrieve Guideline \[as originator\] | R Note-3 |
+|  | X4: Apply Guideline \[as responder\] | R Note-2 |
+
+Table 1 - CCG Actors and Transactions
+
+Note-1: there are options for digitally signed CCGs (see below).
+
+Note-2: a Guideline Performer that is **grouped** with its own internal
+Guideline Engine need not support transaction X4 as an originator nor as
+a responder; it will be conformance tested as a single grouped entity
+(see below). Otherwise X4 support **<u>is</u>** required by both actors.
+
+Note-3: a Guideline Engine that supports the Trusted CCG option will
+evaluate CCGs returned by transaction X2 to ensure the artefacts are
+signed by trusted parties and that they have not been tampered with (see
+below).
 
 ### Guideline Publisher
 
@@ -262,34 +289,6 @@ Apply Guideline transaction. An implementing jurisdiction (via its
 relevant IHE Deployment Committee) may contextualize these
 specifications and, where applicable, such contextualizations are
 documented in Volume-4 of this IHE Profile.
-
-The CCG actors and their transactions are listed in Table 1.
-
-| **Actor** | **Transaction** | **Optionality** |
-|----|----|----|
-| Guideline Publisher | X1: Search for Guidelines \[as originator\] | O |
-|  | X2: Retrieve Guideline \[as originator\] | O |
-|  | X3: Publish Guideline \[as originator\] | R Note-1 |
-| Guideline Repository | X1: Search for Guidelines \[as responder\] | R |
-|  | X2: Retrieve Guideline \[as responder\] | R |
-| Guideline Performer | X4: Apply Guideline \[as originator\] | R Note-2 |
-| Guideline Engine | X1: Search for Guidelines \[as originator\] | R |
-|  | X2: Retrieve Guideline \[as originator\] | R Note-3 |
-|  | X4: Apply Guideline \[as responder\] | R Note-2 |
-
-Table 1 - CCG Actors and Transactions
-
-Note-1: there are options for digitally signed CCGs (see below).
-
-Note-2: a Guideline Performer that is **grouped** with its own internal
-Guideline Engine need not support transaction X4 as an originator nor as
-a responder; it will be conformance tested as a single grouped entity
-(see below). Otherwise X4 support **<u>is</u>** required by both actors.
-
-Note-3: a Guideline Engine that supports the Trusted CCG option will
-evaluate CCGs returned by transaction X2 to ensure the artefacts are
-signed by trusted parties and that they have not been tampered with (see
-below).
 
 ## Options
 
