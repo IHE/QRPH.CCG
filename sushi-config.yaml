@@ -57,12 +57,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: ToDo Home
+    title: Home
     generation: markdown
   CCG_v1_over.md:
-    title: "Volume-1: Overview"
+    title: "Volume-1: Business Description"
     generation: markdown
-  volume-1.md:
+  CCG_v1_actor.md:
     title: "Volume-1: Actors"
     generation: markdown
   domain-YY.md:
@@ -86,8 +86,8 @@ pages:
 
 menu:
   Home: index.html
-  Volume 1 - Overview: CCG_v1_over.html
-  Volume 1 - Actors: volume-1.html
+  Volume 1 - Business Description: CCG_v1_over.html
+  Volume 1 - Actors: CCG_v1_actor.html
   Volume 2:
     "Transaction one [Domain-YY]": domain-YY.html
   Volume 3:
