@@ -726,7 +726,7 @@ will fund her plans to implement a new EMR.
 
 <figure>
 <img src="image12.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="height: 50%; width: 50%; object-fit: contain" />
 <figcaption><p>Figure 12 - Reducing Cognitive Load</p></figcaption>
 </figure>
 
