@@ -1,7 +1,4 @@
-## Transaction X1: Search for Guideline
-
 ### Scope
-
 Transaction X1 Search for Guidelines is used to query for CCGs that have
 been published to a Guideline Repository. The query parameters can be
 employed, for example, to search for CCGs published (or updated) since a
@@ -27,14 +24,6 @@ standards:
   <https://docs.npmjs.com/cli/v10/commands/npm-search>
 
 ### Interactions
-
-participant "Guideline Publisher\nor Guideline Engine" as a
-
-Participant "Guideline Repository" as b
-
-a -\> b: Search for Guidelines
-
-b -\> a: Search for Guidelines Response
 
 <figure>
 <img src="image14.png" style="height: 100%; width: 100%; object-fit: contain"
