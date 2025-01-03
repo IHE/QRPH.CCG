@@ -1,8 +1,4 @@
 
-**This Implementation Guide template includes skeleton pages for each part of an IHE supplement. The instructions for how to fill out these sections can be found in the included [Supplement Template](https://github.com/IHE/supplement-template/blob/master/suppl_template.md). This supplement template should not be included in your github repo or publication. It is included here for easy reference.**
-
-**TODO: Write your executive overview here. Usually a one paragraph explanation of what problem this implementation guide solves.**
-
 The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar and a normative transaction processing model that allows evidence-based care recommendations to be expressed in a way that a digital health solution can ingest and operationalize. This is an implementable and conformance-testable specification. It is targeted to regulated healthcare markets where the support for multiple conditions is an important requirement. The CCG Profile supports jurisdictions that want to leverage digital health to systemically improve the adoption of guideline-adherent best practices across an entire care delivery network. 
 
 <div markdown="1" class="stu-note">
@@ -17,11 +13,13 @@ The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar a
 This guide is organized into the following sections:
 
 1. Volume 1:
-   1. [Introduction](volume-1.html)
-   1. **TODO: point to the Volume 1 Appendix if there is one**
+   1. [Business Description](CCG_v1_over.html)
+   1. [Actors](CCG_v1_actor.html)
 2. Volume 2: Transaction Detail
-   1. [ToDo do \[domain-YY\]](domain-YY.html)
-   1. **TODO: point to the Volume 2 Appendix if there is one**
+   1. [QRPH-X1 - Search for Guidelines](CCG_v2_x1.html)
+   1. [QRPH-X2 - Retrieve Guideline](CCG_v2_x2.html)
+   1. [QRPH-X3 - Publish Guidelines](CCG_v2_x3.html)
+   1. [QRPH-X4 - Apply Guidelines](CCG_v2_x4.html)
 3. Volume 3: Metadata and Content
    1. [Content One](domain-ZZ.html)
 4. Volume 4: National Extensions
