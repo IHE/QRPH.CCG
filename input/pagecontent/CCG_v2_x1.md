@@ -37,8 +37,8 @@ a -\> b: Search for Guidelines
 b -\> a: Search for Guidelines Response
 
 <figure>
-<img src="./media/image1.png" style="width:3.99306in;height:1.93542in"
-alt="A close-up of several yellow squares Description automatically generated" />
+<img src="image14.png" style="height: 100%; width: 100%; object-fit: contain"
+ />
 <figcaption><p>Figure 14 - X1 Search for Guidelines Interaction
 Diagram</p></figcaption>
 </figure>
