@@ -112,4 +112,6 @@ This transaction does **not** convey personal health information (PHI).
 FHIR-related security considerations SHOULD be adopted as described in
 IHE Appendix Z[^1].
 
+**Footnotes**
+
 [^1]: <https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations>

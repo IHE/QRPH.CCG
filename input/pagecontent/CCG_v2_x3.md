@@ -118,6 +118,8 @@ This transaction does **not** convey personal health information (PHI).
 FHIR-related security considerations **SHOULD** be adopted as described
 in IHE Appendix Z[^2].
 
+**Footnotes**
+
 [^1]: The CRMI specification *draft* is referenced, but the reference
     will be updated to the STU2 version upon completion and balloting of
     this work item within the HL7 working group

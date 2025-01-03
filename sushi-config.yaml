@@ -95,16 +95,16 @@ pages:
 
 menu:
   Home: index.html
-  Volume 1 - Business Description: CCG_v1_over.html
-  Volume 1 - Actors: CCG_v1_actor.html
-  Volume 2 - Transactions:
+  Vol-1 - Business Description: CCG_v1_over.html
+  Vol-1 - Actors: CCG_v1_actor.html
+  Vol-2 - Transactions:
     "Search for Guidelines [QRPH-X1]": CCG_v2_x1.html
     "Retrieve Guideline [QRPH-X2]": CCG_v2_x2.html
     "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
     "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
-  Volume 3 - Content:
+  Vol-3 - Content:
     "Content one [Domain-ZZ]": domain-ZZ.html
-  Volume 4 - Contextualizations:
+  Vol-4 - Contextualizations:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
   Other:
