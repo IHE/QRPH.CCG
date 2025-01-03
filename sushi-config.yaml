@@ -65,8 +65,17 @@ pages:
   CCG_v1_actor.md:
     title: "Volume-1: Actors"
     generation: markdown
-  domain-YY.md:
-    title: 2:3.YY Transaction one [Domain-YY]
+  CCG_v2_x1.md:
+    title: 2:3.X1 Search for Guidelines [QRPH-X1]
+    generation: markdown
+  CCG_v2_x2.md:
+    title: 2:3.X2 Retrieve Guideline [QRPH-X2]
+    generation: markdown
+  CCG_v2_x3.md:
+    title: 2:3.X3 Publish Guideline [QRPH-X3]
+    generation: markdown
+  CCG_v2_x4.md:
+    title: 2:3.X4 Apply Guideline [QRPH-X4]
     generation: markdown
   domain-ZZ.md:
     title: 3:?.ZZ Content one [Domain-ZZ]
@@ -88,9 +97,14 @@ menu:
   Home: index.html
   Volume 1 - Business Description: CCG_v1_over.html
   Volume 1 - Actors: CCG_v1_actor.html
-  Volume 2:
-    "Transaction one [Domain-YY]": domain-YY.html
-  Volume 3:
+  Volume 2 - Transactions:
+    "Search for Guidelines [QRPH-X1]": CCG_v2_x1.html
+    "Retrieve Guideline [QRPH-X2]": CCG_v2_x2.html
+    "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
+    "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
+  Volume 3 - Content:
+    "Content one [Domain-ZZ]": domain-ZZ.html
+  Volume 4 - Contextualizations:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
   Other:
