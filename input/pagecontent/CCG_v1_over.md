@@ -65,7 +65,7 @@ realized.
 
 <figure>
 <img src="image1.png"
-style="max-width: 50%; object-fit: contain" />
+style="max-width: 75%; object-fit: contain" />
 <figcaption><p>Figure 1 - Care Delivery in the "Green" Zone</p></figcaption>
 </figure>
 

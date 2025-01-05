@@ -2,17 +2,17 @@
 
 Transaction X4 Apply Guideline is used by a Guideline Performer to
 submit a contextual content bundle to a Guideline Engine and to invoke
-the \$apply operation, which will be evaluated based on the submitted
-content. The transaction response returns a bundle of Request resources
-representing the proposed activities based on applying the relevant
-CCGs.
+the \$CPGPlanDefinitionApply operation, which will be evaluated based on
+the submitted content. The transaction response returns a bundle of
+Request resources representing the proposed activities based on applying
+the relevant CCGs.
 
 ### Actor roles
 
 | **Actor** | **Role** |
 |----|----|
-| Guideline Performer | Submits a well-formed contextual content bundle to the Guideline Engine and invokes the \$apply operation. |
-| Guideline Engine | Executes the \$apply operation on the submitted content bundle and returns a bundle of Request resources, one for each of the relevant CCG CARDs that has fired true. |
+| Guideline Performer | Submits a well-formed contextual content bundle to the Guideline Engine and invokes the CPGPlanDefinitionApply operation. |
+| Guideline Engine | Executes the CPGPlanDefinitionApply operation on the submitted content bundle and returns a bundle of Request resources, one for each of the relevant CCG CARDs that has fired true. |
 
 ### Referenced standard(s)
 
@@ -26,9 +26,6 @@ Transaction X4 Apply Guideline is based on the following standards:
 
 - IHE mCSD Profile: <https://profiles.ihe.net/ITI/mCSD/index.html>
 
-- HL7 FHIR PlanDefinition R5[^2]:
-  <https://hl7.org/fhir/R5/plandefinition.html>
-
 ### Interactions
 
 <figure>
@@ -40,18 +37,18 @@ Diagram</p></figcaption>
 
 #### Trigger Events - Initiator
 
-<span class="mark">There **SHOULD** be a **human** in the loop.</span>
-With human input, a Guideline Performer actor triggers the initiation of
-an Apply Guideline transaction loop during a person-centric care
-encounter to operationalize the application of relevant CCGs and provide
+There **SHOULD** be a **human** in the loop. With human input, a
+Guideline Performer actor triggers the initiation of an Apply Guideline
+transaction loop during a person-centric care encounter to
+operationalize the application of relevant CCGs and provide
 recommendations to a **human** actor that will inform the course of the
-patient’s care.[^3]
+patient’s care.[^2]
 
 #### Message Semantics - Initiator
 
 The command to apply the relevant CCG(s) for a patient during a care
 encounter **SHALL** be submitted by the Guideline Performer to the
-Guideline Engine using the **CPGPlanDefinitionApply** operation[^4] as
+Guideline Engine using the **CPGPlanDefinitionApply** operation[^3] as
 defined by the HL7 CPG-on-FHIR specification.
 
 URL: \[base\]/PlanDefinition/\[id\]/\$apply
@@ -59,8 +56,8 @@ URL: \[base\]/PlanDefinition/\[id\]/\$apply
 The following parameters are relevant to this transaction:
 
 - The **id** of the relevant PlanDefinition **SHALL** be supplied at the
-  instance level. This PlanDefinition MAY be included in the contextual
-  content bundle.
+  instance level. This PlanDefinition **MAY** be included in the
+  contextual content bundle.
 
 - The **subject** **SHALL** be supplied as a parameter. The subject
   SHALL be a patient.id reference and the identified patient resource
@@ -84,10 +81,16 @@ Prior to submitting the transaction, the transaction initiator:
 - **SHALL** prepare an up-to-date contextual content bundle adherent to
   the specification in the Vol-3 section: Contextual Content Bundle.
 
+- **SHALL** create an audit record of the transaction submission (see
+  Security section).
+
 Based on receipt of the transaction response, the transaction initiator:
 
+- **SHALL** create an audit record of the transaction response (see
+  Security section).
+
 - **SHALL** process a **Provide Information** CARD to create a
-  CPGCommuniction[^5] resource with either status=completed or
+  CPGCommuniction[^4] resource with either status=completed or
   status=not-done (with statusReason) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
@@ -95,13 +98,13 @@ Based on receipt of the transaction response, the transaction initiator:
 - **SHALL** process a **Collect Information** CARD to capture input from
   the human user and create the indicated resource using the stipulated
   codes and units of measure (where applicable) and create a
-  CPGObservation[^6] resource with either status=final or
+  CPGObservation[^5] resource with either status=final or
   status=cancelled (with dataAbsentReason) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
 
 - **SHALL** process a **Request a Service (Lab Order)** CARD to create a
-  CPGServiceRequest[^7] resource with either status=draft or
+  CPGServiceRequest[^6] resource with either status=draft or
   status=revoked (indicating not done) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
@@ -125,32 +128,32 @@ Based on receipt of the transaction response, the transaction initiator:
   transactions during the present encounter.
 
 - **SHALL** process a **Propose a Diagnosis** CARD to create a
-  CPGCondition[^8] resource with either a verificationStatus absent or
+  CPGCondition[^7] resource with either a verificationStatus absent or
   *not* entered-in-error or verificationStatus=entered-in-error
   (indicating not done) and **SHALL** include this resource in the
   contextual content bundle of all subsequent Apply Guideline
   transactions during the present encounter.
 
 - **SHALL** process an **Order Medication** CARD to create a
-  CPGMedicationRequest[^9] resource with either status=draft,
+  CPGMedicationRequest[^8] resource with either status=draft,
   status=active or status=cancelled (with statusReason) and **SHALL**
   include this resource in the contextual content bundle of all
   subsequent Apply Guideline transactions during the present encounter.
 
 - **SHALL** process a **Dispense Medication** CARD to create a
-  CPGMedicationDispense[^10] resource with either status=completed or
+  CPGMedicationDispense[^9] resource with either status=completed or
   status=cancelled (with statusReason) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
 
 - **SHALL** process an **Administer Medication** CARD to create a
-  CPGMedicationAdministration[^11] resource with either status=completed
+  CPGMedicationAdministration[^10] resource with either status=completed
   or status=not-done (with statusReason) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
 
 - **SHALL** process a **Request Immunization** CARD to create a
-  CPGImmunization[^12] resource with either status=completed or
+  CPGImmunization[^11] resource with either status=completed or
   status=not-done (with statusReason) and **SHALL** include this
   resource in the contextual content bundle of all subsequent Apply
   Guideline transactions during the present encounter.
@@ -173,8 +176,13 @@ they are received.
 #### Message Semantics - Responder
 
 The transaction result returned by the Guideline Engine **SHALL**
-conform to the content defined for the CPGPlanDefinitionApply[^13]
+conform to the content defined for the CPGPlanDefinitionApply[^12]
 operation.
+
+Each Request resource returned in the transaction response bundle
+**SHALL** reference the relevant “CARD’s” PlanDefinition resource in the
+\[resource\].instantiatesCanonical or the
+\[resource\].extension:instantiatesCanonical element, as applicable.
 
 #### Expected Actions - Responder
 
@@ -185,75 +193,151 @@ Upon receiving a submitted transaction, the transaction responder:
   transaction;
 
 - **SHALL** return a response in accordance with the Message Semantics –
-  Responder, defined above.
+  Responder, defined above;
+
+- **SHALL** create an audit record of the transaction submission (see
+  Security section).
 
 Based on the returned transaction response, the transaction responder:
 
-- **MAY** create an audit record;
+- **SHALL** create an audit record of the transaction response (see
+  Security section);
 
 - Executes other processes in accordance with its application logic.
 
-### Security and audit considerations
+### Security and Audit considerations
 
-This transaction **does** convey personal health information (**PHI**).
+This transaction **does** convey personal health information (**PHI**);
+it is present in the data content conveyed by the Guideline Performer to
+the Guideline Engine during the Apply Guideline transaction and in the
+transaction response.
 
 FHIR-related security considerations related to the secure processing of
-PHI SHALL be adopted as described in IHE Appendix Z[^14].
+PHI **SHALL** be adopted as described in IHE Appendix Z[^13].
 
 The Guideline Performer **SHALL** be grouped with Audit Creator actor
-and **SHALL** adhere to the Basic Audit Log Patterns (BALP)[^15]
-specifications related to Basic AuditEvent for a successful Create with
-known Patient Subject.[^16]
+and **SHALL** adhere to the Basic Audit Log Patterns (BALP)[^14]
+specifications.
 
-<span class="mark">An AuditEvent **SHALL** be persisted to an Audit
-Record Repository for every resource create transactions.</span>
+The Guideline Engine **SHALL** be grouped with Audit Creator actor and
+**SHALL** adhere to the Basic Audit Log Patterns (BALP) specifications.
 
-- <span class="mark">type: originate for all except Stop Activity CARD
-  processing, where type: amend</span>
+Upon every *submission* of an Apply Guideline transaction, the Guideline
+Performer and the Guideline Engine **SHALL** both act as an Audit
+Creator to persist a Basic AuditEvent for Privacy Disclosure at
+Source.[^15] Specifically, the following AuditEvent content **SHALL** be
+included:
 
-- <span class="mark">outcome: 0 for all successful events</span>
+- AuditEvent.outcome = 0 (regardless of the eventual transaction
+  response)
 
-- <span class="mark">agent.type</span>
+- AuditEvent.outcomeDesc = submission statement content from the Apply
+  Guideline transaction, concatenated with “\|” delimiters:
 
-\*\*to be completed…\*\*
+  - “CPGPlanDefinitionApply submission” (constant, string, without
+    quotes)
+
+  - PlanDefinition id
+
+  - Encounter id
+
+  - Parameters (formatted as they appeared in the transaction submission
+    statement)
+
+- AuditEvent.purposeOfEvent = “TREAT”
+
+- AuditEvent.agent.source.who = software name and version \# of
+  Guideline Performer; where applicable, SHALL match the software name
+  and version \# named in the conformance statement resulting from
+  participation at Connectathon test events.
+
+- AuditEvent.agent.recipient.who = software name and version \# of
+  Guideline Engine; where applicable, SHALL match the software name and
+  version \# named in the conformance statement resulting from
+  participation at Connectathon test events.
+
+- AuditEvent.agent.custodian.who = practitioner.identifier (for
+  provider-care context) or patient.identifier (for self-care context)
+
+- AuditEvent.agent.authorizer.who = patient.identifier
+
+Upon every *response* to an Apply Guideline transaction submission, the
+Guideline Engine and the Guideline Performer **SHALL** both act as an
+Audit Creator to persist a Basic AuditEvent for Privacy Disclosure at
+Source. Specifically, the following AuditEvent content **SHALL** be
+included:
+
+- AuditEvent.outcome = 0 or operation outcome code from Guideline Engine
+  server
+
+- AuditEvent.outcomeDesc = the list of Request resource “CARD” ids
+  returned in the Apply Guideline transaction, concatenated with “\|”
+  delimiters. NOTE: these values are returned in the resource’s
+  instantiatesCanonical elements.
+
+- AuditEvent.purposeOfEvent = “TREAT”
+
+- AuditEvent.agent.source.who = software name and version \# of
+  Guideline Performer; where applicable, SHALL match the software name
+  and version \# named in the conformance statement resulting from
+  participation at Connectathon test events.
+
+- AuditEvent.agent.recipient.who = software name and version \# of
+  Guideline Engine; where applicable, SHALL match the software name and
+  version \# named in the conformance statement resulting from
+  participation at Connectathon test events.
+
+- AuditEvent.agent.custodian.who = practitioner.identifier (for
+  provider-care context) or patient.identifier (for self-care context)
+
+- AuditEvent.agent.authorizer.who = patient.identifier
+
+For all PHI persisted by the Guideline Performer during its
+post-processing of the Apply Guideline response, it **SHALL** act as an
+Audit Creator to persist a Basic AuditEvent for a **successful**
+**Create with known Patient Subject**.[^16]
+
+A Guideline Engine **MAY**, per its CCG transaction processing design,
+enduringly persist content submitted in the Apply Guideline transaction.
+Where this is so, the Guideline Engine **SHALL** act as an Audit Creator
+to persist a Basic AuditEvent for a **successful** **Create with known
+Patient Subject**.
 
 **Footnotes**
 
 [^1]: The use of the IPS specification in this context is based on the
     IHE IPS Profile and the **COMPLETE option** defined therein.
 
-[^2]: NOTE: important breaking changes have been made to the behaviours
-    of the \$apply operation between FHIR R4 and R5. These changes to R4
-    are pre-adopted by this IHE CCG Profile.
-
-[^3]: NOTE: it is anticipated that there is a **human** in the loop to
+[^2]: NOTE: it is anticipated that there is a **human** in the loop to
     action the care recommendations. In some jurisdictions, a digital
     health solution playing the role of a Guideline Performer actor
     and/or a Guideline Engine actor may meet the definition of Software
     as a Medical Device (SaMD).
 
-[^4]: <https://hl7.org/fhir/uv/cpg/STU2/OperationDefinition-cpg-plandefinition-apply.html>
+[^3]: <https://hl7.org/fhir/uv/cpg/STU2/OperationDefinition-cpg-plandefinition-apply.html>
 
-[^5]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-communication.html>
+[^4]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-communication.html>
 
-[^6]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-observation.html>
+[^5]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-observation.html>
 
-[^7]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-servicerequest.html>
+[^6]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-servicerequest.html>
 
-[^8]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-condition.html>
+[^7]: <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-condition.html>
 
-[^9]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationrequest.html>
+[^8]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationrequest.html>
 
-[^10]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationdispense.html>
+[^9]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationdispense.html>
 
-[^11]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationadministration.html>
+[^10]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-medicationadministration.html>
 
-[^12]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-immunization.html>
+[^11]: <https://build.fhir.org/ig/HL7/cqf-recommendations/StructureDefinition-cpg-immunization.html>
 
-[^13]: <https://build.fhir.org/ig/HL7/cqf-recommendations/OperationDefinition-cpg-plandefinition-apply.html>
+[^12]: <https://build.fhir.org/ig/HL7/cqf-recommendations/OperationDefinition-cpg-plandefinition-apply.html>
 
-[^14]: <https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations>
+[^13]: <https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations>
 
-[^15]: <https://profiles.ihe.net/ITI/BALP/index.html>
+[^14]: <https://profiles.ihe.net/ITI/BALP/index.html>
+
+[^15]: <https://profiles.ihe.net/ITI/BALP/StructureDefinition-IHE.BasicAudit.PrivacyDisclosure.Source.html>
 
 [^16]: <https://profiles.ihe.net/ITI/BALP/StructureDefinition-IHE.BasicAudit.PatientCreate.html>
