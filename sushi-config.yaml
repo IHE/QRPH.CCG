@@ -77,6 +77,51 @@ pages:
   CCG_v2_x4.md:
     title: 2:3.X4 Apply Guideline [QRPH-X4]
     generation: markdown
+  CCG_v3_IG.md:
+    title: CCG IG
+    generation: markdown
+  CCG_v3_data_in.md:
+    title: CCG Contextual Content Bundle
+    generation: markdown
+  CCG_v3_folder.md:
+    title: CCG Folder (PlanDefinition)
+    generation: markdown
+  CCG_v3_CARD_1.md:
+    title: CCG CARD (Provide Information)
+    generation: markdown
+  CCG_v3_CARD_2.md:
+    title: CCG CARD (Collect Information)
+    generation: markdown
+  CCG_v3_CARD_3.md:
+    title: CCG CARD (Request a Service (Lab Order))
+    generation: markdown
+  CCG_v3_CARD_4.md:
+    title: CCG CARD (Request a Service (Radiology Order))
+    generation: markdown
+  CCG_v3_CARD_5.md:
+    title: CCG CARD (Request a Service (Procedure Order))
+    generation: markdown
+  CCG_v3_CARD_6.md:
+    title: CCG CARD (Request a Service (Referral))
+    generation: markdown
+  CCG_v3_CARD_7.md:
+    title: CCG CARD (Propose a Diagnosis)
+    generation: markdown
+  CCG_v3_CARD_8.md:
+    title: CCG CARD (Order Medication)
+    generation: markdown
+  CCG_v3_CARD_9.md:
+    title: CCG CARD (Dispense Medication)
+    generation: markdown
+  CCG_v3_CARD_10.md:
+    title: CCG CARD (Administer Medication)
+    generation: markdown
+  CCG_v3_CARD_11.md:
+    title: CCG CARD (Request Immunization)
+    generation: markdown
+  CCG_v3_CARD_12.md:
+    title: CCG CARD (Stop Activity)
+    generation: markdown
   domain-ZZ.md:
     title: 3:?.ZZ Content one [Domain-ZZ]
     generation: markdown
@@ -103,7 +148,21 @@ menu:
     "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
     "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
   Vol-3 - Content:
-    "Content one [Domain-ZZ]": domain-ZZ.html
+    "CCG IG": CCG_v3_IG.html
+    "CCG Contextual Content Bundle": CCG_v3_data_in.html
+    "CCG Folder (PlanDefinition)": CCG_v3_folder.html
+    "CCG CARD (Provide Information)": CCG_v3_CARD_1.html
+    "CCG CARD (Collect Information)": CCG_v3_CARD_2.html
+    "CCG CARD (Request a Service (Lab Order))": CCG_v3_CARD_3.html
+    "CCG CARD (Request a Service (Radiology Order))": CCG_v3_CARD_4.html
+    "CCG CARD (Request a Service (Procedure Order))": CCG_v3_CARD_5.html
+    "CCG CARD (Request a Service (Referral))": CCG_v3_CARD_6.html
+    "CCG CARD (Propose a Diagnosis)": CCG_v3_CARD_7.html
+    "CCG CARD (Order Medication)": CCG_v3_CARD_8.html
+    "CCG CARD (Dispense Medication)": CCG_v3_CARD_9.html
+    "CCG CARD (Administer Medication)": CCG_v3_CARD_10.html
+    "CCG CARD (Request Immunization)": CCG_v3_CARD_11.html
+    "CCG CARD (Stop Activity)": CCG_v3_CARD_12.html
   Vol-4 - Contextualizations:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
