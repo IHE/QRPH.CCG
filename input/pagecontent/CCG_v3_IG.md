@@ -1,90 +1,30 @@
-## CCG Contextual Content Bundle
+## CCG Deployment Package (IG)
 
-This content model defines the **data** input (“data-in”) bundle that is
-passed as part of the Apply Guideline transaction submission. This
-bundle represents the content that will be used by the Guideline Engine
-to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation.
+The deployment model is that each unique CCG Folder and its contents
+will be contained in a **FHIR package** based on the
+CPGComputableGuideline[^1] profile on which the following constraints
+**SHALL** be abided:
 
-The data-in bundle **SHALL** be composed of:
+- id = un-prefixed UUID per RFC 3986
 
-- the relevant **Encounter** resource, which **SHALL** include, at the
-  least:
+- url = same UUID as id
 
-  - status = in-progress
+- version = business version expressed using semver[^2], required
 
-  - subject = patient.id identical to the patient-id passed to the
-    \$apply operation
+- title = human-friendly short title, required
 
-  - period = encounter start timestamp; end timestamp omitted
+- date = CCG publication date, required
 
-  - participant.individual.practitioner = practitioner.id, if class !=
-    “HH”
+- publisher = name of the CCG publisher, required to match the CCG
+  Folder publisher
 
-  - participant.individual.practitionerRole = PractitionerRole.id if
-    class != “HH”
+Guideline Publisher actors that support either the Digitally Signed
+Folder or the Digitally Signed CARD option **SHALL** sign the CCG
+Deployment Package using an ECDSA signature as described in the relevant
+npm documentation.[^3]
 
-  - location.location = location.id, if class != “HH”
+[^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-computableguideline.html>
 
-  - serviceProvider = organization.id if class != “HH”
+[^2]: <https://semver.org/>
 
-- the relevant **Practitioner** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address
-
-- the relevant **PractitionerRole** resource, if applicable, which
-  **SHALL** include, at the least:
-
-  - id
-
-  - practitioner = practitioner.id
-
-  - organization = organization.id
-
-  - specialty = one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
-
-- the relevant **Location** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - position, if known
-
-  - managingOrganization = organization.id
-
-  - type = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/v3/ServiceDeliveryLocationRoleType/vs.html>
-
-  - physicalType = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-location-physical-type.html>
-
-- the relevant **Organization** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - telecom, if known
-
-- the patient’s **IPS document**, which **SHALL** include all content
-  defined in the FHIR IPS content model and available to the Guideline
-  Performer.
+[^3]: <https://docs.npmjs.com/about-registry-signatures>

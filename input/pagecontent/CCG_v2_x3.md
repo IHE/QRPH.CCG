@@ -57,15 +57,14 @@ Prior to submitting the transaction, the transaction initiator:
 
 - **MAY** authenticate to the Guideline Repository.
 
-- **MAY** digitally sign each CCG CARD (each PlanDefinition and library
-  in the Implementation Guide), as recommended by the HL7 CRMI
-  specification
-  (<https://build.fhir.org/ig/HL7/crmi-ig/publishing.html#preparing-artifacts>
-  and leveraging the methods defined by the IHE DSG specification
-  (<https://profiles.ihe.net/ITI/DSGj/Volume3/ch-5.10.html#5.10>).
+- **MAY** digitally sign each resource
+  in the Implementation Guide leveraging the signing methods defined by the IHE DSG specification
+  (<https://profiles.ihe.net/ITI/DSGj/Volume3/ch-5.10.html#5.10>) and abiding the use of Provenance resources as defined in Volume 3 of this Profile.
 
-- **MAY** digitally sign the CCG Folder (the IG) leveraging the methods
-  defined by the IHE DSG specification (see above).
+- **SHALL** execute npm-shrinkwrap.
+
+- **MAY** digitally sign the CCG Deployment Package (IG) leveraging the relevant npm methods
+  defined in Volume 3 of this Profile.
 
 Based on receipt of the transaction response, the transaction initiator:
 
@@ -98,9 +97,7 @@ Upon receiving a submitted transaction, the transaction responder:
   Guideline Repository and their authority to execute the submitted
   transaction;
 
-- **SHALL**, for digitally signed content, verify the content using the
-  process defined by the IHE DSG specification:
-  <https://profiles.ihe.net/ITI/DSGj/Volume3/ch-5.10.html#5.10.5>.
+- **SHALL**, for digitally signed content, verify the submitted content is from a *trusted* signer and that the submitted content's hash matches its signed hash.
 
 - **SHALL** return a response code in accordance with the Message
   Semantics – Responder, defined above.

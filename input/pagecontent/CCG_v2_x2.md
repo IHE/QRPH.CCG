@@ -69,6 +69,8 @@ Prior to submitting the transaction, the transaction initiator:
 
 Based on receipt of the transaction response, the transaction initiator:
 
+- MAY execute an *npm audit signatures* command;
+
 - MAY create an audit record;
 
 - Processes the response in accordance with its application and user
