@@ -22,7 +22,7 @@ Transaction X2 Retrieve Guideline is based on the following standards:
 - Draft HL7 CRMI[^1] specification
   <https://build.fhir.org/ig/HL7/crmi-ig/distribution.html#distribution-fhir-package>
 
-- GitHub Node Package Manager version 10.9.1
+- Node Package Manager version 10.9.1
   <https://docs.npmjs.com/cli/v10/commands/npm-install>
 
 - CPG Computable Guideline STU2 specification:

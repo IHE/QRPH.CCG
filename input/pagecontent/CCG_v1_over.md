@@ -765,10 +765,10 @@ all her patients.
 
 [^2]: <https://build.fhir.org/ig/HL7/cqf-recommendations/index.html>
 
-[^3]: Organization of Economic Development
+[^3]: Organization of Economic Development country members: <https://www.oecd.org/en/about/members-partners.html>
 
 [^4]: Low- and Middle-income Countries as defined by World Bank income
-    stratification:
+    stratification: <https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups>
 
 [^5]: <https://www.canada.ca/en/services/health/publications/diseases-conditions/prevalence-chronic-disease-risk-factors-canadians-aged-65-years-older.html>
 

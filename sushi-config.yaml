@@ -78,13 +78,13 @@ pages:
     title: 2:3.X4 Apply Guideline [QRPH-X4]
     generation: markdown
   CCG_v3_IG.md:
-    title: CCG IG
+    title: CCG Deployment Package (IG)
     generation: markdown
   CCG_v3_data_in.md:
     title: CCG Contextual Content Bundle
     generation: markdown
   CCG_v3_folder.md:
-    title: CCG Folder (PlanDefinition)
+    title: CCG Folder 
     generation: markdown
   CCG_v3_CARD_1.md:
     title: CCG CARD (Provide Information)
@@ -148,9 +148,9 @@ menu:
     "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
     "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
   Vol-3 - Content:
-    "CCG IG": CCG_v3_IG.html
+    "CCG Deployment Package (IG)": CCG_v3_IG.html
     "CCG Contextual Content Bundle": CCG_v3_data_in.html
-    "CCG Folder (PlanDefinition)": CCG_v3_folder.html
+    "CCG Folder": CCG_v3_folder.html
     "CCG CARD (Provide Information)": CCG_v3_CARD_1.html
     "CCG CARD (Collect Information)": CCG_v3_CARD_2.html
     "CCG CARD (Request a Service (Lab Order))": CCG_v3_CARD_3.html

@@ -20,7 +20,7 @@ Transaction X3 Publish Guideline is based on the following standards:
 - Draft HL7 CRMI[^1] specification
   <https://build.fhir.org/ig/HL7/crmi-ig/publishing.html#transmit-to-repository>
 
-- GitHub Node Package Manager version 10.9.1
+- Node Package Manager version 10.9.1
   <https://docs.npmjs.com/cli/v10/commands/npm-publish>
 
 - CPG Computable Guideline STU2 specification:

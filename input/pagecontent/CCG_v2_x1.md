@@ -20,7 +20,7 @@ standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
-- GitHub Node Package Manager version 10.9.0
+- Node Package Manager version 10.9.0
   <https://docs.npmjs.com/cli/v10/commands/npm-search>
 
 ### Interactions

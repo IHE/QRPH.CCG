@@ -4,7 +4,7 @@ This content model defines the **data** input (“data-in”) bundle that is
 passed as part of the Apply Guideline transaction submission. This
 bundle represents the content that will be used by the Guideline Engine
 to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation.
+\$apply operation. NOTE: *this* version of the IHE CCG Profile is focused on ambulatory care encounters; subsequent versions of the specification will expand the focus to acute, home and self care scenarios.
 
 The data-in bundle **SHALL** be composed of:
 
@@ -18,28 +18,24 @@ The data-in bundle **SHALL** be composed of:
 
   - period = encounter start timestamp; end timestamp omitted
 
-  - participant.individual.practitioner = practitioner.id, if class !=
-    “HH”
+  - participant.individual.practitioner = practitioner.id
 
-  - participant.individual.practitionerRole = PractitionerRole.id if
-    class != “HH”
+  - participant.individual.practitionerRole = PractitionerRole.id 
 
-  - location.location = location.id, if class != “HH”
+  - location.location = location.id
 
-  - serviceProvider = organization.id if class != “HH”
+  - serviceProvider = organization.id 
 
-- the relevant **Practitioner** resource, if applicable, which **SHALL**
+- the relevant **Practitioner** resource, which **SHALL**
   include, at the least:
 
   - id
 
-  - identifier, if known
+  - identifier
 
   - name
 
-  - address
-
-- the relevant **PractitionerRole** resource, if applicable, which
+- the relevant **PractitionerRole** resource, which
   **SHALL** include, at the least:
 
   - id
@@ -48,15 +44,15 @@ The data-in bundle **SHALL** be composed of:
 
   - organization = organization.id
 
-  - specialty = one or more CodeableConcept values from
+  - specialty = if known, one or more CodeableConcept values from
     <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
 
-- the relevant **Location** resource, if applicable, which **SHALL**
+- the relevant **Location** resource, which **SHALL**
   include, at the least:
 
   - id
 
-  - identifier, if known
+  - identifier
 
   - name
 
@@ -85,6 +81,6 @@ The data-in bundle **SHALL** be composed of:
 
   - telecom, if known
 
-- the patient’s **IPS document**, which **SHALL** include all content
-  defined in the FHIR IPS content model and available to the Guideline
+- the patient’s **IPS document**, which **SHALL** include all the content
+  defined in the FHIR IPS content model which is available to the Guideline
   Performer.
