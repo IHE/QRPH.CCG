@@ -84,3 +84,7 @@ The data-in bundle **SHALL** be composed of:
 - the patient’s **IPS document**, which **SHALL** include all the content
   defined in the FHIR IPS content model which is available to the Guideline
   Performer.
+
+- **all** resources which reference the present Encounter.
+
+
