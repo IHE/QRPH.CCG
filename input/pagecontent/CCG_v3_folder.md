@@ -1,90 +1,50 @@
-## CCG Contextual Content Bundle
+## CCG Folder
 
-This content model defines the **data** input (“data-in”) bundle that is
-passed as part of the Apply Guideline transaction submission. This
-bundle represents the content that will be used by the Guideline Engine
-to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation.
+The deployment model is that each unique CCG will be expressed as a
+PlanDefinition (a CCG Folder) that lists the CCG’s defined CARDs. The
+CCG Folder is based on the CPGComputablePlanDefinition[^1] profile on
+which the following constraints **SHALL** be abided:
 
-The data-in bundle **SHALL** be composed of:
+- id = un-prefixed UUID per RFC 3986
 
-- the relevant **Encounter** resource, which **SHALL** include, at the
-  least:
+- url = same UUID as id
 
-  - status = in-progress
+- text = human-friendly short description of the CCG, required
 
-  - subject = patient.id identical to the patient-id passed to the
-    \$apply operation
+- name = computer-friendly name, required
 
-  - period = encounter start timestamp; end timestamp omitted
+- title = human-friendly short title, required
 
-  - participant.individual.practitioner = practitioner.id, if class !=
-    “HH”
+- type = clinical-protocol
 
-  - participant.individual.practitionerRole = PractitionerRole.id if
-    class != “HH”
+- date = CCG publication date, required
 
-  - location.location = location.id, if class != “HH”
+- publisher = name of the CCG publisher, required
 
-  - serviceProvider = organization.id if class != “HH”
+- actions… (one for each CARD), at least one is required
 
-- the relevant **Practitioner** resource, if applicable, which **SHALL**
-  include, at the least:
+  - action.definition.PlanDefinition.url = UUID of the CCG CARD
 
-  - id
+For Guideline Publisher actors that support the **Digitally Signed
+CARD** option, the CCG Folder’s signature **SHALL** be carried by a
+Provenance[^2] resource that will accompany the CCG Folder in the
+deployment package (the Implementation Guide). The Provenance resource
+**SHALL** reference:
 
-  - identifier, if known
+- target = CCG Folder’s UUID
 
-  - name
+- recorded = timestamp of signature
 
-  - address
+- agent.who = identifier of publisher
 
-- the relevant **PractitionerRole** resource, if applicable, which
-  **SHALL** include, at the least:
+- signature.type = 1.462.46840.4610065.461.4612.461.461
 
-  - id
+- signature.when = same timestamp as recorded
 
-  - practitioner = practitioner.id
+- signature.who = same identifier as agent.who
 
-  - organization = organization.id
+**Footnotes**
 
-  - specialty = one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
+[^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-computableplandefinition.html>
 
-- the relevant **Location** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - position, if known
-
-  - managingOrganization = organization.id
-
-  - type = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/v3/ServiceDeliveryLocationRoleType/vs.html>
-
-  - physicalType = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-location-physical-type.html>
-
-- the relevant **Organization** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - telecom, if known
-
-- the patient’s **IPS document**, which **SHALL** include all content
-  defined in the FHIR IPS content model and available to the Guideline
-  Performer.
+[^2]: <https://hl7.org/fhir/r4/provenance.html>
