@@ -1,4 +1,3 @@
-## CCG CARD (Collect Information)
 
 The role of this type of CCG CARD is to collect information **about**
 the patient. There **SHALL** be *one* Collect Information CARD for each

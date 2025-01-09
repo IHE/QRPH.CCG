@@ -1,4 +1,3 @@
-## CCG CARD (Request a Service (Lab Order))
 
 The role of this type of CCG CARD is to create a laboratory / pathology
 ServiceRequest **for** the patient.
@@ -60,6 +59,6 @@ Contextual Content bundle.
 
 [^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-servicerequestactivity.html>
 
-[^2]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communicationrequest.html>
+[^2]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-servicerequest.html>
 
-[^3]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communication.html>
+[^3]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-servicerequest.html>

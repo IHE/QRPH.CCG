@@ -1,4 +1,3 @@
-## CCG CARD (Provide Information)
 
 The role of this type of CCG CARD is to provide information,
 counselling, or instructions **to** the patient.

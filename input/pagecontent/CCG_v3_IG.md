@@ -1,5 +1,3 @@
-## CCG Deployment Package (IG)
-
 The deployment model is that each unique CCG Folder and its contents
 will be contained in a **FHIR package** based on the
 CPGComputableGuideline[^1] profile on which the following constraints

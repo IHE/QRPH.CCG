@@ -1,4 +1,3 @@
-## CCG Folder
 
 The deployment model is that each unique CCG will be expressed as a
 PlanDefinition (a CCG Folder) that lists the CCG’s defined CARDs. The

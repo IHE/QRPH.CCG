@@ -1,4 +1,3 @@
-## CCG CARD PlanDefinition
 
 Each evidence-based recommendation is expressed using one or more CCG
 CARDs. All CCG CARDs are composed of a **PlanDefinition** plus an
