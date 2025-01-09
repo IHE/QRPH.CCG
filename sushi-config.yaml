@@ -128,8 +128,8 @@ pages:
   CCG_v3_CARD_12.md:
     title: CCG CARD (Stop Activity)
     generation: markdown
-  domain-ZZ.md:
-    title: 3:?.ZZ Content one [Domain-ZZ]
+  CCG_v4.md:
+    title: Jurisdictional Contextualizations
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -171,8 +171,7 @@ menu:
     "CCG CARD (Administer Medication)": CCG_v3_CARD_10.html
     "CCG CARD (Request Immunization)": CCG_v3_CARD_11.html
     "CCG CARD (Stop Activity)": CCG_v3_CARD_12.html
-  Vol-4 - Contextualizations:
-    "Content one [Domain-ZZ]": domain-ZZ.html
+  Vol-4 - Contextualizations: CCG_v4.html
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html
