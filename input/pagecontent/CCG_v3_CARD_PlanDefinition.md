@@ -12,9 +12,9 @@ the recommendation.
 A CCG CARD’s PlanDefinition **SHALL** be based on the
 CPGComputablePlanDefinition[^1] profile with the following constraints:
 
-- id = un-prefixed UUID per RFC 3986
+- id = same as url
 
-- url = same UUID as id
+- url = same as id
 
 - text = human-friendly short description of the CARD, required
 
@@ -54,9 +54,9 @@ A CARD’s PlanDefinition **MAY** reference a **library**. Where this is
 so, the library will be based on the CQLLibrary[^2] profile with the
 following constraints:
 
-- id = un-prefixed UUID per RFC 3986
+- id = same as url
 
-- url = same UUID as id
+- url = same as id
 
 - text = human-friendly short description of the CARD, required
 

@@ -1,90 +1,56 @@
-## CCG Contextual Content Bundle
+## CCG CARD (Provide Information)
 
-This content model defines the **data** input (“data-in”) bundle that is
-passed as part of the Apply Guideline transaction submission. This
-bundle represents the content that will be used by the Guideline Engine
-to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation.
+The role of this type of CCG CARD is to provide information,
+counselling, or instructions **to** the patient.
 
-The data-in bundle **SHALL** be composed of:
+All CARDs are composed of a **PlanDefinition** plus an
+**ActivityDefinition**. The PlanDefinition references the evidence
+supporting this recommendation and defines the **C**onditions that must
+be true in order for it to be applicable. The ActivityDefinition
+describes the CARD’s recommended **A**ction as well as the **R**esulting
+**D**ata that will be generated from dispositioning the recommendation.
 
-- the relevant **Encounter** resource, which **SHALL** include, at the
-  least:
+All CARDs share this common format. Information about defining the
+CARD’s **PlanDefinition** is found in the CCG CARD PlanDefinition
+section, which is common to all CARDs. For Guideline Publisher actors
+that support the **Digitally Signed CARD** option, information about
+signing CCG CARDs is found in the CCG CARD Digital Signature section.
 
-  - status = in-progress
+The Provide Information CARD’s **ActivityDefinition** **SHALL** be based
+on the CPGCommunicationActivity[^1] profile with the following
+constraints:
 
-  - subject = patient.id identical to the patient-id passed to the
-    \$apply operation
+- id = same as url, required
 
-  - period = encounter start timestamp; end timestamp omitted
+- url = same as id, required
 
-  - participant.individual.practitioner = practitioner.id, if class !=
-    “HH”
+- text = human-friendly short description of the recommended action,
+  required
 
-  - participant.individual.practitionerRole = PractitionerRole.id if
-    class != “HH”
+- name = computer-friendly name, required
 
-  - location.location = location.id, if class != “HH”
+- title = human-friendly short title, required
 
-  - serviceProvider = organization.id if class != “HH”
+- date = last update timestamp, required
 
-- the relevant **Practitioner** resource, if applicable, which **SHALL**
-  include, at the least:
+- publisher = name of the CARD publisher, required
 
-  - id
+The recommended **Action** from this CARD **SHALL** be a
+CommunicationRequest resource based on the CPGCommunicationRequest[^2]
+profile. If the CARD is applicable, this resource **SHALL** be returned
+from the Guideline Engine to the Guideline Performer in the Apply
+Guidelines transaction response bundle. The CommunicationRequest
+resource **SHALL** reference the Encounter.
 
-  - identifier, if known
+After processing the Apply Guidelines transaction response, the
+**Resulting Data** from this CARD **SHALL** be a Communication resource
+based on the CPGCommunication[^3] profile. The Communication resource
+**SHALL** reference the Encounter.
 
-  - name
+**Footnotes:**
 
-  - address
+[^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communicationactivity.html>
 
-- the relevant **PractitionerRole** resource, if applicable, which
-  **SHALL** include, at the least:
+[^2]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communicationrequest.html>
 
-  - id
-
-  - practitioner = practitioner.id
-
-  - organization = organization.id
-
-  - specialty = one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
-
-- the relevant **Location** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - position, if known
-
-  - managingOrganization = organization.id
-
-  - type = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/v3/ServiceDeliveryLocationRoleType/vs.html>
-
-  - physicalType = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-location-physical-type.html>
-
-- the relevant **Organization** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - telecom, if known
-
-- the patient’s **IPS document**, which **SHALL** include all content
-  defined in the FHIR IPS content model and available to the Guideline
-  Performer.
+[^3]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communication.html>
