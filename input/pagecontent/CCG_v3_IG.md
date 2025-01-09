@@ -23,6 +23,8 @@ Folder or the Digitally Signed CARD option **SHALL** sign the CCG
 Deployment Package using an ECDSA signature as described in the relevant
 npm documentation.[^3]
 
+**Footnotes**
+
 [^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-computableguideline.html>
 
 [^2]: <https://semver.org/>

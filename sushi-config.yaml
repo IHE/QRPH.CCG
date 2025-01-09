@@ -86,6 +86,12 @@ pages:
   CCG_v3_folder.md:
     title: CCG Folder 
     generation: markdown
+  CCG_v3_CARD_PlanDefinition.md:
+    title: CCG CARD PlanDefinition
+    generation: markdown
+  CCG_v3_CARD_dsig.md:
+    title: CCG CARD Digital Signature
+    generation: markdown
   CCG_v3_CARD_1.md:
     title: CCG CARD (Provide Information)
     generation: markdown
@@ -151,6 +157,8 @@ menu:
     "CCG Deployment Package (IG)": CCG_v3_IG.html
     "CCG Contextual Content Bundle": CCG_v3_data_in.html
     "CCG Folder": CCG_v3_folder.html
+    "CCG CARD PlanDefinition": CCG_v3_CARD_PlanDefinition.html
+    "CCG CARD Digital Signature": CCG_v3_CARD_dsig.html
     "CCG CARD (Provide Information)": CCG_v3_CARD_1.html
     "CCG CARD (Collect Information)": CCG_v3_CARD_2.html
     "CCG CARD (Request a Service (Lab Order))": CCG_v3_CARD_3.html

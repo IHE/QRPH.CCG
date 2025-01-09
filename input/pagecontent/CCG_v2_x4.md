@@ -192,6 +192,8 @@ Upon receiving a submitted transaction, the transaction responder:
   Guideline Engine and their authority to execute the submitted
   transaction;
 
+- **SHALL**, when processing CARDs with multiple condition statements, logically AND the condition statements together;
+
 - **SHALL** return a response in accordance with the Message Semantics –
   Responder, defined above;
 
