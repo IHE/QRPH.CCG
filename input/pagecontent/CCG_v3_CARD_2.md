@@ -1,90 +1,91 @@
-## CCG Contextual Content Bundle
+## CCG CARD (Collect Information)
 
-This content model defines the **data** input (“data-in”) bundle that is
-passed as part of the Apply Guideline transaction submission. This
-bundle represents the content that will be used by the Guideline Engine
-to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation.
+The role of this type of CCG CARD is to collect information **about**
+the patient. There **SHALL** be *one* Collect Information CARD for each
+data element needed to drive the evidence-based care workflow. The
+CARD’s condition statement(s) will evaluate true if this information is
+missing from the Contextual Content bundle and the processing of the
+CARD **SHALL** “fill in” this missing information using Structured Data
+Capture based on the **Definition-based extraction** method.[^1]
 
-The data-in bundle **SHALL** be composed of:
+All CARDs are composed of a **PlanDefinition** plus an
+**ActivityDefinition**. The PlanDefinition references the evidence
+supporting this recommendation and defines the **C**onditions that must
+be true in order for it to be applicable. The ActivityDefinition
+describes the CARD’s recommended **A**ction as well as the **R**esulting
+**D**ata that will be generated from dispositioning the recommendation.
 
-- the relevant **Encounter** resource, which **SHALL** include, at the
-  least:
+All CARDs share this common format. Information about defining the
+CARD’s **PlanDefinition** is found in the CCG CARD PlanDefinition
+section, which is common to all CARDs. For Guideline Publisher actors
+that support the **Digitally Signed CARD** option, information about
+signing CCG CARDs is found in the CCG CARD Digital Signature section.
+NOTE: if applicable, Questionnaire resources defined in support of this
+CARD **SHALL** be digitally signed.
 
-  - status = in-progress
+The Collect Information CARD’s **ActivityDefinition** **SHALL** be based
+on the CPGCollectInformation[^2] profile with the following constraints:
 
-  - subject = patient.id identical to the patient-id passed to the
-    \$apply operation
+- id = same as url, required
 
-  - period = encounter start timestamp; end timestamp omitted
+- url = same as id, required
 
-  - participant.individual.practitioner = practitioner.id, if class !=
-    “HH”
+- text = human-friendly short description of the recommended action,
+  required
 
-  - participant.individual.practitionerRole = PractitionerRole.id if
-    class != “HH”
+- name = computer-friendly name, required
 
-  - location.location = location.id, if class != “HH”
+- title = human-friendly short title, required
 
-  - serviceProvider = organization.id if class != “HH”
+- date = last update timestamp, required
 
-- the relevant **Practitioner** resource, if applicable, which **SHALL**
-  include, at the least:
+- publisher = name of the CARD publisher, required
 
-  - id
+The recommended **Action** from this CARD **SHALL** be a Task resource
+based on the CPGQuestionnaireTask[^3] profile. If the CARD is
+applicable, this resource **SHALL** be returned from the Guideline
+Engine to the Guideline Performer in the Apply Guidelines transaction
+response bundle. The Task resource **SHALL:**
 
-  - identifier, if known
+- reference as its input a Questionnaire resource based on the
+  SDCQuestionnaireExtractDefinition[^4] profile
 
-  - name
+- reference as its output a QuestionnaireResponse based on the
+  CPGQuestionnaireResponse[^5] profile
 
-  - address
+- reference the Encounter.
 
-- the relevant **PractitionerRole** resource, if applicable, which
-  **SHALL** include, at the least:
+The following constraints **SHALL** apply to the Questionnaire resource
+referenced in the Task:
 
-  - id
+- the scope of the Questionnaire will be limited to a **single** data
+  element and the target FHIR resource type will be identified
+  Questionnaire.item.defintion
 
-  - practitioner = practitioner.id
+- the content type (e.g. LOINC code for observation) and relevant units
+  of measure will be defined by the Questionnaire such that the content
+  is captured in the format necessary to drive the evidence-based
+  workflow logic defined for this CCG.
 
-  - organization = organization.id
+It is the responsibility of the Guideline Performer to operationalize
+data collection as defined by the Questionnaire. After processing the
+Apply Guidelines transaction response, the **Resulting Data** from this
+CARD **SHALL** be a FHIR resource based on the semantic definition
+expressed in the Questionnaire. The resulting resource **SHALL**
+reference the Encounter. NOTE: in this first version of the CCG Profile,
+Observation resources based on the CPGObservation[^6] profile **SHALL**
+be exclusively supported.
 
-  - specialty = one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
+**Footnotes:**
 
-- the relevant **Location** resource, if applicable, which **SHALL**
-  include, at the least:
+[^1]: <https://hl7.org/fhir/uv/sdc/extraction.html#definition-extract>
 
-  - id
+[^2]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-collectinformationactivity.html>
 
-  - identifier, if known
+[^3]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-questionnairetask.html>
 
-  - name
+[^4]: <https://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire-extr-defn.html>
 
-  - address, if known
+[^5]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-questionnaireresponse.html>
 
-  - position, if known
-
-  - managingOrganization = organization.id
-
-  - type = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/v3/ServiceDeliveryLocationRoleType/vs.html>
-
-  - physicalType = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-location-physical-type.html>
-
-- the relevant **Organization** resource, if applicable, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier, if known
-
-  - name
-
-  - address, if known
-
-  - telecom, if known
-
-- the patient’s **IPS document**, which **SHALL** include all content
-  defined in the FHIR IPS content model and available to the Guideline
-  Performer.
+[^6]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-observation.html>
