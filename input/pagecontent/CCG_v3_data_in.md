@@ -1,89 +1,104 @@
+## CCG Contextual Content Bundle
 
 This content model defines the **data** input (“data-in”) bundle that is
 passed as part of the Apply Guideline transaction submission. This
 bundle represents the content that will be used by the Guideline Engine
 to evaluate all relevant CCG CARD’s condition statements during the
-\$apply operation. NOTE: *this* version of the IHE CCG Profile is focused on ambulatory care encounters; subsequent versions of the specification will expand the focus to acute, home and self care scenarios.
+\$apply operation.
 
 The data-in bundle **SHALL** be composed of:
 
-- the relevant **Encounter** resource, which **SHALL** include, at the
-  least:
+- the relevant **Encounter** resource, based on the CPGEncounter[^1]
+  profile which **SHALL** be further constrained as follows:
+
+  - id (required)
 
   - status = in-progress
 
-  - subject = patient.id identical to the patient-id passed to the
-    \$apply operation
+  - period = encounter start timestamp required; end timestamp must be
+    omitted
 
-  - period = encounter start timestamp; end timestamp omitted
+  - serviceProvider = organization.id, required if known
 
-  - participant.individual.practitioner = practitioner.id
+- the relevant **Practitioner** resource, based on the
+  CPGPractitioner[^2] profile which **SHALL** be further constrained as
+  follows:
 
-  - participant.individual.practitionerRole = PractitionerRole.id 
+  - id (required)
 
-  - location.location = location.id
+  - address (required if known)
 
-  - serviceProvider = organization.id 
+- the relevant **PractitionerRole** resource, based on the
+  CPGPractitionerRole[^3] profile, which **SHALL** be further
+  constrained as follows:
 
-- the relevant **Practitioner** resource, which **SHALL**
-  include, at the least:
+  - id (required)
 
-  - id
+  - organization = organization.id, required if known
 
-  - identifier
+  - specialty = required if known
 
-  - name
+- the relevant **Location** resource, based on the CPGLocation[^4]
+  profile, which **SHALL** be further constrained as follows:
 
-- the relevant **PractitionerRole** resource, which
-  **SHALL** include, at the least:
+  - id (required)
 
-  - id
+  - identifier, required if known
 
-  - practitioner = practitioner.id
+  - address, required if known
 
-  - organization = organization.id
-
-  - specialty = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/valueset-c80-practice-codes.html>
-
-- the relevant **Location** resource, which **SHALL**
-  include, at the least:
-
-  - id
-
-  - identifier
-
-  - name
-
-  - address, if known
-
-  - position, if known
-
-  - managingOrganization = organization.id
-
-  - type = if known, one or more CodeableConcept values from
-    <https://hl7.org/fhir/R4/v3/ServiceDeliveryLocationRoleType/vs.html>
+  - position, required if known
 
   - physicalType = if known, one or more CodeableConcept values from
     <https://hl7.org/fhir/R4/valueset-location-physical-type.html>
+    (preferred)
 
-- the relevant **Organization** resource, if applicable, which **SHALL**
-  include, at the least:
+- the relevant **Organization** resource, based on the CPGOrganization
+  profile, which **SHALL** be further constrained as follows:
 
-  - id
+  - id (required)
 
-  - identifier, if known
+  - address, required if known
 
-  - name
+  - telecom, required if known
 
-  - address, if known
+- the patient’s **IPS document**, which **SHALL** include all content
+  defined in the FHIR IPS content model[^5] and *available* to the
+  Guideline Performer. For clarity, this means the FHIR IPS profile
+  **SHALL** be further constrained[^6] as follows:
 
-  - telecom, if known
+  - Composition.section:sectionProceduresHx, required if known
 
-- the patient’s **IPS document**, which **SHALL** include all the content
-  defined in the FHIR IPS content model which is available to the Guideline
-  Performer.
+  - Composition.section:sectionImmunizations, required if known
 
-- **all** resources which reference the present Encounter.
+  - Composition.section:sectionMedicalDevices, required if known
 
+  - Composition.section:sectionResults, required if known
 
+  - Composition.section:sectionVitalSigns, required if known
+
+  - Composition.section:sectionPastIllness, required if known
+
+  - Composition.section:sectionFunctionalStatus, required if known
+
+  - Composition.section:sectionPlanOfCare, **required**
+
+- **All** resources which reference the present Encounter (e.g. which
+  may have been created by the Guideline Performer as the result of
+  processing CARDs returned by the Guideline Engine as part of an Apply
+  Guidelines transaction response).
+
+**Footnotes**
+
+[^1]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-encounter.html>
+
+[^2]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-practitioner.html>
+
+[^3]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-practitionerrole.html>
+
+[^4]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-location.html>
+
+[^5]: <https://hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html>
+
+[^6]: These constraints support the FHIR **Complete** option, as defined
+    by the IHE IPS Profile.
