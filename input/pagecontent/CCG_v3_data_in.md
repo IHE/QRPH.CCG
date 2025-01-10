@@ -1,4 +1,3 @@
-## CCG Contextual Content Bundle
 
 This content model defines the **data** input (“data-in”) bundle that is
 passed as part of the Apply Guideline transaction submission. This
