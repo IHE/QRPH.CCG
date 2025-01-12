@@ -12,6 +12,7 @@ denote the specific CCG. The transaction response is the CCG package
 | Guideline Publisher | Optionally, queries for a CCG to be downloaded and ingested |
 | Guideline Engine | Queries for a CCG to be downloaded and ingested |
 | Guideline Repository | Responds with the CCG package that meets the query criteria |
+{:.grid}
 
 ### Referenced standard(s)
 

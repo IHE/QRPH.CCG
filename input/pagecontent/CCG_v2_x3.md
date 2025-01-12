@@ -10,6 +10,7 @@ response returns a confirmation or an exception message.
 |----|----|
 | Guideline Publisher | Submits a well-formed CCG package to be persisted and catalogued by the Guideline Repository |
 | Guideline Repository | Persists and catalogues the submitted CCG package or returns an exception message indicating the reason for rejecting the submission. |
+{:.grid}
 
 ### Referenced standard(s)
 
@@ -88,6 +89,7 @@ correspond to the http-status-codes defined by NPM:
 |----|----|
 | 417 | A CCG whose digital signatures do not match the signed content will return 417 EXPECTATION_FAILED |
 | 500 | All other exception conditions will return 500 INTERNAL_SERVER_ERROR |
+{:.grid}
 
 #### Expected Actions - Responder
 

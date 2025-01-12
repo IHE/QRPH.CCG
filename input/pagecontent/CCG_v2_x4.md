@@ -13,6 +13,7 @@ the relevant CCGs.
 |----|----|
 | Guideline Performer | Submits a well-formed contextual content bundle to the Guideline Engine and invokes the CPGPlanDefinitionApply operation. |
 | Guideline Engine | Executes the CPGPlanDefinitionApply operation on the submitted content bundle and returns a bundle of Request resources, one for each of the relevant CCG CARDs that has fired true. |
+{:.grid}
 
 ### Referenced standard(s)
 

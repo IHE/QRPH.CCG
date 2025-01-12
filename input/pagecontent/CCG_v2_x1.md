@@ -12,6 +12,7 @@ meet the search criteria.
 | Guideline Publisher | Optionally, queries for a CCG to be updated and re-published |
 | Guideline Engine | Queries for new or updated CCGs |
 | Guideline Repository | Responds with a list of CCGs that meet the query criteria |
+{:.grid}
 
 ### Referenced standard(s)
 
