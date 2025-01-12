@@ -85,8 +85,9 @@ The transaction result returned by the Guideline Repository **SHALL**
 correspond to the http-status-codes defined by NPM:
 <https://www.npmjs.com/package/http-status-codes>.
 
-| 200 | A successful submission will return 200 OK. |
+| Result | Conditions |
 |----|----|
+| 200 | A successful submission will return 200 OK. |
 | 417 | A CCG whose digital signatures do not match the signed content will return 417 EXPECTATION_FAILED |
 | 500 | All other exception conditions will return 500 INTERNAL_SERVER_ERROR |
 {:.grid}
