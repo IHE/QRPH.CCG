@@ -91,6 +91,7 @@ The *new* CCG actors and their transactions are listed in Table 1 and further de
 | Guideline Engine | X1: Search for Guidelines \[as originator\] | R |
 |  | X2: Retrieve Guideline \[as originator\] | R Note-3 |
 |  | X4: Apply Guideline \[as responder\] | R Note-2 |
+{:.grid}
 
 Table 1 - CCG Actors and Transactions
 
