@@ -2,7 +2,7 @@ Profile: CCG_Data_In_Encounter
 Parent: cpg-encounter
 Id: ccg-di-encounter
 Title: "CCG Data-In Bundle Encounter"
-Description: "Identifies the Encounter to which the CCG Query is relevant."
+Description: "Identifies the Encounter to which the CCG Apply Guideline transaction is relevant."
 * id 1..1
 * status = #in-progress (exactly)
 * period.start 1..1
@@ -13,7 +13,7 @@ Profile: CCG_Data_In_Practitioner
 Parent: cpg-practitioner
 Id: ccg-di-practitioner
 Title: "CCG Data-In Bundle Practitioner"
-Description: "Identifies the Practitioner initiating the CCG Query"
+Description: "Identifies the Practitioner initiating the CCG Apply Guideline transaction"
 * id 1..1
 * address MS
 
@@ -61,7 +61,7 @@ Profile: CCG_IPS_Bundle
 Parent: Bundle
 Id: ccg-di-ips-bundle
 Title: "CCG IPS Bundle"
-Description: "This bundle follows the IPS Bundle with the Exception of using the CPG Composition"
+Description: "This bundle follows the IPS Bundle with the exception of using the CCG Composition"
 * ^version = "1.1.0"
 * ^date = "2024-06-19T10:50:07-05:00"
 * ^publisher = "HL7 International / Patient Care"
