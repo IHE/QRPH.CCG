@@ -66,21 +66,15 @@ The data-in bundle **SHALL** be composed of:
   Guideline Performer. For clarity, this means the FHIR IPS profile
   **SHALL** be further constrained[^6] as follows:
 
-  - Composition.section:sectionProceduresHx, required if known
-
-  - Composition.section:sectionImmunizations, required if known
-
-  - Composition.section:sectionMedicalDevices, required if known
-
-  - Composition.section:sectionResults, required if known
-
-  - Composition.section:sectionVitalSigns, required if known
-
-  - Composition.section:sectionPastIllness, required if known
-
-  - Composition.section:sectionFunctionalStatus, required if known
+  - all sections are MUST SUPPORT (required, or required if known)
 
   - Composition.section:sectionPlanOfCare, **required**
+   - at least **one** CarePlan.instantiatesCanonical.PlanDefintion reference must exist and this referenced PlanDefinition **SHALL** be further constrained as follows:
+     - id (required)
+     - identifier (required, same as patient identifier)
+     - type = order-set
+     - status = active
+     - zero or more action.definitionCanonical.planDefinition entries will be used to reference applicable CCG Folders
 
 - **All** resources which reference the present Encounter (e.g. which
   may have been created by the Guideline Performer as the result of
