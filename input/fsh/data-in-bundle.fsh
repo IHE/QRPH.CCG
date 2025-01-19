@@ -40,7 +40,7 @@ Description: "Location of the Encounter in the Data-in Bundle"
 Profile: CCG_Data_In_Organization 
 Parent: cpg-organization
 Id: ccg-di-organization
-Title: "CCG Data-In Bundle PractitionerRole"
+Title: "CCG Data-In Bundle Organization"
 Description: "Organization relevant to the current Encounter"
 * id 1..1
 * address MS
