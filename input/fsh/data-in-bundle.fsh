@@ -57,6 +57,20 @@ Description: "IPS Composition Resource Profiled for use with CCG"
 * section[sectionFunctionalStatus] MS
 * section[sectionPlanOfCare] 1..1
 
+Profile: CCG_Data_In_IPS_CarePlan
+Parent: CarePlan
+Id: ccg-data-in-ips-careplan
+Title: "CCG Data-In Bundle IPS CarePlan Specific Resource"
+Description: "This is a CarePlan profile that forces at least one of the activity.definitionCanonical to be a CARD Folder"
+* activity.detail.instantiatesCanonical 1..*
+* activity.detail.instantiatesCanonical ^slicing.discriminator[0].type = #type
+* activity.detail.instantiatesCanonical ^slicing.discriminator[=].path = "$this"
+* activity.detail.instantiatesCanonical ^slicing.rules = #open
+* activity.detail.instantiatesCanonical contains
+    folder 1..*
+* activity.detail.instantiatesCanonical[folder] only Canonical(ccg-card-folder)
+
+
 Profile: CCG_IPS_Bundle
 Parent: Bundle
 Id: ccg-di-ips-bundle
@@ -115,7 +129,7 @@ Description: "This bundle follows the IPS Bundle with the exception of using the
     observation-vital-signs 0..* and
     specimen 0..* and
     clinicalimpression 0..* and
-    careplan 0..* and
+    careplan 1..* and
     consent 0..* and
     documentreference 0..*
 * entry[composition].resource 1..
@@ -171,7 +185,7 @@ Description: "This bundle follows the IPS Bundle with the exception of using the
 * entry[clinicalimpression].resource 1..
 * entry[clinicalimpression].resource only ClinicalImpression
 * entry[careplan].resource 1..
-* entry[careplan].resource only CarePlan
+* entry[careplan].resource only CCG_Data_In_IPS_CarePlan
 * entry[consent].resource 1..
 * entry[consent].resource only Consent
 * entry[documentreference].resource 1..

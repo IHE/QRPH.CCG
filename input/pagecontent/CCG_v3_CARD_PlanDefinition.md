@@ -40,7 +40,7 @@ CPGComputablePlanDefinition[^1] profile with the following constraints:
 
   - kind = applicability
 
-- action.definition.ActivityDefinition.url = UUID of the CARD’s
+- action.definition.ActivityDefinition.definitionCanonical = Canonical of the CARD’s
   ActivityDefinition
 
 If changes are made to a *published* CARD’s PlanDefinition, before the
