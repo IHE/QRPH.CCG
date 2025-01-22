@@ -27,7 +27,7 @@ RuleSet: CCG_CARD_ActivityDefinition(adtopic)
 * date 1..1
 * publisher 1..1
 * topic from ccg-card-type
-* topic = #{adtopic} (exactly)
+* topic = ccg-card-type-cs#{adtopic} (exactly)
 
 Profile: CCG_CARD_Library
 Parent: cql-library
