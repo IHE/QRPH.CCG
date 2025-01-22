@@ -1,7 +1,5 @@
 == Suppressed Messages ==
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
-# IHE valueset that is not yet a real valueset
-Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
 
 # referring to our own CodeSystem
 %Reference to draft CodeSystem%
@@ -12,5 +10,5 @@ Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be valid
 # This is a necessary constraint
 %For the complex type CodeableConcept, consider using a pattern rather than a fixed value%
 
-#yet, just reducing noise during development
+# yet, just reducing noise during development
 %The Implementation Guide contains no examples for this profile%
