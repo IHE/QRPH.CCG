@@ -9,14 +9,14 @@ Description: "Profile to serve as the basis for all CARD PlanDefinitions based o
 * name 1..1
 * text 1..1
 * title 1..1
-* type = #eca-rule (exactly)
+* type = http://terminology.hl7.org/CodeSystem/plan-definition-type#eca-rule (exactly)
 * date 1..1
 * publisher 1..1
 * relatedArtifact 1..
 * action
   * trigger 0..0
   * condition 1..
-    * kind = #applicability (exactly)
+    * kind = http://hl7.org/fhir/action-condition-kind#applicability (exactly)
      
 RuleSet: CCG_CARD_ActivityDefinition(adtopic)
 * id 1..1
