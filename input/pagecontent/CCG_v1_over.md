@@ -319,7 +319,7 @@ below:
     a patient to another care provider (e.g. perhaps to escalate to a
     higher level of care)
 
-7.  **Propose a Diagnosis** – record the patient’s diagnosis as a
+7.  **Propose a Diagnosis** – record the patient&apos;s diagnosis as a
     Condition resource
 
 8.  **Order Medication** – create a medication order (MedicationRequest)
@@ -333,7 +333,8 @@ below:
 11. **Request Immunization** – create a vaccination order
     (ImmunizationRequest)
 
-12. **Stop Activity** – create a task to stop a present care activity.
+12. **Stop Activity (Medication Order)** - create a Task that, upon being processed, will stop a patient&apos;s presently active MedicationRequest
+13. **Stop Activity (Service Order)**  - create a Task that, upon being processed, will stop a patient&apos;s presently active ServiceRequest
 
 ### Stack-of-CARDs Processing Metaphor
 
