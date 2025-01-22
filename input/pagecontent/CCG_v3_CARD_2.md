@@ -40,7 +40,7 @@ on the CPGCollectInformation[^2] profile with the following constraints:
 
 - publisher = name of the CARD publisher, required
 
-The recommended **Action** from this CARD **SHALL** be a Task resource
+The **Action** recommendation from this CARD **SHALL** be a Task resource
 based on the CPGQuestionnaireTask[^3] profile. If the CARD is
 applicable, this resource **SHALL** be returned from the Guideline
 Engine to the Guideline Performer in the Apply Guidelines transaction

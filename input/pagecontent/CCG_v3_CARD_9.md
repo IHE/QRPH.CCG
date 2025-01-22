@@ -33,7 +33,7 @@ constraints:
 
 - publisher = name of the CARD publisher, required
 
-The recommended **Action** from this CARD **SHALL** be a Task resource
+The **Action** recommendation from this CARD **SHALL** be a Task resource
 based on the CPGDispenseMedicationTask [^2] profile. If the CARD is
 applicable, this resource **SHALL** be returned from the Guideline
 Engine to the Guideline Performer in the Apply Guidelines transaction
