@@ -21,7 +21,7 @@ This guide is organized into the following sections:
    1. [QRPH-X3 - Publish Guidelines](CCG_v2_x3.html)
    1. [QRPH-X4 - Apply Guidelines](CCG_v2_x4.html)
 3. Volume 3: Metadata and Content
-   1. [Content One](domain-ZZ.html)
+   1. [Content One](CCG_v3_launch.html)
 4. Volume 4: National Extensions
    1. **TODO: point at the National Extensions if there are any**
 5. Other
