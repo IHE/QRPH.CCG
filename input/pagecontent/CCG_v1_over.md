@@ -297,7 +297,7 @@ more-flexible CPG-on-FHIR specification may be summarized as follows:
   PlanDefinition will act as a container and reference the full set of
   relevant CARDs.
 
-The set of **12 CARD *types*** defined by the IHE CCG Profile is listed
+The set of **13 CARD *types*** defined by the IHE CCG Profile is listed
 below:
 
 1.  **Provide Information** – provide information, counselling, or
@@ -330,10 +330,11 @@ below:
 10. **Administer Medication** – administer a dispensed medication
     (MedicationAdministration)
 
-11. **Request Immunization** – create a vaccination order
-    (ImmunizationRequest)
+11. **Request Immunization** – create a vaccination order and administer the vaccine
+    (recorded as an Immunization resource)
 
 12. **Stop Activity (Medication Order)** - create a Task that, upon being processed, will stop a patient&apos;s presently active MedicationRequest
+
 13. **Stop Activity (Service Order)**  - create a Task that, upon being processed, will stop a patient&apos;s presently active ServiceRequest
 
 ### Stack-of-CARDs Processing Metaphor

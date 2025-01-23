@@ -83,7 +83,7 @@ Description: "The role of this type of CCG CARD is to provide information, couns
 * action 1..
 * action.definitionCanonical only Canonical(ccg-card-provide-ad)
 
-Profile: CCB_Provide_Info_Activity
+Profile: CCG_Provide_Info_Activity
 Parent: cpg-communicationactivity
 Id: ccg-card-provide-ad
 Title: "Activity Definition for the Provide Information CARD"
@@ -99,7 +99,7 @@ Description: "The role of this type of CCG CARD is to collect information about 
 * action 1..
 * action.definitionCanonical only Canonical(ccg-card-collect-ad)
 
-Profile: CCB_Collect_Info_Activity
+Profile: CCG_Collect_Info_Activity
 Parent: cpg-collectinformationactivity
 Id: ccg-card-collect-ad
 Title: "Activity Definition for the Collect Information CARD"
@@ -114,7 +114,7 @@ Description: "The role of this type of CCG CARD is to create a laboratory / path
 * action 1..
 * action.definitionCanonical only Canonical(cpg-servicerequestactivity)
 
-Profile: CCB_REquest_Service_Labs_Activity
+Profile: CCG_REquest_Service_Labs_Activity
 Parent: cpg-servicerequestactivity
 Id: ccg-card-reqlabs-ad
 Title: "Activity Definition for the Request a Service (Lab Order) CARD"
@@ -143,7 +143,7 @@ Title: "CCG CARD type - Request a Service (Procedure Order)"
 Description: "The role of this type of CCG CARD is to create a procedure ServiceRequest for the patient."
 * action.definitionCanonical only Canonical(ccg-card-reqprocserv-ad)
 
-Profile: CCB_REquest_Service_Procedure_Activity
+Profile: CCG_Request_Service_Procedure_Activity
 Parent: cpg-servicerequestactivity
 Id: ccg-card-reqprocserv-ad
 Title: "Activity Definition for the Request a Service (Procedure Order) CARD"
@@ -157,7 +157,7 @@ Title: "CCG CARD type - Request a Service (Referral)"
 Description: "The role of this type of CCG CARD is to create a procedure ServiceRequest for the patient."
 * action.definitionCanonical only Canonical(ccg-card-reqrefserv-ad)
 
-Profile: CCB_REquest_Service_Referral_Activity
+Profile: CCG_Request_Service_Referral_Activity
 Parent: cpg-servicerequestactivity
 Id: ccg-card-reqrefserv-ad
 Title: "Activity Definition for the Request a Service (Referral) CARD"
