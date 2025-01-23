@@ -30,8 +30,11 @@ Transaction X4 Apply Guideline is based on the following standards:
 ### Interactions
 
 <figure>
+{% include image15.svg %}
+<!--
 <img src="image17.png" style="height: 100%; width: 100%; object-fit: contain"
  />
+ -->
 <figcaption><p>Figure 17 – X4 Apply Guideline Interaction
 Diagram</p></figcaption>
 </figure>

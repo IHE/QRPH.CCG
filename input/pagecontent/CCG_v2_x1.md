@@ -27,8 +27,11 @@ standards:
 ### Interactions
 
 <figure>
+{% include image14.svg %}
+<!--
 <img src="image14.png" style="height: 100%; width: 100%; object-fit: contain"
  />
+ -->
 <figcaption><p>Figure 14 - X1 Search for Guidelines Interaction
 Diagram</p></figcaption>
 </figure>

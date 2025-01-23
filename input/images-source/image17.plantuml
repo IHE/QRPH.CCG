@@ -1,0 +1,23 @@
+@startuml
+skinparam defaultFontSize        18
+skinparam roundcorner            20
+skinparam Note {
+BackgroundColor LightBlue
+BorderColor Blue
+}
+skinparam Participant {
+FontName Arial
+Style awesome
+BorderColor DeepSkyBlue
+BackgroundColor LightBlue
+}
+participant "Guideline Performer" as a
+Participant "Guideline Engine" as b
+loop until no Request resources returned in\n Apply Guideline Response
+a -> a: Prepare contextual content bundle
+a -> b: Apply Guideline
+b -> b: $apply operation
+b -> a: Apply Guideline Response
+a -> a: Process Request resources\n with human input
+end
+@enduml

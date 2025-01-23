@@ -32,8 +32,11 @@ Transaction X2 Retrieve Guideline is based on the following standards:
 ### Interactions
 
 <figure>
+{% include image15.svg %}
+<!--
 <img src="image15.png" style="height: 100%; width: 100%; object-fit: contain"
  />
+ -->
 <figcaption><p>Figure 15- X2 Retrieve Guideline Interaction
 Diagram</p></figcaption>
 </figure>

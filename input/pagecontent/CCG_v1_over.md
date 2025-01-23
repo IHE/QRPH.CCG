@@ -459,8 +459,11 @@ operationalize an ***ecosystem*** that supports the patient-safe
 execution of CCG-supported care encounters, at scale.
 
 <figure>
+{% include image7.svg %}
+<!--
 <img src="image7.png"
 style="height: 100%; width: 100%; object-fit: contain" />
+-->
 <figcaption><p>Figure 7 - Graphical Depiction of Use Cases 1, 2 & 3</p></figcaption>
 </figure>
 
@@ -488,8 +491,11 @@ Figure 8. From Figure 7 we can note the following:
   subject’s Care Plan **(State-C)**.
 
 <figure>
+{% include image8.svg %}
+<!--
 <img src="image8.png"
 style="height: 100%; width: 100%; object-fit: contain" />
+-->
 <figcaption><p>Figure 8 - Graphical Depiction of a CCG-supported Care
 Encounter</p></figcaption>
 </figure>

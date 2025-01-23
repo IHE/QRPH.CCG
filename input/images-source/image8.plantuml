@@ -1,0 +1,42 @@
+@startuml
+skinparam defaultFontSize        18
+skinparam roundcorner            20
+skinparam Note {
+BackgroundColor LightBlue
+BorderColor Blue
+}
+skinparam Participant {
+FontName Arial
+Style awesome
+BorderColor DeepSkyBlue
+BackgroundColor LightBlue
+}
+
+
+participant "Care Plan Contributor" as cpc
+box #lightCyan
+participant "Guideline Performer" as gf
+participant "Guideline Engine" as ge
+endbox
+participant "Care Plan Service" as cps
+participant "Guideline Publisher" as gp
+participant "Guideline Repository" as gr
+
+note over gr: State-A: Well-formed CCGs exist in \nGuideline Repository
+note over ge: State-B: updated CCGs exist on \nGuideline $apply Engine
+note over cps: State-C: one or more CCGs are \nassociated with a care subject
+==<size 28><color #blue>4.  CCGs inform the course of patient care during an encounter==
+
+
+loop for each CCG-supported care encounter
+ note over cpc,cps: Guideline Performer establishes the necessary contextual pre-conditions to commencing the care encounter
+ note over gf: State-D: Care context expressed in \nCCG-adherent common data model 
+ loop during a CCG-supported care encounter, until x4 response is empty
+  note over gf: Interim updated data, reflecting \nCCG-informed recommendations
+
+  gf -> ge: x4 Apply guideline
+  ge -> gf: x4 response
+ end loop 
+ note over gf: State-E: Encounter results persisted \nper the CCG-adherent data model
+end loop
+@enduml

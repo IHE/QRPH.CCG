@@ -1,0 +1,19 @@
+@startuml
+skinparam defaultFontSize        18
+skinparam roundcorner            20
+skinparam Note {
+BackgroundColor LightBlue
+BorderColor Blue
+}
+skinparam Participant {
+FontName Arial
+Style awesome
+BorderColor DeepSkyBlue
+BackgroundColor LightBlue
+}
+participant "Guideline Publisher\nor Guideline Engine" as a
+Participant "Guideline Repository" as b
+a -> b: Retrieve Guideline
+b -> a: Retrieve Guideline Response
+
+@enduml
