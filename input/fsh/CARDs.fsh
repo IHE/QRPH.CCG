@@ -112,7 +112,7 @@ Id: ccg-card-reqserv-labs
 Title: "CCG CARD type - Request a Service (Lab Order)"
 Description: "The role of this type of CCG CARD is to create a laboratory / pathology ServiceRequest for the patient."
 * action 1..
-* action.definitionCanonical only Canonical(cpg-servicerequestactivity)
+* action.definitionCanonical only Canonical(ccg-card-reqlabs-ad)
 
 Profile: CCG_REquest_Service_Labs_Activity
 Parent: cpg-servicerequestactivity
@@ -129,10 +129,10 @@ Description: "The role of this type of CCG CARD is to create a laboratory / path
 * action 1..
 * action.definitionCanonical only Canonical(ccg-card-reqradserv-ad)
 
-Profile: CCG_Request_Service_Labs_Activity
+Profile: CCG_Request_Service_Rad_Activity
 Parent: cpg-servicerequestactivity
 Id: ccg-card-reqradserv-ad
-Title: "Activity Definition for the Request a Service (Lab Order) CARD"
+Title: "Activity Definition for the Request a Service (Radiology Order) CARD"
 Description: "Simple profile to inherit the base and set topic to the appropriate CARD"
 * insert CCG_CARD_ActivityDefinition(reqrad)
 
@@ -176,7 +176,7 @@ Parent: cpg-proposediagnosisactivity
 Id: ccg-card-proposedx-ad
 Title: "Activity Definition for the Propose a Diagnosis CARD"
 Description: "Simple profile to inherit the base and set topic to the appropriate CARD"
-* insert CCG_CARD_ActivityDefinition(reqproc)
+* insert CCG_CARD_ActivityDefinition(propdx)
 
 Profile: CCG_Order_Medication
 Parent: ccg-card-pd-base
