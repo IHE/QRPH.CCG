@@ -29,7 +29,7 @@ Description: "Role of the Practitioner in the Data-in Bundle"
 Profile: CCG_Data_In_Location 
 Parent: cpg-location
 Id: ccg-di-location
-Title: "CG Data-In Bundle Location"
+Title: "CCG Data-In Bundle Location"
 Description: "Location of the Encounter in the Data-in Bundle"
 * id 1..1
 * identifier MS
