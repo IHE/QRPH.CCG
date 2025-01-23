@@ -81,59 +81,8 @@ pages:
   CCG_v2_x4.md:
     title: 2:3.X4 Apply Guideline [QRPH-X4]
     generation: markdown
-  CCG_v3_IG.md:
-    title: CCG Deployment Package (IG)
-    generation: markdown
-  CCG_v3_data_in.md:
-    title: CCG Contextual Content Bundle
-    generation: markdown
-  CCG_v3_folder.md:
-    title: CCG Folder 
-    generation: markdown
-  CCG_v3_CARD_PlanDefinition.md:
-    title: CCG CARD PlanDefinition
-    generation: markdown
-  CCG_v3_CARD_dsig.md:
-    title: CCG CARD Digital Signature
-    generation: markdown
-  CCG_v3_CARD_1.md:
-    title: CCG CARD type - Provide Information
-    generation: markdown
-  CCG_v3_CARD_2.md:
-    title: CCG CARD type - Collect Information
-    generation: markdown
-  CCG_v3_CARD_3.md:
-    title: CCG CARD type - Request a Service (Lab Order)
-    generation: markdown
-  CCG_v3_CARD_4.md:
-    title: CCG CARD type - Request a Service (Radiology Order)
-    generation: markdown
-  CCG_v3_CARD_5.md:
-    title: CCG CARD type - Request a Service (Procedure Order)
-    generation: markdown
-  CCG_v3_CARD_6.md:
-    title: CCG CARD type - Request a Service (Referral)
-    generation: markdown
-  CCG_v3_CARD_7.md:
-    title: CCG CARD type - Propose a Diagnosis
-    generation: markdown
-  CCG_v3_CARD_8.md:
-    title: CCG CARD type - Order Medication
-    generation: markdown
-  CCG_v3_CARD_9.md:
-    title: CCG CARD type - Dispense Medication
-    generation: markdown
-  CCG_v3_CARD_10.md:
-    title: CCG CARD type - Administer Medication
-    generation: markdown
-  CCG_v3_CARD_11.md:
-    title: CCG CARD type - Request Immunization
-    generation: markdown
-  CCG_v3_CARD_12_med.md:
-    title: CCG CARD type - Stop Activity (Medication Order)
-    generation: markdown
-  CCG_v3_CARD_12_svc.md:
-    title: CCG CARD type - Stop Activity (Service Order)
+  CCG_v3_launch.md:
+    title: CCG Content Specifications
     generation: markdown
   CCG_v4.md:
     title: Jurisdictional Contextualizations
@@ -160,25 +109,7 @@ menu:
     "Retrieve Guideline [QRPH-X2]": CCG_v2_x2.html
     "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
     "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
-  Vol-3 - Content:
-    "CCG Deployment Package (IG)": CCG_v3_IG.html
-    "CCG Contextual Content Bundle": CCG_v3_data_in.html
-    "CCG Folder": CCG_v3_folder.html
-    "CCG CARD Common PlanDefinition": CCG_v3_CARD_PlanDefinition.html
-    "CCG CARD Common Digital Signature": CCG_v3_CARD_dsig.html
-    "CCG CARD type - Provide Information": CCG_v3_CARD_1.html
-    "CCG CARD type - Collect Information": CCG_v3_CARD_2.html
-    "CCG CARD type - Request a Service (Lab Order)": CCG_v3_CARD_3.html
-    "CCG CARD type - Request a Service (Radiology Order)": CCG_v3_CARD_4.html
-    "CCG CARD type - Request a Service (Procedure Order)": CCG_v3_CARD_5.html
-    "CCG CARD type - Request a Service (Referral)": CCG_v3_CARD_6.html
-    "CCG CARD type - Propose a Diagnosis": CCG_v3_CARD_7.html
-    "CCG CARD type - Order Medication": CCG_v3_CARD_8.html
-    "CCG CARD type - Dispense Medication": CCG_v3_CARD_9.html
-    "CCG CARD type - Administer Medication": CCG_v3_CARD_10.html
-    "CCG CARD type - Request Immunization": CCG_v3_CARD_11.html
-    "CCG CARD type - Stop Activity (Medication Order)": CCG_v3_CARD_12_med.html
-    "CCG CARD type - Stop Activity (Service Order)": CCG_v3_CARD_12_svc.html  
+  Vol-3 - Content: CCG_v3_launch.html
   Vol-4 - Contextualizations: CCG_v4.html
   Artifacts: artifacts.html
   Other:
