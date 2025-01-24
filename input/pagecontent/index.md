@@ -23,7 +23,7 @@ This guide is organized into the following sections:
 3. Volume 3: Metadata and Content
    1. [CCG Content Specs](CCG_v3_launch.html)
 4. Volume 4: National Extensions
-   1. [Jurisdictional Contextualizations] (CCG_v4.html)
+   1. [Jurisdictional Contextualizations](CCG_v4.html)
 5. Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
