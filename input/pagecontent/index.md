@@ -16,10 +16,10 @@ This guide is organized into the following sections:
    1. [Business Description](CCG_v1_over.html)
    1. [Actors](CCG_v1_actor.html)
 2. Volume 2: Transaction Detail
-   1. [QRPH-X1 - Search for Guidelines](CCG_v2_x1.html)
-   1. [QRPH-X2 - Retrieve Guideline](CCG_v2_x2.html)
-   1. [QRPH-X3 - Publish Guidelines](CCG_v2_x3.html)
-   1. [QRPH-X4 - Apply Guidelines](CCG_v2_x4.html)
+   1. [QRPH-61 - Search for Guidelines](CCG_v2_x1.html)
+   1. [QRPH-62 - Retrieve Guideline](CCG_v2_x2.html)
+   1. [QRPH-63 - Publish Guidelines](CCG_v2_x3.html)
+   1. [QRPH-64 - Apply Guidelines](CCG_v2_x4.html)
 3. Volume 3: Metadata and Content
    1. [Content One](CCG_v3_launch.html)
 4. Volume 4: National Extensions
