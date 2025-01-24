@@ -1,5 +1,5 @@
 @startuml
-skinparam defaultFontSize        18
+skinparam defaultFontSize        14
 skinparam roundcorner            20
 skinparam Note {
 BackgroundColor LightBlue
@@ -11,20 +11,20 @@ Style awesome
 BorderColor DeepSkyBlue
 BackgroundColor LightBlue
 }
-participant "Care Plan Contributor" as cpc
-participant "Guideline Performer" as gf
-participant "Guideline Engine" as ge
-participant "Care Plan Service" as cps
-participant "Guideline Publisher" as gp
-participant "Guideline Repository" as gr
+participant "Care Plan\n Contributor" as cpc
+participant "Guideline\n Performer" as gf
+participant "Guideline\n Engine" as ge
+participant "Care Plan\n Service" as cps
+participant "Guideline\n Publisher" as gp
+participant "Guideline\n Repository" as gr
 
-==<size 28><color #155b2e>1. CCGs are published==
+==<size 18><color #155b2e>1. CCGs are published==
 
 loop during CCG authoring
-  note left of cps #EBF1DE
-<size 24>•   A Guideline Publisher may support x1, x2
-<size 24>•   A Guideline Publisher may support a digitally signed
-   <size 24>   x3 payload (whole CCG, or reach CARD)
+  note left of gp #EBF1DE
+<size 16>•   A Guideline Publisher may support x1, x2
+<size 16>•   A Guideline Publisher may support a digitally signed
+   <size 16>   x3 payload (whole CCG, or reach CARD)
 end note
  opt if updating an existing CCG
   gp -> gr: x1 Search for Guidelines
@@ -37,14 +37,15 @@ end note
  gr -> gp: x3 response
 end loop
 note over gr #EBF1DE: <size 18>State-A: Well-formed CCGs exist in \n<size 18>Guideline Repository
-==<size 28><color #e98023> 2. Guideline Engines regularly refresh their local cache of published CCGs. ==
+==<size 18><color #e98023> 2. $apply Engines regularly refresh\n<size 18><color #e98023>their local cache of published CCGs. ==
 
 loop for each CCG refresh cycle
  ge -> gr: x1 Search for Guideline
  gr -> ge: x1 response
- note left of ge #FFE7B7
- <size 24>A Guideline $apply Engine may support that only
- <size 24> “trusted” CCG artefacts are available for execution.
+ note left of cps #FFE7B7
+ <size 16>A Guideline $apply Engine may support
+ <size 16>  that only “trusted” CCG artefacts
+ <size 16>  are available for execution.
 end note
  loop for every Guideline in need of refresh
   ge -> gr: x2 Retrieve Guideline
@@ -52,7 +53,7 @@ end note
  end loop for Guideline refresh 
 end loop for refresh cycle
 note over ge #FFE7B7: <size 18>State-B: updated CCGs exist on \n<size 18>Guideline $apply Engine
-==<size 28><color #e94a23>3. Providers associate Patients with relevant CCGs ==
+==<size 18><color #e94a23>3. Providers associate Patients with relevant CCGs ==
 loop for every update of a person's care plan
  cpc -> cps: PCC-41 Search for Care Plan
  cps -> cpc: PCC-41 response
@@ -61,5 +62,5 @@ loop for every update of a person's care plan
  cpc -> cps: PCC-37 Update Care Plan
  cps -> cpc: PCC-37 response
 end loop
-note over cps #e94a23: <size 18>State-C: one or more CCGs are \n<size 18>associated with a care subject
+note over cps #e94a23: <size 14>State-C: one or more CCGs are \n<size 14>associated with a care subject
 @enduml
