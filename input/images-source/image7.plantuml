@@ -37,7 +37,7 @@ end note
  gr -> gp: x3 response
 end loop
 note over gr #EBF1DE: <size 18>State-A: Well-formed CCGs exist in \n<size 18>Guideline Repository
-==<size 28><color #e98023> 2. $apply Engines regularly refresh their local cache of published CCGs. ==
+==<size 28><color #e98023> 2. Guideline Engines regularly refresh their local cache of published CCGs. ==
 
 loop for each CCG refresh cycle
  ge -> gr: x1 Search for Guideline
