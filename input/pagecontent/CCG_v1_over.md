@@ -247,7 +247,7 @@ described by a **CARD**. This metaphor is illustrated in Figure 4.
 
 <figure>
 <img src="image4.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="width: 75%; object-fit: contain" />
 <figcaption><p>Figure 4 - Folder-and-CARDs Metaphor</p></figcaption>
 </figure>
 
@@ -655,7 +655,7 @@ System[^21] (LHS) strategy.
 
 <figure>
 <img src="image10.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="width: 70%; object-fit: contain" />
 <figcaption><p>Figure 10 - Learning Health System</p></figcaption>
 </figure>
 
@@ -699,7 +699,7 @@ four** of the key use cases IHE CCG Profile:
 
 <figure>
 <img src="image11.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="width: 80%; object-fit: contain" />
 <figcaption><p>Figure 11 - Analyses of Data Outside the "Green
 Zone"</p></figcaption>
 </figure>
@@ -733,7 +733,7 @@ will fund her plans to implement a new EMR.
 
 <figure>
 <img src="image12.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="width: 80%; object-fit: contain" />
 <figcaption><p>Figure 12 - Reducing Cognitive Load</p></figcaption>
 </figure>
 

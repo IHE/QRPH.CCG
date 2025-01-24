@@ -21,9 +21,9 @@ This guide is organized into the following sections:
    1. [QRPH-63 - Publish Guidelines](CCG_v2_x3.html)
    1. [QRPH-64 - Apply Guidelines](CCG_v2_x4.html)
 3. Volume 3: Metadata and Content
-   1. [Content One](CCG_v3_launch.html)
+   1. [CCG Content Specs](CCG_v3_launch.html)
 4. Volume 4: National Extensions
-   1. **TODO: point at the National Extensions if there are any**
+   1. [Jurisdictional Contextualizations] (CCG_v4.html)
 5. Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
