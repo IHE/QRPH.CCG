@@ -28,7 +28,7 @@ license:  CC-BY-4.0
 fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 #copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
-copyrightYear: 2024+
+copyrightYear: 2025+
 dependencies: 
   hl7.fhir.uv.cpg: 2.0.0
   hl7.fhir.uv.ips: 1.1.0
@@ -70,16 +70,16 @@ pages:
     title: "Volume-1: Actors"
     generation: markdown
   CCG_v2_x1.md:
-    title: 2:3.X1 Search for Guidelines [QRPH-X1]
+    title: 2:3.61 Search for Guidelines [QRPH-61]
     generation: markdown
   CCG_v2_x2.md:
-    title: 2:3.X2 Retrieve Guideline [QRPH-X2]
+    title: 2:3.62 Retrieve Guideline [QRPH-62]
     generation: markdown
   CCG_v2_x3.md:
-    title: 2:3.X3 Publish Guideline [QRPH-X3]
+    title: 2:3.63 Publish Guideline [QRPH-63]
     generation: markdown
   CCG_v2_x4.md:
-    title: 2:3.X4 Apply Guideline [QRPH-X4]
+    title: 2:3.64 Apply Guideline [QRPH-64]
     generation: markdown
   CCG_v3_launch.md:
     title: CCG Content Specifications
@@ -105,10 +105,10 @@ menu:
   Vol-1 - Business Description: CCG_v1_over.html
   Vol-1 - Actors: CCG_v1_actor.html
   Vol-2 - Transactions:
-    "Search for Guidelines [QRPH-X1]": CCG_v2_x1.html
-    "Retrieve Guideline [QRPH-X2]": CCG_v2_x2.html
-    "Publish Guideline [QRPH-X3]": CCG_v2_x3.html
-    "Apply Guideline [QRPH-X4]": CCG_v2_x4.html
+    "Search for Guidelines [QRPH-61]": CCG_v2_x1.html
+    "Retrieve Guideline [QRPH-62]": CCG_v2_x2.html
+    "Publish Guideline [QRPH-63]": CCG_v2_x3.html
+    "Apply Guideline [QRPH-64]": CCG_v2_x4.html
   Vol-3 - Content: CCG_v3_launch.html
   Vol-4 - Contextualizations: CCG_v4.html
   Artifacts: artifacts.html
