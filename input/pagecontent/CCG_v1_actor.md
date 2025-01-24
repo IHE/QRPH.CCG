@@ -6,7 +6,7 @@ to satisfy four use cases:
 1.  **UC-1 (Green)**: A person who is a guideline *author* uses a digital health
     tool (which plays the role of a **CCG Publisher** actor) to retrieve
     and edit an existing CCG or to create a brand-new CCG
-    (L3)[<sup>1</sup>](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v1_over.html#fn:1) artefact.
+    (L3)[<sup>1</sup>](CCG_v1_over.html#fn:1) artefact.
     Maybe she digitally signs the artefact (at the top level, or every
     recommendation). She then **publishes the CCG (L3) artefact** to
     a **CCG Repository** actor.
@@ -82,15 +82,15 @@ The *new* CCG actors and their transactions are listed in Table 1 and further de
 
 | **Actor** | **Transaction** | **Optionality** |
 |----|----|----|
-| Guideline Publisher | X1: Search for Guidelines \[as originator\] | O |
-|  | X2: Retrieve Guideline \[as originator\] | O |
-|  | X3: Publish Guideline \[as originator\] | R Note-1 |
-| Guideline Repository | X1: Search for Guidelines \[as responder\] | R |
-|  | X2: Retrieve Guideline \[as responder\] | R |
-| Guideline Performer | X4: Apply Guideline \[as originator\] | R Note-2 |
-| Guideline Engine | X1: Search for Guidelines \[as originator\] | R |
-|  | X2: Retrieve Guideline \[as originator\] | R Note-3 |
-|  | X4: Apply Guideline \[as responder\] | R Note-2 |
+| Guideline Publisher | QRPH-61: Search for Guidelines \[as originator\] | O |
+|  | QRPH-62: Retrieve Guideline \[as originator\] | O |
+|  | QRPH-63: Publish Guideline \[as originator\] | R Note-1 |
+| Guideline Repository | QRPH-61: Search for Guidelines \[as responder\] | R |
+|  | QRPH-62: Retrieve Guideline \[as responder\] | R |
+| Guideline Performer | QRPH-64: Apply Guideline \[as originator\] | R Note-2 |
+| Guideline Engine | QRPH-61: Search for Guidelines \[as originator\] | R |
+|  | QRPH-62: Retrieve Guideline \[as originator\] | R Note-3 |
+|  | QRPH-64: Apply Guideline \[as responder\] | R Note-2 |
 {:.grid}
 
 Table 1 - CCG Actors and Transactions
@@ -98,12 +98,12 @@ Table 1 - CCG Actors and Transactions
 Note-1: there are options for digitally signed CCGs (see below).
 
 Note-2: a Guideline Performer that is **grouped** with its own internal
-Guideline Engine need not support transaction X4 as an originator nor as
+Guideline Engine need not support transaction QRPH-64 as an originator nor as
 a responder; it will be conformance tested as a single grouped entity
-(see below). Otherwise X4 support **<u>is</u>** required by both actors.
+(see below). Otherwise QRPH-64 support **<u>is</u>** required by both actors.
 
 Note-3: a Guideline Engine that supports the Trusted CCG option will
-evaluate CCGs returned by transaction X2 to ensure the artefacts are
+evaluate CCGs returned by transaction QRPH-62 to ensure the artefacts are
 signed by trusted parties and that they have not been tampered with (see
 below).
 
@@ -119,19 +119,19 @@ are out of scope for this IHE Profile.
 Normatively, a Guideline Publisher actor:
 
 1.  **MAY** be able to submit a query to a Guideline Repository actor
-    using X1: Search for Guideline \[as originator\]; and
+    using QRPH-61: Search for Guideline \[as originator\]; and
 
 2.  **MAY** be able to submit a query to a Guideline Repository actor
-    using X2: Retrieve Guideline \[as originator\]; and
+    using QRPH-62: Retrieve Guideline \[as originator\]; and
 
 3.  **SHALL** be able to submit a well-formed CCG payload to a Guideline
-    Repository actor using X3: Publish Guideline \[as originator\];
+    Repository actor using QRPH-63: Publish Guideline \[as originator\];
 
-    1.  The well-formed CCG payload submitted using transaction X3
+    1.  The well-formed CCG payload submitted using transaction QRPH-63
         **MAY** adhere to the stipulations of the Digitally Signed
         Folder option.
 
-    2.  The well-formed CCG payload submitted using transaction X3
+    2.  The well-formed CCG payload submitted using transaction QRPH-63
         **MAY** adhere to the stipulations of the Digitally Signed CARD
         option.
 
@@ -150,13 +150,13 @@ of scope for this IHE Profile.
 Normatively, a Guideline Repository actor:
 
 1.  **SHALL** be able to appropriately respond to a well-formed
-    transaction X1: Search for Guideline \[as responder\]; and
+    transaction QRPH-61: Search for Guideline \[as responder\]; and
 
 2.  **SHALL** be able to appropriately respond to a well-formed
-    transaction X2: Retrieve Guideline \[as responder\]; and
+    transaction QRPH-62: Retrieve Guideline \[as responder\]; and
 
 3.  **SHALL** be able to appropriately respond to the submission of a
-    well-formed CCG payload by a Guideline Publisher actor using X3:
+    well-formed CCG payload by a Guideline Publisher actor using QRPH-63:
     Publish Guideline \[as responder\]; and
 
     1.  If the well-formed CCG payload adheres to the stipulations of
@@ -219,7 +219,7 @@ During a care encounter, the Guideline Performer:
 
     3.  The relevant care context data will be leveraged by a Guideline
         Engine, either internally or via an external call using
-        transaction X4: Apply Guideline \[as originator\], to generate
+        transaction QRPH-64: Apply Guideline \[as originator\], to generate
         and return a set of CCG CARD-based recommendations.
 
 3.  **SHALL** persist the updated care context data, reflective of the
@@ -228,7 +228,7 @@ During a care encounter, the Guideline Performer:
 
 The content specifications related to care context and related to
 person-centric health data are defined in Volume-3 of the IHE CCG
-Profile, as are the calling conventions and data inputs for the X4:
+Profile, as are the calling conventions and data inputs for the QRPH-64:
 Apply Guideline transaction. An implementing jurisdiction (via its
 relevant IHE Deployment Committee) may contextualize these
 specifications and, where applicable, such contextualizations are
@@ -261,14 +261,14 @@ Engine are out of scope for this IHE Profile.
 Normatively, a Guideline Engine actor:
 
 1.  **SHALL** be able to submit a query to a Guideline Repository actor
-    using X1: Search for Guideline \[as originator\]; and
+    using QRPH-61: Search for Guideline \[as originator\]; and
 
 2.  **SHALL** be able to submit a query to a Guideline Repository actor
-    using X2: Retrieve Guideline \[as originator\] and ingest the
+    using QRPH-62: Retrieve Guideline \[as originator\] and ingest the
     resulting CCG packages, if applicable; and
 
 3.  **MAY**, if the Trusted CCG option is supported, ensure for
-    digitally signed artefacts returned via transaction X2:
+    digitally signed artefacts returned via transaction QRPH-62:
 
     1.  The signing authorities are trusted; and
 
@@ -277,7 +277,7 @@ Normatively, a Guideline Engine actor:
 
 4.  **SHALL** support execution of the CPG PlanDefinition Apply
     operation with the input (“IN”) parameters defined for transaction
-    Transaction X4: Apply Guideline.
+    Transaction QRPH-64: Apply Guideline.
 
 5.  **MAY** support execution of the CPG PlanDefinition Apply operation
     with any other input (“IN”) parameters defined in the operation’s
@@ -285,7 +285,7 @@ Normatively, a Guideline Engine actor:
 
 The content specifications related to care context and related to
 person-centric health data are defined in Volume-3 of the IHE CCG
-Profile, as are the calling conventions and data inputs for the X4:
+Profile, as are the calling conventions and data inputs for the QRPH-64:
 Apply Guideline transaction. An implementing jurisdiction (via its
 relevant IHE Deployment Committee) may contextualize these
 specifications and, where applicable, such contextualizations are
