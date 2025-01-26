@@ -14,7 +14,7 @@ CCGs</p></figcaption>
 The transactions
 [QRPH-62](CCG_v2_x2.html) and
 [QRPH-63](CCG_v2_x3.html)
-*convey* **CCG Package** content. Each CCG Package is a FHIR
+*convey* **CCG Package** content - it is the payload of the response of the former and of the input in the latter. Each CCG Package is a FHIR
 ImplementationGuide. To simplify discoverability of CCGs on a Guideline
 Registry (using transaction
 [QRPH-61](CCG_v2_x1.html)), the
@@ -31,7 +31,7 @@ Metaphor](CCG_v1_over.html#folder-and-cards-metaphor),
 the CCG Folder references one or more **CCG CARDs**. Each CARD is used
 to describe a recommended evidence-based activity. The thirteen types of
 evidence-based activities are defined by the [CCG_Card_Type value
-set](ValueSet-ccg-card-type.html).
+set](ValueSet-ccg-card-type.html#expansion).
 Every CARD is comprised of one **PlanDefinition** (of type eca-rule)
 that refers to one of thirteen types of **ActivityDefinition**
 resources. Using the CARD acronym, the **C**ondition statement(s) are
@@ -42,7 +42,7 @@ A **CQL Library** may be used to define complicated Condition
 statements; if this the case, the Library must adhere to the
 CCG_CARD_Library specification. Also, if supported as an
 [Option](CCG_v1_actor.html#options)
-by the relevant actors, CARDs (or the CCG Folder… or both) may be
+by the relevant actors, Folder and/or CARDs and/or libraries may be
 **digitally signed**. Where this is the case, digital signing is
 effected using a Provenance resource that adheres to the CCG_Signature
 specification.
@@ -50,7 +50,7 @@ specification.
 Originally launched in 2019, the IHE CCG Profile is the result of a
 joint **HL7-IHE Gemini Project**[^3]. Including as noted above, relevant
 underlying specifications of the HL7 CPG-on-FHIR IG[^4] are constrained
-and profiled by the IHE CCG Profile.
+and profiled by this IHE CCG Profile.
 
 ### List of Key Definitional Content Specifications
 
@@ -193,8 +193,9 @@ CommunicationRequest resource based on the CPGCommunicationRequest[^7]
 profile.
 
 After processing the Apply Guidelines transaction response, the
-**Resulting Data** from this CARD **SHALL** be a Communication resource
-based on the CPGCommunication[^8] profile. The Communication resource
+**Resulting Data** from this CARD **SHALL** be a Communication resource based on the CPGCommunication[^8] profile with either status=completed or
+status=not-done (with statusReason).
+The Communication resource
 **SHALL** reference the Encounter.
 
 ### Collect Information CARD
@@ -230,7 +231,8 @@ resource based on the semantic definition expressed in the
 Questionnaire. The resulting resource **SHALL** reference the Encounter.
 NOTE: in this first version of the CCG Profile, Observation resources
 based on the CPGObservation[^11] profile **SHALL** be exclusively
-supported.
+supported with either status=final or
+status=cancelled (with dataAbsentReason).
 
 ### Request a Service (Lab Order) CARD
 
@@ -242,7 +244,8 @@ ServiceRequest resource based on the CPGServiceRequest[^12] profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a Lab Order
-ServiceRequest resource based on the CPGServiceRequest profile. The
+ServiceRequest resource based on the CPGServiceRequest profile with either status=draft or
+status=revoked (indicating not done). The
 ServiceRequest resource **SHALL** reference the Encounter.
 
 NOTE: active Lab Order ServiceRequest resources **SHALL** be included as
@@ -264,7 +267,8 @@ ServiceRequest resource based on the CPGServiceRequest[^13] profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a Radiology Order
-ServiceRequest resource based on the CPGServiceRequest profile. The
+ServiceRequest resource based on the CPGServiceRequest profile with either status=draft or
+status=revoked (indicating not done). The
 ServiceRequest resource **SHALL** reference the Encounter.
 
 NOTE: active Radiology Order ServiceRequest resources **SHALL** be
@@ -286,7 +290,8 @@ ServiceRequest resource based on the CPGServiceRequest[^14] profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a Procedure Order
-ServiceRequest resource based on the CPGServiceRequest profile. The
+ServiceRequest resource based on the CPGServiceRequest profile with either status=draft or
+status=revoked (indicating not done). The
 ServiceRequest resource **SHALL** reference the Encounter.
 
 NOTE: active Procedure Order ServiceRequest resources **SHALL** be
@@ -308,7 +313,8 @@ ServiceRequest resource based on the CPGServiceRequest[^15] profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a Referral Order
-ServiceRequest resource based on the CPGServiceRequest profile. The
+ServiceRequest resource based on the CPGServiceRequest profile with either status=draft or
+status=revoked (indicating not done). The
 ServiceRequest resource **SHALL** reference the Encounter.
 
 NOTE: active Referral Order ServiceRequest resources **SHALL** be
@@ -332,7 +338,9 @@ It is the responsibility of the Guideline Performer to operationalize
 the processing of the Task resource to capture a patient diagnosis.
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a FHIR resource based
-on the CPGCondition[^17] profile.
+on the CPGCondition[^17] profile with either a verificationStatus absent altogether or
+*not* entered-in-error or verificationStatus=entered-in-error
+(indicating not done).
 
 ### Order Medication CARD
 
@@ -345,7 +353,8 @@ profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a MedicationRequest
-resource based on the CPGMedicationRequest profile. The
+resource based on the CPGMedicationRequest profile with either status=draft,
+status=active or status=cancelled (with statusReason). The
 MedicationRequest resource **SHALL** reference the present Encounter.
 
 NOTE: active MedicationRequest resources **SHALL** be included as a
@@ -367,7 +376,8 @@ resource based on the CPGDispenseMedicationTask[^19] profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a MedicationDispense
-resource based on the CPGMedicationDispense[^20] profile. The
+resource based on the CPGMedicationDispense[^20] profile with either status=completed or
+status=cancelled (with statusReason). The
 MedicationDispense resource **SHALL** reference the present Encounter in
 the MedicationDispense.context.
 
@@ -387,7 +397,8 @@ resource based on the CPGAdministerMedicationTask[^21] profile.
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a
 MedicationAdministration resource based on the
-CPGMedicationAdministration[^22] profile. The MedicationAdministration
+CPGMedicationAdministration[^22] profile with either status=completed
+or status=not-done (with statusReason). The MedicationAdministration
 resource **SHALL** reference the present Encounter in the
 MedicationAdministration.context.
 
@@ -408,7 +419,8 @@ profile.
 
 After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be an Immunization
-resource based on the CPGImmunization[^24] profile.
+resource based on the CPGImmunization[^24] profile with either status=completed or
+status=not-done (with statusReason).
 
 A new IPS document **SHALL NOT** be regenerated before each invocation
 of the Apply Guidelines transaction, but Immunization resources created

@@ -83,94 +83,17 @@ The following parameters are relevant to this transaction:
 Prior to submitting the transaction, the transaction initiator:
 
 - **SHALL** prepare an up-to-date contextual content bundle adherent to
-  the specification in the Vol-3 section: Contextual Content Bundle.
+  the specification in the Vol-3 section: [**Contextual Content Bundle**](CCG_v3_launch.html#contextual-content-data-in-bundle).
 
 - **SHALL** create an audit record of the transaction submission (see
-  Security section).
+  [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
 
 Based on receipt of the transaction response, the transaction initiator:
 
 - **SHALL** create an audit record of the transaction response (see
-  Security section).
+  [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
 
-- **SHALL** process a **Provide Information** CARD to create a
-  CPGCommuniction[^4] resource with either status=completed or
-  status=not-done (with statusReason) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Collect Information** CARD to capture input from
-  the human user and create the indicated resource using the stipulated
-  codes and units of measure (where applicable) and create a
-  CPGObservation[^5] resource with either status=final or
-  status=cancelled (with dataAbsentReason) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Request a Service (Lab Order)** CARD to create a
-  CPGServiceRequest[^6] resource with either status=draft or
-  status=revoked (indicating not done) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Request a Service (Radiology Order)** CARD to
-  create a CPGServiceRequest resource with either status=draft or
-  status=revoked (indicating not done) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Request a Service (Procedure Order)** CARD to
-  create a CPGServiceRequest resource with either status=draft or
-  status=revoked (indicating not done) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Request a Service (Referral)** CARD to create a
-  CPGServiceRequest resource with either status=draft or status=revoked
-  (indicating not done) and **SHALL** include this resource in the
-  contextual content bundle of all subsequent Apply Guideline
-  transactions during the present encounter.
-
-- **SHALL** process a **Propose a Diagnosis** CARD to create a
-  CPGCondition[^7] resource with either a verificationStatus absent or
-  *not* entered-in-error or verificationStatus=entered-in-error
-  (indicating not done) and **SHALL** include this resource in the
-  contextual content bundle of all subsequent Apply Guideline
-  transactions during the present encounter.
-
-- **SHALL** process an **Order Medication** CARD to create a
-  CPGMedicationRequest[^8] resource with either status=draft,
-  status=active or status=cancelled (with statusReason) and **SHALL**
-  include this resource in the contextual content bundle of all
-  subsequent Apply Guideline transactions during the present encounter.
-
-- **SHALL** process a **Dispense Medication** CARD to create a
-  CPGMedicationDispense[^9] resource with either status=completed or
-  status=cancelled (with statusReason) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process an **Administer Medication** CARD to create a
-  CPGMedicationAdministration[^10] resource with either status=completed
-  or status=not-done (with statusReason) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Request Immunization** CARD to create a
-  CPGImmunization[^11] resource with either status=completed or
-  status=not-done (with statusReason) and **SHALL** include this
-  resource in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-- **SHALL** process a **Stop Activity** CARD to appropriately update the
-  status of the relevant resource, which **SHALL** be included with this
-  new status in the contextual content bundle of all subsequent Apply
-  Guideline transactions during the present encounter.
-
-  - A MedicationRequest resource **SHALL** be updated to
-    status=cancelled
-
-  - A ServiceRequest resource **SHALL** be updated to status=revoked.
+- **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats).
 
 #### Trigger Events - Responder
 
