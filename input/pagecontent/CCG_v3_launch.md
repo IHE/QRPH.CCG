@@ -6,7 +6,7 @@ being related to the transactional data needed to **invoke** and
 ## Definitional Content
 
 <figure>
-<img src="image18.png" style="max-width: 70%; object-fit: contain" />
+<img src="image18.png" style="max-width: 60%; object-fit: contain" />
 <figcaption><p>Figure 18 – Illustration of the Definitional Content for
 CCGs</p></figcaption>
 </figure>
