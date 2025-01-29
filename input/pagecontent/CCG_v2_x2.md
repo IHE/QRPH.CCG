@@ -1,6 +1,6 @@
 ### Scope
 
-Transaction X2 Retrieve Guideline is used to download and ingest a CCG
+Transaction QRPH-62 Retrieve Guideline is used to download and ingest a CCG
 that has been published to a Guideline Repository. The query parameters
 denote the specific CCG. The transaction response is the CCG package
 (FHIR IG) that meets the search criteria.
@@ -16,7 +16,7 @@ denote the specific CCG. The transaction response is the CCG package
 
 ### Referenced standard(s)
 
-Transaction X2 Retrieve Guideline is based on the following standards:
+Transaction QRPH-62 Retrieve Guideline is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -37,7 +37,7 @@ Transaction X2 Retrieve Guideline is based on the following standards:
 <img src="image15.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 15- X2 Retrieve Guideline Interaction
+<figcaption><p>Figure 15- QRPH-62 Retrieve Guideline Interaction
 Diagram</p></figcaption>
 </figure>
 

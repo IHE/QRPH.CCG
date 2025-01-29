@@ -1,6 +1,6 @@
 ### Scope
 
-Transaction X4 Apply Guideline is used by a Guideline Performer to
+Transaction QRPH-64 Apply Guideline is used by a Guideline Performer to
 submit a contextual content bundle to a Guideline Engine and to invoke
 the \$CPGPlanDefinitionApply operation, which will be evaluated based on
 the submitted content. The transaction response returns a bundle of
@@ -17,7 +17,7 @@ the relevant CCGs.
 
 ### Referenced standard(s)
 
-Transaction X4 Apply Guideline is based on the following standards:
+Transaction QRPH-64 Apply Guideline is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -35,7 +35,7 @@ Transaction X4 Apply Guideline is based on the following standards:
 <img src="image17.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 17 – X4 Apply Guideline Interaction
+<figcaption><p>Figure 17 – QRPH-64 Apply Guideline Interaction
 Diagram</p></figcaption>
 </figure>
 

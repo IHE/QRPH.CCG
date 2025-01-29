@@ -1,6 +1,6 @@
 ### Scope
 
-Transaction X3 Publish Guideline is used to submit an NPM package
+Transaction QRPH-63 Publish Guideline is used to submit an NPM package
 containing a well-formed CCG to a Guideline Repository. The transaction
 response returns a confirmation or an exception message.
 
@@ -14,7 +14,7 @@ response returns a confirmation or an exception message.
 
 ### Referenced standard(s)
 
-Transaction X3 Publish Guideline is based on the following standards:
+Transaction QRPH-63 Publish Guideline is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -35,7 +35,7 @@ Transaction X3 Publish Guideline is based on the following standards:
 <img src="image16.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 16 – X3 Publish Guideline Interaction
+<figcaption><p>Figure 16 – QRPH-63 Publish Guideline Interaction
 Diagram</p></figcaption>
 </figure>
 

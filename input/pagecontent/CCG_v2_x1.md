@@ -1,5 +1,5 @@
 ### Scope
-Transaction X1 Search for Guidelines is used to query for CCGs that have
+Transaction QRPH-61 Search for Guidelines is used to query for CCGs that have
 been published to a Guideline Repository. The query parameters can be
 employed, for example, to search for CCGs published (or updated) since a
 given timestamp. The transaction response will be a list of CCGs that
@@ -16,7 +16,7 @@ meet the search criteria.
 
 ### Referenced standard(s)
 
-Transaction X1 Search for Guidelines is based on the following
+Transaction QRPH-61 Search for Guidelines is based on the following
 standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
@@ -32,7 +32,7 @@ standards:
 <img src="image14.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 14 - X1 Search for Guidelines Interaction
+<figcaption><p>Figure 14 - QRPH-61 Search for Guidelines Interaction
 Diagram</p></figcaption>
 </figure>
 
