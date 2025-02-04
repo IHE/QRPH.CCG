@@ -12,3 +12,6 @@
 
 # yet, just reducing noise during development
 %The Implementation Guide contains no examples for this profile%
+
+# problem with Parent
+%Coding has no system. A code with no system has no defined meaning, and it cannot be validated: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided%

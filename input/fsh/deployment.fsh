@@ -12,6 +12,6 @@ Description: "The deployment model is that each unique CCG Folder and its conten
 
 Invariant: CCG-ID-and-URL-match
 Description: "Deployment Package .id and .url must both be an OID that matches, .id will be unprefixed"
-Expression: "url.contains(id).not"
+Expression: "url.contains(id).not()"
 Severity: #error
 
