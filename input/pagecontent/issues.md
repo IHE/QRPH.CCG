@@ -12,7 +12,8 @@
 ### Submit an Issue
 
 ### Open Issues
-
+- Should a content profile define expected behaviors on actors?: in volume 3, there are a number of expect behaviors for the actors being defined. usually these things are defined in Vol 2.
+  
 - Can Vol 2 require something from Vol 3?:  Currently the CCG profile has a Vol 3 content profile that is [required](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v2_x4.html#expected-actions---initiator)  by Vol 2.   This does not seem in line with typical IHE use of Content Profiles.
 
 - Should the IPS be required?:  Currently the IPS is a required document for the CCG profile.  This is because in Vol 2, there is a [reference](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v2_x4.html#expected-actions---initiator) to requiring a Guideline Repository actor "SHALL prepare an up-to-date contextual content bundle adherent to the specification in the Vol-3 section: Contextual Content Bundle."  Looking in Vol 3, the [Contextual Content Bundle](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v3_launch.html#contextual-content-data-in-bundle)_ is required to be an IPS.   Moreover, it was decided earlier by the QRPH committee that references to the IPS as a requirement would be left to Vol 4.
