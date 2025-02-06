@@ -16,7 +16,7 @@
 - Are we limiting this profile to high bandwidth countries only?: In Vol 3, there is are [requirements](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v3_launch.html#transactional-content) to repeatedly send an IPS bundle back and forth between the Guideline Performer and the Guideline Engine.  The bandwidth requirements of such repeated transactions should be evaluated to determine if they are feasible in low bandwidth settings.
 
 - Is this an interoperability profile?:  The majority of the requirements in this profile are in Vol 3 which are describing application behaviour.  The interoperability problem that is being addressed by this profile should be clearly stated.  Looking at 2.1.12 of the [governance document](https://www.ihe.net/wp-content/uploads/IHE-Intl-Governance-Amended_2024-10-10.pdf) we have thhe IHE's Interoperability-orientation where "Developed specifications focus on details essential to
-interoperability rather than application design details."
+interoperability rather than application design details."   there is one interoperability statement in fhe business requirements section around  the guideline engine getting an uodated planDefintion but it is not clear how that would imply the need for the FC&M.
 
 - Should a content profile define expected behaviors on actors?: in volume 3, there are a number of expect behaviors for the actors being defined. usually these things are defined in Vol 2.
   
