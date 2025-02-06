@@ -27,7 +27,6 @@
 
 - Should CPG or FHIR requirements be repeated?:  There are several places where existing requirements from the CPG Implementation Guide or the base FHIR resources are repeated.  This is not in general considered best practices as it can cause confusion for the reader (e.g. is this restated requirement to be undertood somehow different that the base standard? otherwise, why has it been restated? ) and burdens IHE with tracking and replicating any changes from the base specifications in the IHE.  For example in Vol 1, there is a requirement that $apply is an [idempotent operation](https://build.fhir.org/ig/IHE/QRPH.CCG/CCG_v1_over.html#folder-and-cards-metaphor) which is already a requirement in the base FHIR PlanDefinition resource for that operation.  
 
-- The output 
 
 ### Closed Issues
 
