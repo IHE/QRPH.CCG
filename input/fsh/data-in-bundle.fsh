@@ -76,16 +76,7 @@ Parent: Bundle
 Id: ccg-di-ips-bundle
 Title: "CCG IPS Bundle"
 Description: "This bundle follows the IPS Bundle with the exception of using the CCG Composition"
-* ^version = "1.1.0"
-* ^date = "2024-06-19T10:50:07-05:00"
-* ^publisher = "HL7 International / Patient Care"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7.org/Special/committees/patientcare"
-* ^jurisdiction = $m49.htm#001
-* ^purpose = "An International Patient Summary (IPS) bundle is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * obeys bdl-ips-1
-* . ^short = "International Patient Summary Bundle"
-* . ^definition = "International Patient Summary Bundle. \r\nA container for a collection of resources in the patient summary document."
 * identifier 1.. MS
 * type = #document (exactly)
 * timestamp 1.. MS
@@ -195,3 +186,41 @@ Invariant: bdl-ips-1
 Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
 * severity = #error
 * expression = "entry.tail().where(resource is Composition).empty()"
+
+Profile: CCG_DataIn_Bundle
+Parent: Bundle
+Id: ccg-di-bundle
+Title: "CCG Data In Bundle"
+Description: "CCG Data Input Bundle. \r\nA container for a collection of resources that is passed as part of the Apply Guideline transaction submission. This bundle represents the content that will be used by the Guideline Engine to evaluate all relevant CCG CARD&amp;s condition statements during the $apply operation."
+* type = #collection (exactly)
+* entry MS
+* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.rules = #open
+* entry ^short = "Entry resource in the CCG Data In bundle"
+* entry ^definition = "An entry resource included in the CCG DAta In document bundle resource."
+* entry.fullUrl 1.. MS
+* entry.search ..0
+* entry.request ..0
+* entry.response ..0
+* entry contains
+    di-encounter 1..1 and
+    di-practitioner 1..1 and
+    di-practitionerrole 1..1 and
+    di-location 1..1 and
+    di-organization 1..1 and
+    di-ips-bundle 1..1
+* entry[di-encounter].resource 1..
+* entry[di-encounter].resource only ccg-di-encounter
+* entry[di-practitioner].resource 1..
+* entry[di-practitioner].resource only ccg-di-practitioner
+* entry[di-practitionerrole].resource 1..
+* entry[di-practitionerrole].resource only ccg-di-practitionerrole
+* entry[di-location].resource 1..
+* entry[di-location].resource only ccg-di-location
+* entry[di-organization].resource 1..
+* entry[di-organization].resource only ccg-di-organization
+* entry[di-ips-bundle].resource 1..
+* entry[di-ips-bundle].resource only ccg-di-ips-bundle

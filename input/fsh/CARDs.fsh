@@ -54,7 +54,7 @@ Description: "Each unique CCG will be expressed as a PlanDefinition (a CCG Folde
 * title 1..1
 * date 1..1
 * publisher 1..1
-* type = #clinical-protocol (exactly)
+* type = $PlanDefType#clinical-protocol (exactly)
 * action 1..
 * action.definitionCanonical only Canonical(CCG_CARD_PlanDefinition)
 

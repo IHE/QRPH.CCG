@@ -45,3 +45,4 @@ Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-Rout
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 Alias: $vital-signs-profile = http://hl7.org/fhir/StructureDefinition/vitalsigns
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+Alias: $PlanDefType = http://terminology.hl7.org/CodeSystem/plan-definition-type
