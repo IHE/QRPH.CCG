@@ -15,7 +15,7 @@ Usage: #definition
 * rest.mode = #server
 * rest.security.description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or SMART-on-FHIR"
 * rest.resource[0].type = #Bundle
-* rest.resource[=].profile = "https://profiles.ihe.net/QRPH/CCG/StructureDefinition/ccg-di-ips-composition"
+* rest.resource[=].profile = "https://profiles.ihe.net/QRPH/CCG/StructureDefinition/ccg-di-bundle"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #read
@@ -45,4 +45,4 @@ Usage: #definition
 * rest.resource.type = #Bundle
 * rest.resource.interaction.code = #create
 * rest.interaction[0].code = #transaction
-* rest.interaction[=].documentation = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.ProvideBundle"
+* rest.interaction[=].documentation = "https://profiles.ihe.net/QRPH/CCG/StructureDefinition/ccg-di-bundle"
