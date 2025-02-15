@@ -214,7 +214,7 @@ Description: "The role of this type of CCG CARD is to record a medication admini
 * action.definitionCanonical only Canonical(ccg-card-adminrx-ad)
 
 Profile: CCG_Administer_Medication_Activity
-Parent: cpg-dispensemedicationactivity
+Parent: CPGAdministerMedicationActivity
 Id: ccg-card-adminrx-ad
 Title: "Activity Definition for the Administer Medication CARD"
 Description: "Simple profile to inherit the base and set topic to the appropriate CARD"
