@@ -68,7 +68,7 @@ Description: "This is a CarePlan profile that forces at least one of the activit
 * activity.detail.instantiatesCanonical ^slicing.rules = #open
 * activity.detail.instantiatesCanonical contains
     folder 1..*
-* activity.detail.instantiatesCanonical[folder] only Canonical(ccg-card-folder)
+* activity.detail.instantiatesCanonical[folder] only Canonical(CCG_Patient_Plans)
 
 
 Profile: CCG_IPS_Bundle
