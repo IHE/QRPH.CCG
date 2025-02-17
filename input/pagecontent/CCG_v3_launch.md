@@ -59,12 +59,13 @@ is listed below. These, along with supporting underlying specs, are
 listed in full on the
 [Artefacts](artifacts.html) page.
 
-| CCG Package | [CCG_Deployment_Package](StructureDefinition-ccg-deployment.html) |  |
+| ***Content:*** |  |  |
 |----|----|----|
-| CCG Folder | [CCG_CARD_Folder](StructureDefinition-ccg-card-folder.html) |  |
-| Library | [CCG_CARD_Library](StructureDefinition-ccg-card-library.html) |  |
-| Digital Signature | [CCG_Signature](StructureDefinition-ccg-signature.html) |  |
-| ***CARD types:*** |  |  |
+| CCG Package | [CCG_Deployment_Package](StructureDefinition-ccg-deployment.html) | IG |
+| CCG Folder | [CCG_CARD_Folder](StructureDefinition-ccg-card-folder.html) | PD |
+| Library | [CCG_CARD_Library](StructureDefinition-ccg-card-library.html) | Library |
+| Digital Signature | [CCG_Signature](StructureDefinition-ccg-signature.html) | Provenance |
+| ***CARD types:*** | ***PD*** |***AD***  |
 | Provide Information | [CCG_Provide_Information](StructureDefinition-ccg-card-provide.html) | [CCG_Provide_Info_Activity](StructureDefinition-ccg-card-provide-ad.html) |
 | Collect Information | [CCG_Collect_Information](StructureDefinition-ccg-card-collect.html) | [CCG_Collect_Info_Activity](StructureDefinition-ccg-card-collect-ad.html) |
 | Lab Order | [CCG_Request_Service_Lab_Order](StructureDefinition-ccg-card-reqserv-labs.html) | [CCG_Request_Service_Labs_Activity](StructureDefinition-ccg-card-reqlabs-ad.html) |
@@ -156,7 +157,7 @@ The data-in bundle **SHALL** contain:
   [**Organization**](StructureDefinition-ccg-di-organization.html)
   resource, if applicable,
 
-- the patient’s [**IPS
+- the patient’s [**health summary
   document**](StructureDefinition-ccg-di-ips-bundle.html),
   which **SHALL** include *all* content defined in the [**CCG IPS
   composition**](StructureDefinition-ccg-di-ips-composition.html)
@@ -202,10 +203,10 @@ The Communication resource
 
 The role of this type of CCG CARD is to collect information **about**
 the patient. There **SHALL** be *one* Collect Information CARD for each
-data element needed to drive the evidence-based care workflow. The
+data element needed to drive the evidence-based care workflow (e.g. current blood pressure, weight, spirometry, etc.). The
 CARD’s condition statement(s) will evaluate true if this information is
 missing from the Contextual Content bundle and the processing of the
-CARD **SHALL** “fill in” this missing information using Structured Data
+CARD **SHOULD** “fill in” this missing information using Structured Data
 Capture based on the **Definition-based extraction** method.[^9]
 
 The recommended **Action** from this CARD **SHALL** be a Task resource
@@ -215,7 +216,7 @@ The following constraints **SHALL** apply to the Questionnaire resource
 referenced in the Task:
 
 - the scope of the Questionnaire will be limited to a **single** data
-  element and the target FHIR resource type will be identified
+  element and the relevant target FHIR resource content will be identified
   Questionnaire.item.defintion
 
 - the content type (e.g. LOINC code for observation) and relevant units
