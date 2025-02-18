@@ -1,4 +1,3 @@
-Alias: $c80-practice-codes = http://hl7.org/fhir/ValueSet/c80-practice-codes
 
 Instance: Encounter-1234567
 InstanceOf: Encounter
@@ -36,7 +35,7 @@ Description: "Example practitionerRole (Family Doctor in a Family Practice setti
 * identifier.value = "PractitionerRole-124"
 * practitioner = Reference(Practitioner/Practitioner-123)
 * organization = Reference(Organization/Organization-14)
-* specialty.coding = $c80-practice-codes#419772000 "Family practice"
+* specialty.coding = $sct#419772000 "Family practice (qualifier value)"
 
 Instance: Location-12
 InstanceOf: Location
