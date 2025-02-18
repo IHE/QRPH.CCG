@@ -1,4 +1,4 @@
-Alias: SCT = http://snomed.info/sct/
+Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
 Alias: LOINC = http://loinc.org
 Alias: $allergyintolerance-abatement = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
@@ -32,7 +32,7 @@ Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-t
 Alias: $personalPronouns = http://hl7.org/fhir/StructureDefinition/individual-pronouns
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias: $sct = http://snomed.info/sct/
+Alias: $sct = http://snomed.info/sct
 Alias: $standardterms = http://standardterms.edqm.eu
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
