@@ -63,6 +63,7 @@ listed in full on the
 |----|----|----|
 | CCG Package | [CCG_Deployment_Package](StructureDefinition-ccg-deployment.html) | IG |
 | CCG Folder | [CCG_CARD_Folder](StructureDefinition-ccg-card-folder.html) | PD |
+| CCG Patient Plans | [CCG_Patient_Plans](StructureDefinition-ccg-patient-plans.html) | PD |
 | Library | [CCG_CARD_Library](StructureDefinition-ccg-card-library.html) | Library |
 | Digital Signature | [CCG_Signature](StructureDefinition-ccg-signature.html) | Provenance |
 | ***CARD types:*** | ***PD*** |***AD***  |
@@ -163,7 +164,7 @@ The data-in bundle **SHALL** contain:
   composition**](StructureDefinition-ccg-di-ips-composition.html)
   model and available to the Guideline Performer, and which **SHALL**
   reference the <span class="mark">top-level Folder</span> that lists
-  the patient’s applicable CCG(s) in the [**CCG IPS
+  the patient’s applicable CCG(s) in the **CCG Patient Plans** resource referenced in the [**CCG IPS
   CarePlan**](StructureDefinition-ccg-data-in-ips-careplan.html)
   resource,
 
