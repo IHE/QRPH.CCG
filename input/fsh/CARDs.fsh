@@ -45,8 +45,8 @@ Description: "Profile to serve as the basis for all CARD definitions referencing
 Profile: CCG_Patient_Plans
 Parent: PlanDefinition
 Id: ccg-patient-plans
-Title: "CCG CARD Folder PlanDefinition"
-Description: "Each unique CCG will be expressed as a PlanDefinition (a CCG Folder) that lists the CCG's defined CARDs"
+Title: "CCG Patient Plans (patient-specific) PlanDefinition"
+Description: "A patient-specific PlanDefinition holds the list of one or more applicable CCG Folders."
 * id 1..1
 * url 1..1
 * type = $PlanDefType#clinical-protocol (exactly)
