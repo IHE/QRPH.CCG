@@ -182,8 +182,7 @@ by the IHE Dynamic Care Planning (DCP)[^6] Profile.
 ## Normative Action and Resulting Data Formats
 
 The details of ***how*** the Guideline Performer processes each
-recommended Action are not specified by this IHE CCG Profile. The Action
-and Resulting Data for each CARD is, however, normatively defined.
+recommended Action are not specified by this IHE CCG Profile. The Resulting Data for each CARD, however, is normatively defined. For clarity: this means that the Guideline Performer SHALL ensure that necessary post-processing is completed, based on the request resources returned in the QRPH-64 transaction response.
 
 ### Provide Information CARD
 
