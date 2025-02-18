@@ -15,10 +15,82 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
 
-Instance: NZ-IPS-20241229230313
+Instance: ex-CCG-data-in-bundle
 InstanceOf: Bundle
 Usage: #example
-Title: "Example Patient IPS"
+* type = #collection
+* entry[0].fullUrl = "http://example.org/fhir/Encounter/Encounter-1234567"
+* entry[=].resource = Encounter-1234567
+
+* entry[+].fullUrl = "http://example.org/fhir/Practitioner/Practitioner-123"
+* entry[=].resource = Practitioner-123
+
+* entry[+].fullUrl = "http://example.org/fhir/PractitionerRole/PractitionerRole-124"
+* entry[=].resource = PractitionerRole-124
+
+* entry[+].fullUrl = "http://example.org/fhir/Location/Location-12"
+* entry[=].resource = Location-12
+
+* entry[+].fullUrl = "http://example.org/fhir/Organization/Organization-14"
+* entry[=].resource = Organization-14
+
+* entry[+].fullUrl = "http://example.org/fhir/bundle/NZ-IPS-20241229230313"
+* entry[=].resource = NZ-IPS-20241229230313
+
+Instance: Encounter-1234567
+InstanceOf: Encounter
+Usage: #inline
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Encounter-1234567"
+* status = #in-progress
+* type.coding = $sct#31881000087103 "Outpatient Clinical Visit"
+* priority.coding = $sct#394848005 "Normal Priority"
+* subject = Reference(Patient/ZKT9319)
+* participant[0].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
+* participant[=].individual = Reference(Practitioner/Practitioner-123)
+* location[0].location = Reference(Location/Location-12)
+* period.start = 2024-02-18
+* serviceProvider = Reference(Organization/Organization-14)
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#HH
+
+Instance: Practitioner-123
+InstanceOf: Practitioner
+Usage: #inline
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Practitioner-123"
+* name.text = "Doctor Doctor"
+
+Instance: PractitionerRole-124
+InstanceOf: PractitionerRole
+Usage: #inline
+* identifier.system = "http://example.org/ids"
+* identifier.value = "PractitionerRole-124"
+* practitioner = Reference(Practitioner/Practitioner-123)
+* organization = Reference(Organization/Organization-14)
+* specialty.coding = $sct#419772000 "Family Practice"
+
+Instance: Location-12
+InstanceOf: Location
+Usage: #inline
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Location-12"
+* status = #active
+* name = "Example Location"
+* mode = #instance
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PC "Primary Care Clinic"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bu "Building"
+
+Instance: Organization-14
+InstanceOf: Organization
+Usage: #inline
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Organization-14"
+* active = true
+* name = "Example Organization"
+
+Instance: NZ-IPS-20241229230313
+InstanceOf: Bundle
+Usage: #inline
 * language = #en-US
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "ca7cac26-f0ee-42b9-bd98-b102b0365b40"
@@ -292,7 +364,7 @@ Usage: #inline
 * section[+].title = "Functional Status"
 * section[=].code = $loinc#47420-5 "Functional status assessment note"
 * section[=].text.status = #generated
-* section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-NZ'><table xmlns=\"http://www.w3.org/1999/xhtml\">        <thead>          <tr>            <th>Functional Condition</th>            <th>Effective Dates</th>            <th>Condition Status</th>          </tr>        </thead>        <tbody>          <tr>            <td>Often confused, struggles to communicate in English</td>                        <td>Active</td>          </tr>          <tr>            <td>Depends on a walking frame or electric scooter to get around.</td>                        <td>Active</td>          </tr>          <tr>            <td>Doesnï¿½t leave the house much.</td>                        <td>Active</td>          </tr>          <tr>            <td>Relies on caregiver Cindy for assistance with many activities of daily living.</td>                        <td>Active</td>          </tr>          <tr>            <td>Family has made the decision to transfer Iosefa to residential care soon, arrangements currently being finalised.</td>                        <td>Active</td>          </tr>        </tbody>      </table>    </div>"
+* section[=].text.div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='en-NZ'><table xmlns=\"http://www.w3.org/1999/xhtml\">        <thead>          <tr>            <th>Functional Condition</th>            <th>Effective Dates</th>            <th>Condition Status</th>          </tr>        </thead>        <tbody>          <tr>            <td>Often confused, struggles to communicate in English</td>                        <td>Active</td>          </tr>          <tr>            <td>Depends on a walking frame or electric scooter to get around.</td>                        <td>Active</td>          </tr>          <tr>            <td>Doesn’t leave the house much.</td>                        <td>Active</td>          </tr>          <tr>            <td>Relies on caregiver Cindy for assistance with many activities of daily living.</td>                        <td>Active</td>          </tr>          <tr>            <td>Family has made the decision to transfer Iosefa to residential care soon, arrangements currently being finalised.</td>                        <td>Active</td>          </tr>        </tbody>      </table>    </div>"
 * section[=].entry[0] = Reference(b0bce00f-992e-4512-87c4-ab3a6f8c8671)
 * section[=].entry[+] = Reference(c5f4fa66-f2c4-4529-89c5-f38d24459d45)
 * section[=].entry[+] = Reference(88a5b69e-50b3-44b2-ba92-58f3aa61225b)
@@ -491,7 +563,7 @@ Instance: 88a5b69e-50b3-44b2-ba92-58f3aa61225b
 InstanceOf: Condition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
-* code.text = "Doesnï¿½t leave the house much."
+* code.text = "Doesn’t leave the house much."
 * subject = Reference(ZKT9319)
 
 Instance: 4a78b5bc-90c3-4a0b-a355-55e40a8e5e60
@@ -800,7 +872,7 @@ Usage: #inline
 * performer = Reference(52b7075b-9070-47f6-9e15-4a3129e0ae10)
 * valueQuantity = 60 'mmol/mol' "mmol/mol"
 * interpretation = $v3-ObservationInterpretation#H "High"
-* referenceRange.text = "50 ï¿½ 55 mmol/mol (diabetes)"
+* referenceRange.text = "50 – 55 mmol/mol (diabetes)"
 
 Instance: 69df69fa-c716-4aba-8e2f-2ecf855fd243
 InstanceOf: Observation
