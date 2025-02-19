@@ -109,7 +109,7 @@ Progress **has** been made over the last five years as HL7 and IHE have
 collaborated on the CCG Gemini Project. In this timeframe, the **HL7
 CPG-on-FHIR IG**[^2] (Implementation Guide) has been developed and is
 completing its second ballot. This IG describes how a CCG may be defined
-using the FHIR standard. The role of the proposed IHE CCG Profile is to
+using the FHIR standard. The role of the IHE CCG Profile is to
 leverage this specification and to **constrain it to address the
 challenges**, as noted above, associated with broadly scaling
 conformance-testable, concurrently executable CCGs in both OECD[^3] and
@@ -181,14 +181,13 @@ this IHE CCG Profile is influenced by the **US ASTP/ONC’s guidance §
 170.315 (b)(11)**[^10] regarding the methods for conformance-testing
 digital health solutions that provide Evidence-based Decision Support
 Interventions \[NOTE: this guidance was current as of October 2024\].
-Sections (iii)(A) and (iv)(A) of this ONC guidance are shown in Figure
-3. From the figure it may be noted that evidence-based CCGs shall
+Sections (iii)(A) and (iv)(A) of this ONC guidance are shown in Figure 3. From the figure it may be noted that evidence-based Decision Support Interventions (DSIs) shall
 leverage a **constrained common data set** defined in the US Core Data
 for Interoperability[^11] specification. It can also be noted that,
 under this ONC regulation, a software solution provider must provide an
 attestation related to the source content leveraged to construct the
-CCG, including bibliographic citations of the clinical research of
-narrative (L1) care guidelines that inform the CCG’s recommendations.
+DSI, including bibliographic citations of the clinical research of
+narrative (L1) care guidelines that inform the DSI's recommendations.
 
 <figure>
 <img src="image3.png"
@@ -198,8 +197,8 @@ DSI</p></figcaption>
 </figure>
 
 In an analogous way, the IHE CCG Profile **constrains** the content that
-may be employed to define CCG logic. In the present specification, a
-slightly more flexible approach is favoured than that used by ASTP/ONC:
+may be employed to define CCG logic. In the base CCG specification, a
+slightly more flexible approach is favoured versus that used by ASTP/ONC:
 
 - CCG logic based on **person-centric content** is defined in terms of
   the IHE International Patient Summary (**IPS**) Profile (*Complete*
@@ -221,27 +220,27 @@ CCG is to be constructed and what references and citations must be
 included. This CCG grammar has also informed by the ONC regulations.
 Importantly, a CCG artefact that is to be made available as a **global
 public good** shall be defined in terms of the Profile’s normative
-**global** content specifications. It is to be expected that CCG
+**global** content specifications as expressed in Volume-3 of this specification. It is to be expected that CCG
 artefacts intended for deployment in **domestic** contexts will leverage
 a grammar that defines care logic based on a domestic patient summary
 specification (e.g. for the USA: UCSDI, for Canada: PS:CA, for Europe:
 the European Patient Summary, etc.) rather than on IPS.
 Contextualizations of the IHE CCG Profile grammar shall be defined in a
-relevant **Volume-4** section of the IHE CCG Profile.
+relevant **Volume-4** section of the IHE CCG Profile. Every ecosystem actor defined in this IHE CCG Profile must support either the base content specification (as defined in Volume-3) or a contextualized content specification (as defined in Volume-4). All actors in a CCG ecosystem must support the same consistent content model.
 
 As a practical matter – it is anticipated that CCG processing workflows
-would be best served by on-demand generation of IPS documents. Such a
+would be best served by on-demand generation of patient summary documents. Such a
 capability is well supported by many currently available FHIR server
 products. It is also noteworthy that many countries (Canada, Sri Lanka,
 Botswana, New Zealand, etc.) and many multilateral organizations (Asia
 eHealth Information Network[^12], OpenHIE Community[^13], etc.) have
 adopted or advocated for the adoption of IPS as the basis for a national
-person-centric health data sharing infrastructure.
+health summary specification.
 
 ### Folder-and-CARDs Metaphor 
 
 To support the concurrent execution of multiple CCGs, a Folder-and-CARDs
-metaphor is adopted by this IHE CCG Profile. Notionally, one can think
+metaphor is adopted by this IHE CCG Profile. The base content specification (Volume-3) operationalizes this model. Notionally, one can think
 of a CCG as a set of care recommendations where each recommendation is
 described by a **CARD**. This metaphor is illustrated in Figure 4.
 
@@ -275,7 +274,7 @@ more-flexible CPG-on-FHIR specification may be summarized as follows:
   statement(s) that must evaluate to TRUE for the CARD to be
   **applicable**. The condition statements’ **logic** must be expressed
   in terms of the person-centric and care context data model defined by
-  this IHE CCG Profile. NOTE: to ensure patient-safe execution, *Trigger
+  this IHE CCG Profile (or defined in an alternate model expressed in Volume-4). NOTE: to ensure patient-safe execution, *Trigger
   definitions are ignored during CCG processing*.
 
 - CARDs’ condition statements must be formulated in such a way that each
@@ -286,12 +285,12 @@ more-flexible CPG-on-FHIR specification may be summarized as follows:
   option.
 
 - The CARD’s **resulting data** must *also* be expressed in terms of the
-  person-centric and care context data model defined by this IHE CCG
-  Profile.
+  person-centric and care context data models defined by this IHE CCG
+  Profile (in Volume-3 or Volume-4).
 
 - The minimum data set (MDS) for each CCG will be defined by a set of
   Collect Information (Questionnaire) CARDs with **one** CARD for each
-  data element.
+  data element (e.g. blood pressure, weight, etc.).
 
 - A CCG **Folder** is defined using a FHIR PlanDefinition resource. This
   PlanDefinition will act as a container and reference the full set of
@@ -301,47 +300,44 @@ The set of **13 CARD *types*** defined by the IHE CCG Profile is listed
 below:
 
 1.  **Provide Information** – provide information, counselling, or
-    instructions **to** the patient (CommunicationRequest)
+    instructions **to** the patient. 
 
-2.  **Collect Information** – capture information **about** the patient
-    (using Questionnaire-QuestionnaireResponse pairs)
+2.  **Collect Information** – capture information **about** the patient.
 
 3.  **Request a Service (Lab Order)** – create a laboratory / pathology
-    ServiceRequest
+    Service Request.
 
 4.  **Request a Service (Radiology Order)** – create a radiology
-    ServiceRequest
+    Service Request.
 
 5.  **Request a Service (Procedure Order)** – create a procedure
-    ServiceRequest
+    Service Request.
 
-6.  **Request a Service (Referral)** – create a ServiceRequest to refer
+6.  **Request a Service (Referral)** – create a Service Request to refer
     a patient to another care provider (e.g. perhaps to escalate to a
-    higher level of care)
+    higher level of care).
 
 7.  **Propose a Diagnosis** – record the patient&apos;s diagnosis as a
-    Condition resource
+    Condition resource.
 
-8.  **Order Medication** – create a medication order (MedicationRequest)
+8.  **Order Medication** – create a medication order.
 
 9.  **Dispense Medication** – dispense medications based on an active
-    order (MedicationDispense)
+    order.
 
-10. **Administer Medication** – administer a dispensed medication
-    (MedicationAdministration)
+10. **Administer Medication** – administer a dispensed medication.
 
-11. **Request Immunization** – create a vaccination order and administer the vaccine
-    (recorded as an Immunization resource)
+11. **Request Immunization** – create an order and administer the vaccine.
 
-12. **Stop Activity (Medication Order)** - create a Task that, upon being processed, will stop a patient&apos;s presently active MedicationRequest
+12. **Stop Activity (Medication Order)** - create a Task that, upon being processed, will stop a patient&apos;s presently active Medication Order.
 
-13. **Stop Activity (Service Order)**  - create a Task that, upon being processed, will stop a patient&apos;s presently active ServiceRequest
+13. **Stop Activity (Service Order)**  - create a Task that, upon being processed, will stop a patient&apos;s presently active Service Request.
 
 ### Stack-of-CARDs Processing Metaphor
 
 The Folder-and-CARDs "flattened stack" approach may be contrasted with a “flowchart”
 approach, as illustrated by Figure 5 and Figure 6. Figure 5 illustrates
-a flowchart centric approach for describing a CCG.
+a flowchart centric approach for describing CCG-supported workflows.
 
 <figure>
 <img src="image5.png"
@@ -354,8 +350,8 @@ states. For a CARD to evaluate to true, its trigger event must be true
 **and** its condition statement must also be true. The trigger events
 may be leveraged by a digital health solution to inform when it should
 invoke a CCG evaluation operation (\$apply). Such an approach requires
-each individual CCG workflow process to be followed so that each state
-in the workflow occurs; otherwise, the trigger events will not fire
+each individual workflow process to be followed in its entirety so that each state
+in the workflow is reached; otherwise, the trigger events will not have a chance to fire
 true.
 
 <figure>
@@ -386,30 +382,29 @@ regular basis (every six months, for example) or procedures that should
 be done every year (eye exam, foot exam, etc.). Still others will
 describe what medications should be ordered if a patient’s vital signs
 indicate a health concern needs to be dealt with (such as, for instance,
-elevated blood pressure).
+to address elevated blood pressure).
 
 Following is a narrative description related to how concurrent CARD
 processing may be operationalized; this is not normative, but rather
 illustrative. To ensure CARDs are not missed, it is imagined that the
 ***entire CARD stack*** is iteratively processed over the course of the
-encounter. In the first pass, all the CARDs that have “do it during an
-encounter” as their logic condition will fire TRUE. Depending on how
+encounter. In the first pass, all the CARDs in the stack are procssed. Those that have “do it during every encounter” as their logic condition will fire TRUE. Depending on how
 long it has been since the last lab test or foot exam, some “do it every
 six months” CARDs or “do it every year” CARDs could also fire TRUE. For
 every CARD whose condition statement(s) evaluate to TRUE, either the
 recommended action is taken, or a reason code is recorded to indicate
 why the action is *not* to be taken.
 
-For each CARD, there is new ***resulting data***.
+For each CARD that fired TRUE, there is new ***resulting data***.
 This new data is taken into account as the entire stack-of-CARDs is
 again processed. This is illustrated by the successive invocations of
 \$apply in Figure 8. Based on the blood pressure reading, for example,
-an “order medications” CARD may fire TRUE. As before, either the
+an “order medications” CARD may fire TRUE during the second pass. As before, either the
 recommended action is taken, or a reason code is recorded to indicate
 why the action is *not* to be taken. This iterative process continues
 until ***zero*** new CARDs fire TRUE.
 
-Of course, the ***capabilities*** are different within different care
+Of course, the ***capabilities*** may be different within different care
 **contexts**. Such realities can be reflected in more sophisticated
 CARD condition logic statements. If a community health worker at a
 remote health outpost has recorded an elevated blood pressure, for

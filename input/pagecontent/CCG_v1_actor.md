@@ -136,7 +136,7 @@ Normatively, a Guideline Publisher actor:
         option.
 
 The content specifications in Volume-3 of the IHE CCG Profile define the
-normative requirements for a well-formed CCG artefact.
+normative requirements for a well-formed CCG artefact. A Guideline Publisher SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
 
 ### Guideline Repository
 
@@ -170,7 +170,7 @@ Normatively, a Guideline Repository actor:
         it accordingly.
 
 The content specifications in Volume-3 of the IHE CCG Profile define the
-normative requirements for a well-formed CCG artefact.
+normative requirements for a well-formed CCG artefact. A Guideline Repository SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
 
 ### Guideline Performer
 
@@ -232,7 +232,7 @@ Profile, as are the calling conventions and data inputs for the QRPH-64:
 Apply Guideline transaction. An implementing jurisdiction (via its
 relevant IHE Deployment Committee) may contextualize these
 specifications and, where applicable, such contextualizations are
-documented in Volume-4 of this IHE Profile.
+documented in Volume-4 of this IHE Profile. A Guideline Performer SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
 
 ### Guideline Engine
 
@@ -251,7 +251,7 @@ Apply** operation[^3] as defined by the CPG-on-FHIR Implementation
 Guide. Guideline Engine solutions may be implemented as an add-on to a
 FHIR® server or the server may natively operationalize support for this
 operation. There are many deployment options. For example, an engine
-might be operationalized by a software developer kit (SDK) or it might
+might be operationalized by a software development kit (SDK) or it might
 be a hosted online service operated by a Ministry of Health. As noted
 above, some Guideline Performer actors may be grouped with a Guideline
 Engine as part of a single software solution. Except for the normative
@@ -289,7 +289,7 @@ Profile, as are the calling conventions and data inputs for the QRPH-64:
 Apply Guideline transaction. An implementing jurisdiction (via its
 relevant IHE Deployment Committee) may contextualize these
 specifications and, where applicable, such contextualizations are
-documented in Volume-4 of this IHE Profile.
+documented in Volume-4 of this IHE Profile. A Guideline Engine SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
 
 ## Options
 
@@ -372,7 +372,7 @@ The Guideline Performer actor **SHALL** be able to:
   content specification and the “FHIR Complete” option defined in that
   spec. \[NOTE: this requirement is subject to jurisdictional
   contextualizations that may be defined in Volume-4 of the IHE CCG
-  Profile.\]
+  Profile, as noted previously.\]
 
 To support these requirements, the Guideline Performer actor **MAY** be
 grouped with IHE’s Care Services Selective Consumer[^7], Patient
@@ -445,7 +445,7 @@ Implementation architectures may also be employed to afford a credible
 degree of protection. Some jurisdictions have deployed clinical decision
 support engines as hosted services. With such an approach, the security
 practices of the host would defend the integrity of both the CCGs and
-their processor.
+their processing engine.
 
 Another important security aspect relates to CCG Engines’ audit records.
 It should be expected that such records could be of medico-legal

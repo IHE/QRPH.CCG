@@ -1,3 +1,5 @@
+Volume-3 (this section) defines the **base** content model for the CCG Profile. All CCG actors SHALL either operationalize **this** content model or an alternate model defined in Volume-4. 
+
 The content specifications in the IHE CCG Profile can be broadly
 categorized as being related to either the **definition** of CCGs or as
 being related to the transactional data needed to **invoke** and
@@ -182,7 +184,7 @@ by the IHE Dynamic Care Planning (DCP)[^6] Profile.
 ## Normative Action and Resulting Data Formats
 
 The details of ***how*** the Guideline Performer processes each
-recommended Action are not specified by this IHE CCG Profile. The Resulting Data for each CARD, however, is normatively defined. For clarity: this means that the Guideline Performer SHALL ensure that necessary post-processing is completed, based on the request resources returned in the QRPH-64 transaction response.
+recommended Action are not specified by this IHE CCG Profile. The **Resulting Data** for each CARD, however, is normatively defined. For clarity: this means that the Guideline Performer SHALL ensure that necessary post-processing is completed, based on the request resources returned in the QRPH-64 transaction response, such that the normative Resulting Data is generated and may be included in subsequent invocations of QRPH-64.
 
 ### Provide Information CARD
 
@@ -216,13 +218,13 @@ The following constraints **SHALL** apply to the Questionnaire resource
 referenced in the Task:
 
 - the scope of the Questionnaire will be limited to a **single** data
-  element and the relevant target FHIR resource content will be identified
+  element (e.g. blood pressure, weight, spirmetry measure, etc.) and the relevant target FHIR resource content will be identified
   Questionnaire.item.defintion
 
 - the content type (e.g. LOINC code for observation) and relevant units
   of measure **SHALL** be defined by the Questionnaire such that the
   content is persisted in a format consistent with the evidence-based
-  workflow logic defined for this CCG. To be clear: other CARD’s
+  workflow logic defined for this CCG. To be clear: other CARDs'
   Condition statements may rely on this content for their evaluation.
 
 It is the responsibility of the Guideline Performer to operationalize
@@ -230,7 +232,7 @@ data collection as defined by the Questionnaire. After processing is
 completed, the **Resulting Data** from this CARD **SHALL** be a FHIR
 resource based on the semantic definition expressed in the
 Questionnaire. The resulting resource **SHALL** reference the Encounter.
-NOTE: in this first version of the CCG Profile, Observation resources
+NOTE: in this *first* version of the CCG Profile, Observation resources
 based on the CPGObservation[^11] profile **SHALL** be exclusively
 supported with either status=final or
 status=cancelled (with dataAbsentReason).
@@ -341,7 +343,7 @@ After processing the Apply Guidelines transaction response,
 the **Resulting Data** from this CARD **SHALL** be a FHIR resource based
 on the CPGCondition[^17] profile with either a verificationStatus absent altogether or
 *not* entered-in-error or verificationStatus=entered-in-error
-(indicating not done).
+(indicating the recommendation was not followed).
 
 ### Order Medication CARD
 
