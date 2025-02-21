@@ -185,7 +185,7 @@ attestation related to the source content, including bibliographic citations of 
 
 <figure>
 <img src="image3.png"
-style="height: 100%; width: 100%; object-fit: contain" />
+style="width: 75%; object-fit: contain" />
 <figcaption><p>Figure 3 - Danish GP Decision Support Workflow</p></figcaption>
 </figure>
 
