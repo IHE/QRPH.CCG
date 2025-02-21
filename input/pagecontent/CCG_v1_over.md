@@ -227,7 +227,7 @@ products. It is also noteworthy that many countries (Canada, Sri Lanka,
 Botswana, New Zealand, etc.) and many multilateral organizations (Asia
 eHealth Information Network[^12], OpenHIE Community[^13], etc.) have
 adopted or advocated for the adoption of IPS as the basis for a national
-health summary specification.
+health summary specification. The joint EU-USA Trillium II project also reported on the significant value of leveraging IPS across multiple use cases (https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e5c54d85ba&appId=PPGMS)
 
 ### Folder-and-CARDs Metaphor 
 
