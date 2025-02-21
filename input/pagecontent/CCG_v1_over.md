@@ -171,36 +171,29 @@ World Bank[^9]. Among the report’s findings:
 
 As a standards **profiling** organization, IHE is uniquely positioned to
 develop an implementable, conformance-testable specification that
-addresses these challenges. The successful work of the underlying HL7
-CPG-on-FHIR IG can be **constrained** (and simplified) to **address the
-key challenges** around concurrent execution, broad implementability,
+addresses these healthcare challenges. The successful work of the underlying HL7
+CPG-on-FHIR IG has been **constrained** to address key implementation issues in-scope for the IHE CCG Profile related to concurrent CCG execution, broad implementability,
 and conformance-testability.
 
-To frame how this constraining might be accomplished, the approach of
-this IHE CCG Profile is influenced by the **US ASTP/ONC’s guidance §
-170.315 (b)(11)**[^10] regarding the methods for conformance-testing
+The strategy of constraining optionality has been adopted by multiple jurisdictions in their clinical decision support *regulatory* frameworks. As an example, the US ASTP/ONC has published guidance regarding the methods for conformance-testing
 digital health solutions that provide Evidence-based Decision Support
-Interventions \[NOTE: this guidance was current as of October 2024\].
-Sections (iii)(A) and (iv)(A) of this ONC guidance are shown in Figure 3. From the figure it may be noted that evidence-based Decision Support Interventions (DSIs) shall
-leverage a **constrained common data set** defined in the US Core Data
-for Interoperability[^11] specification. It can also be noted that,
+Interventions (DSI). It stipulates that evidence-based DSIs shall
+leverage a constrained common data set defined in the US Core Data
+for Interoperability[^11]. It can also be noted that,
 under this ONC regulation, a software solution provider must provide an
-attestation related to the source content leveraged to construct the
-DSI, including bibliographic citations of the clinical research of
-narrative (L1) care guidelines that inform the DSI's recommendations.
+attestation related to the source content, including bibliographic citations of the clinical research of narrative (L1) care guidelines, that inform the DSI's recommendations. Similarly, NHS Scotland (https://www.dhi-scotland.com/projects/the-right-decision-support-service-(rds)) has adopted a single-hosted-service approach that constrains optionality and ensures consistency of data and logic execution. This hosted service is ISO-13485 certified to meet relevant Software as a Medical Device (SaMD) regulations. In Denmark, the adoption of a common shared health record has enabled four DSIs to be taken to national scale (see Figure 3). Research on the Danish experience (https://bmcprimcare.biomedcentral.com/articles/10.1186/s12875-023-02234-y) has noted the importance of testability as a key element of success.
 
 <figure>
 <img src="image3.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><p>Figure 3 - US ONC regulations related to Evidence-based
-DSI</p></figcaption>
+<figcaption><p>Figure 3 - Danish GP Decision Support Workflow</p></figcaption>
 </figure>
 
-In an analogous way, the IHE CCG Profile **constrains** the content that
-may be employed to define CCG logic. In the base CCG specification, a
-slightly more flexible approach is favoured versus that used by ASTP/ONC:
+Informed by these examples and others, the IHE CCG Profile **constrains** the content that
+may be employed to define CCG logic. In the base CCG specification, an
+approach is favoured that allows care logic to take into account both patient health data *and* contextual attributes of the care encounter:
 
-- CCG logic based on **person-centric content** is defined in terms of
+- In the base specification (Volume-3 of this Profile) CCG logic based on **person-centric content** is defined in terms of
   the IHE International Patient Summary (**IPS**) Profile (*Complete*
   Option). The Complete Option stipulates that *optional* sections of an
   IPS document be instead treated as “required if known”. In this way,
@@ -217,8 +210,7 @@ slightly more flexible approach is favoured versus that used by ASTP/ONC:
 
 The IHE CCG Profile includes a **grammar** specification regarding how a
 CCG is to be constructed and what references and citations must be
-included. This CCG grammar has also informed by the ONC regulations.
-Importantly, a CCG artefact that is to be made available as a **global
+included. Importantly, a CCG artefact that is to be made available as a **global
 public good** shall be defined in terms of the Profile’s normative
 **global** content specifications as expressed in Volume-3 of this specification. It is to be expected that CCG
 artefacts intended for deployment in **domestic** contexts will leverage
@@ -226,7 +218,7 @@ a grammar that defines care logic based on a domestic patient summary
 specification (e.g. for the USA: UCSDI, for Canada: PS:CA, for Europe:
 the European Patient Summary, etc.) rather than on IPS.
 Contextualizations of the IHE CCG Profile grammar shall be defined in a
-relevant **Volume-4** section of the IHE CCG Profile. Every ecosystem actor defined in this IHE CCG Profile must support either the base content specification (as defined in Volume-3) or a contextualized content specification (as defined in Volume-4). All actors in a CCG ecosystem must support the same consistent content model.
+relevant **Volume-4** section of the IHE CCG Profile. Every ecosystem actor defined in this IHE CCG Profile SHALL support either the base content specification (as defined in Volume-3) or a contextualized content specification (as defined in Volume-4). For clarity: **all** actors in a CCG-conformant ecosystem SHALL support the **same** consistent content model.
 
 As a practical matter – it is anticipated that CCG processing workflows
 would be best served by on-demand generation of patient summary documents. Such a
@@ -239,10 +231,10 @@ health summary specification.
 
 ### Folder-and-CARDs Metaphor 
 
-To support the concurrent execution of multiple CCGs, a Folder-and-CARDs
+Action research and prototyping into CCG formats was conducted by a joint team from Canada Health Infoway, Cancer Care Ontario, and Hamilton Health Sciences. A working prototype was demonstrated at the 2020 IHE North American Connectathon. Informed by this research, and to support the concurrent execution of multiple CCGs, a Folder-and-CARDs
 metaphor is adopted by this IHE CCG Profile. The base content specification (Volume-3) operationalizes this model. Notionally, one can think
 of a CCG as a set of care recommendations where each recommendation is
-described by a **CARD**. This metaphor is illustrated in Figure 4.
+described by a **CARD**. This model is illustrated in Figure 4.
 
 <figure>
 <img src="image4.png"
@@ -790,7 +782,7 @@ all her patients.
 
 [^10]: <https://www.healthit.gov/test-method/decision-support-interventions>
 
-[^11]: <https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi>
+[^11]: <https://www.healthit.gov/test-method/decision-support-interventions#ccg>
 
 [^12]: <https://www.asiaehealthinformationnetwork.org/>
 
