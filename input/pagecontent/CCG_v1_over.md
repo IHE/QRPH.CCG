@@ -18,7 +18,7 @@ following key things:
     executed and that all relevant care recommendations will be proposed to
     the end-user in support of their care decision-making.
 
-4.  It documents a base **health data content model** that provides all ecosystem actors with a common underlying framework for defining, sharing, and executing CCG artefacts. It is anticipated that implementing jurisdictions will replace this base model with their national or regional continuity of care content specifications.
+4.  It documents a base **health data content model** that provides all ecosystem actors with a common underlying framework for defining, sharing, and executing CCG artefacts. It is anticipated that implementing jurisdictions may replace this base model with their national or regional continuity of care content specifications.
 
 The digital health ecosystem of CCG actors and transactions is designed
 to satisfy four use cases:
@@ -165,10 +165,7 @@ World Bank[^9]. Among the report’s findings:
   hospitals.
 
 The successful work of the underlying HL7
-CPG-on-FHIR IG has been **constrained** to address key implementation issues in-scope for the IHE CCG Profile related to concurrent CCG execution, broad implementability,
-and conformance-testability.
-
-The strategy of constraining optionality has been adopted by multiple jurisdictions in their clinical decision support *regulatory* frameworks. As an example, the US ASTP/ONC has published guidance regarding the methods for conformance-testing
+CPG-on-FHIR IG has been **constrained** to address key implementation issues in-scope for the IHE CCG Profile. A strategy of constraining optionality has been adopted by multiple jurisdictions in their clinical decision support *regulatory* frameworks. As an example, the US ASTP/ONC has published guidance regarding the methods for conformance-testing
 digital health solutions that provide Evidence-based Decision Support
 Interventions (DSI). It stipulates that evidence-based DSIs shall
 leverage a constrained common data set defined in the US Core Data
@@ -182,8 +179,8 @@ style="width: 75%; object-fit: contain" />
 <figcaption><p>Figure 3 - Danish GP Decision Support Workflow</p></figcaption>
 </figure>
 
-Informed by these examples and others, the IHE CCG Profile **constrains** the content that
-may be employed to define CCG logic. The base CCG content specification is defined in Volume-3 of this Profile. In this base content specification, an
+Informed by these examples and others, the IHE CCG Profile constrains the **content** that
+may be employed to define CCG logic. The (optional) base CCG content specification is defined in Volume-3 of this Profile. In this base content specification, an
 approach is favoured that allows care logic to take into account both patient health data *and* contextual attributes of the care encounter:
 
 - In the base specification, **person-centric content** is defined in terms of
@@ -201,10 +198,10 @@ approach is favoured that allows care logic to take into account both patient he
   the content specified by the IHE mobile Care Services Discovery
   (**mCSD)** Profile may *also* be employed to drive CCG care logic.
 
-It is anticipated that implementing jurisdictions will adopt the base common content model or will define an alternate common content model based on its domestic care continuity specification (e.g. for the USA: UCSDI, for Canada: PS:CA, for Europe:
-the European Patient Summary, etc.) as its common content model. An alterative common content model SHALL be defined in a relevant **Volume-4** section of the IHE CCG Profile. Each ecosystem actor defined SHALL declare its support for a content model option. **All** actors in a CCG-conformant **ecosystem** SHALL support the **same** common content model option.
+It is anticipated that implementing jurisdictions will adopt the base common content model or may define an alternate common content model based on their domestic care continuity specifications (e.g. for the USA: UCSDI, for Canada: PS:CA, for Europe:
+the European Patient Summary, etc.). An alterative common content model SHALL be defined in a relevant **Volume-4** section of the IHE CCG Profile. Each ecosystem actor SHALL declare its support for a content model option. As a practical constraint, **all** actors in a CCG-conformant **ecosystem** SHALL support the **same** common content model option.
 
-The choice of IPS as the foundation of the base common content model is intended to be risk-mitigating. It is noteworthy that many countries (Canada, Sri Lanka,
+IHE's choice of IPS as the foundation of the base common content model is intended to be risk-mitigating. It is noteworthy that many countries (Canada, Sri Lanka,
 Botswana, New Zealand, etc.) and many multilateral organizations (Asia
 eHealth Information Network[^12], OpenHIE Community[^13], etc.) have
 adopted or advocated for the adoption of the IPS as the basis for a national
@@ -212,7 +209,7 @@ health summary specification. The joint EU-USA **Trillium II** project reported 
 
 ### Folder-and-CARDs Metaphor 
 
-Included in the base common content model is a normative grammar related to how CCG artefacts are *defined*. Action research and prototyping into CCG formats was conducted by a joint team from Canada Health Infoway, Cancer Care Ontario, and Hamilton Health Sciences. A working prototype was demonstrated at the 2020 IHE North American Connectathon. Informed by this research, and to support the concurrent execution of multiple CCGs, a **Folder-and-CARDs**
+Included in the base common content model is a normative grammar related to how CCG artefacts are *defined*. Action research into CCG formats was conducted by a joint team from Canada Health Infoway, Cancer Care Ontario, and Hamilton Health Sciences. A working prototype was demonstrated at the 2020 IHE North American Connectathon. Informed by this research, and to support the concurrent execution of multiple CCGs, a **Folder-and-CARDs**
 metaphor is documented in Volume-3. Leveraging this model, one can think
 of a CCG as a set of care recommendations where each recommendation is
 described by a **CARD**. This model is illustrated in Figure 4.
@@ -339,11 +336,11 @@ encounter. In the first pass, all the CARDs in the stack are procssed and those 
 
 This new data is taken into account as the entire stack-of-CARDs is
 *again* processed. This is illustrated by the successive invocations of
-\$apply in Figure 8. Based on the blood pressure reading, for example,
+\$apply in Figure 6. Based on the blood pressure reading, for example,
 an “order medications” CARD may fire TRUE during the second pass. As before, either the
 recommended action is taken, or a reason code is recorded to indicate
 why the action is *not* to be taken. This iterative process continues
-until ***zero*** new CARDs fire TRUE.
+until ***zero*** new CARDs fire TRUE, which indicates the processing is DONE.
 
 Of course, the ***capabilities*** may be different within different care
 **contexts**. Such realities can be reflected in more sophisticated
@@ -364,19 +361,18 @@ As noted in the introduction, the CCG specification is designed to
 satisfy four use cases:
 
 1.  **UC-1**: A person who is a guideline *author* uses a digital health
-    tool (which plays the role of a **CCG Publisher** actor) to retrieve
-    and edit an existing CCG or to create a brand-new CCG (L3)[^15]
+    tool (which plays the role of a **Guideline Publisher** actor) to retrieve
+    and edit an existing CCG or to create a brand-new CCG (L3)[^1]
     artefact. Maybe she digitally signs the artefact (at the top level,
     or every recommendation). She then **publishes the CCG (L3)
-    artefact** to a **CCG Repository** actor.
+    artefact** to a **Guideline Repository** actor.
 
-2.  **UC-2**: A person who uses a digital health solution (e.g. a local
-    EMR, playing the role of a **CCG Engine** actor) to execute CCGs
-    **refreshes the local cache** of CCGs from a **CCG Repository**
+2.  **UC-2**: A digital health solution that executes CCGs (a **Guideline Engine** actor) 
+    **refreshes its local cache** of CCGs from a **Guideline Repository**
     actor.
 
 3.  **UC-3**: A person who is a care provider leverages her digital
-    health solution (e.g. an EMR) to **enroll a patient** in one or more
+    health solution (e.g. an EMR) to **associate a patient** with one or more
     CCG-supported, evidence-based care programmes.
 
 4.  **UC-4**: A person who is a care provider has an ambulatory
