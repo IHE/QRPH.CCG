@@ -296,6 +296,21 @@ signed CCGs:
 
 The Guideline Engine **MAY** support the Trusted CCG option.
 
+| **Actor** | **Option** | **Optionality** |
+|----|----|----|
+| Guideline Publisher | Common Content Model | R |
+|  | Digitally Signed Folder | O |
+|  | Digitally Signed CARD | O |
+| Guideline Repository | Common Content Model | R |
+|  | Digitally Signed Folder | R |
+|  | Digitally Signed CARD | R |
+| Guideline Performer | Common Content Model | R |
+| Guideline Engine | Common Content Model | R |
+|  | Trusted CCG | O |
+{:.grid}
+
+Table 2 - CCG Actor Options
+
 ### Common Content Model
 
 Each CCG actor **SHALL** support at least one of the common content options listed below:
