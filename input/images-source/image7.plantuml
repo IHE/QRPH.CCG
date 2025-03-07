@@ -22,34 +22,34 @@ participant "Guideline\n Repository" as gr
 
 loop during CCG authoring
   note left of gp #EBF1DE
-<size 16>•   A Guideline Publisher may support x1, x2
+<size 16>•   A Guideline Publisher may support QRPH-61, QRPH-62
 <size 16>•   A Guideline Publisher may support a digitally signed
-   <size 16>   x3 payload (whole CCG, or reach CARD)
+   <size 16>   QRPH-63 payload (whole CCG, or reach CARD)
 end note
  opt if updating an existing CCG
-  gp -> gr: x1 Search for Guidelines
-  gr -> gp: x1 response
+  gp -> gr: QRPH-61 Search for Guidelines
+  gr -> gp: QRPH-61 response
 
-  gp -> gr: x2 Retrieve Guideline
-  gr -> gp: x2 response
+  gp -> gr: QRPH-62 Retrieve Guideline
+  gr -> gp: QRPH-62 response
  end opt
- gp -> gr: x3 Publish Guideline*
- gr -> gp: x3 response
+ gp -> gr: QRPH-63 Publish Guideline*
+ gr -> gp: QRPH-63 response
 end loop
 note over gr #EBF1DE: <size 18>State-A: Well-formed CCGs exist in \n<size 18>Guideline Repository
 ==<size 18><color #e98023> 2. $apply Engines regularly refresh\n<size 18><color #e98023>their local cache of published CCGs. ==
 
 loop for each CCG refresh cycle
- ge -> gr: x1 Search for Guideline
- gr -> ge: x1 response
+ ge -> gr: QRPH-61 Search for Guideline
+ gr -> ge: QRPH-61 response
  note left of cps #FFE7B7
  <size 16>A Guideline $apply Engine may support
  <size 16>  that only “trusted” CCG artefacts
  <size 16>  are available for execution.
 end note
  loop for every Guideline in need of refresh
-  ge -> gr: x2 Retrieve Guideline
-  gr -> ge: x2 response
+  ge -> gr: QRPH-62 Retrieve Guideline
+  gr -> ge: QRPH-62 response
  end loop for Guideline refresh 
 end loop for refresh cycle
 note over ge #FFE7B7: <size 18>State-B: updated CCGs exist on \n<size 18>Guideline $apply Engine

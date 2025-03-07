@@ -3,31 +3,29 @@
 The digital health ecosystem of CCG actors and transactions is designed
 to satisfy four use cases:
 
-1.  **UC-1 (Green)**: A person who is a guideline *author* uses a digital health
-    tool (which plays the role of a **CCG Publisher** actor) to retrieve
-    and edit an existing CCG or to create a brand-new CCG
-    (L3)[<sup>1</sup>](CCG_v1_over.html#fn:1) artefact.
-    Maybe she digitally signs the artefact (at the top level, or every
-    recommendation). She then **publishes the CCG (L3) artefact** to
-    a **CCG Repository** actor.
+1.  **UC-1 (Green)**: A person who is a guideline *author* uses a digital health
+    tool (which plays the role of a **Guideline Publisher** actor) to retrieve
+    and edit an existing CCG or to create a brand-new CCG (L3)[^1]
+    artefact. Maybe she digitally signs the artefact (at the top level,
+    or every recommendation). She then **publishes the CCG (L3)
+    artefact** to a **Guideline Repository** actor.
 
-2.  **UC-2 (Yellow)**: A person who uses a digital health solution (e.g. a local
-    EMR, playing the role of a **CCG Engine** actor) to execute
-    CCGs **refreshes the local cache** of CCGs from a **CCG
-    Repository** actor.
+2.  **UC-2 (Yellow)**: A digital health solution that executes CCGs (e.g. a **Guideline Engine** actor) 
+    **refreshes its local cache** of CCGs from a **Guideline Repository**
+    actor.
 
 3.  **UC-3 (Red)**: A person who is a care provider leverages her digital
-    health solution (e.g. an EMR) to **enroll a patient** in one or more
+    health solution (e.g. an EMR) to **associate a patient** with one or more
     CCG-supported, evidence-based care programmes.
 
 4.  **UC-4 (Blue)**: A person who is a care provider has an ambulatory
     encounter with a patient who is enrolled in one or more
     CCG-supported care plans. During the encounter, she leverages her
-    digital health solution (e.g. EMR, playing the role of a **Guideline
-    Performer** actor) to invoke processing by a **Guideline
-    Engine** actor to **concurrently execute the relevant CCGs.** She
-    acts upon the recommendations to provide person-centric,
-    guideline-adherent care.
+    digital health solution (e.g. EMR, playing the role of a **Guideline
+    Performer** actor) to invoke processing by a **Guideline Engine**
+    actor to **concurrently execute the relevant CCGs.** She acts upon
+    the recommendations to provide person-centric, guideline-adherent
+    care.
 
 The actors that participate in operationalizing the four colour-coded use cases are
 pictorially illustrated by Figure 13.
@@ -53,9 +51,9 @@ defined in this Profile:
 - **Guideline Performer:** an actor that can directly or indirectly
   interact with a human user, construct appropriate encounter-specific
   artefacts (e.g. a bundle containing relevant contextual and
-  person-centric content), and manage the iterative invocation of
+  person-centric content), manage the iterative invocation of
   \$apply operations that will concurrently process one or more relevant
-  CCGs.
+  CCGs, and appropriately process the transaction responses.
 
 - **Guideline Engine:** an actor that can ingest a submitted bundle of
   relevant contextual and person-centric content and execute the
@@ -135,8 +133,8 @@ Normatively, a Guideline Publisher actor:
         **MAY** adhere to the stipulations of the Digitally Signed CARD
         option.
 
-The content specifications in Volume-3 of the IHE CCG Profile define the
-normative requirements for a well-formed CCG artefact. A Guideline Publisher SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
+The content specifications in Volume-3 of the IHE CCG Profile define a base set of 
+normative requirements for a well-formed CCG artefact. One or more alternate content definitions may be documented in Volume-4. A Guideline Publisher SHALL declare the content model option to which it adheres. 
 
 ### Guideline Repository
 
@@ -169,8 +167,8 @@ Normatively, a Guideline Repository actor:
         actor **SHALL** appropriately evaluate the payload and process
         it accordingly.
 
-The content specifications in Volume-3 of the IHE CCG Profile define the
-normative requirements for a well-formed CCG artefact. A Guideline Repository SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
+The content specifications in Volume-3 of the IHE CCG Profile define a base set of 
+normative requirements for a well-formed CCG artefact. One or more alternate content definitions may be documented in Volume-4. A Guideline Repository actor SHALL declare the content model option to which it adheres. 
 
 ### Guideline Performer
 
@@ -215,7 +213,7 @@ During a care encounter, the Guideline Performer:
         operationalizing the recommendation;
 
     2.  The relevant care context data will be updated to reflect the
-        user inputs from step (a);
+        user inputs from step 2.1;
 
     3.  The relevant care context data will be leveraged by a Guideline
         Engine, either internally or via an external call using
@@ -226,13 +224,10 @@ During a care encounter, the Guideline Performer:
     activities carried out during the processing of the iterative loop
     (2), along with appropriate audit log records.
 
-The content specifications related to care context and related to
+The base content specifications related to care context and related to
 person-centric health data are defined in Volume-3 of the IHE CCG
 Profile, as are the calling conventions and data inputs for the QRPH-64:
-Apply Guideline transaction. An implementing jurisdiction (via its
-relevant IHE Deployment Committee) may contextualize these
-specifications and, where applicable, such contextualizations are
-documented in Volume-4 of this IHE Profile. A Guideline Performer SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
+Apply Guideline transaction and the normative Resulting Data from the processing of the transaction response. One or more alternate content specifications may be documented in Volume-4. A Guideline Performer actor SHALL declare the content model option to which it adheres. 
 
 ### Guideline Engine
 
@@ -283,31 +278,41 @@ Normatively, a Guideline Engine actor:
     with any other input (“IN”) parameters defined in the operation’s
     specification.
 
-The content specifications related to care context and related to
+The base content specifications related to care context and related to
 person-centric health data are defined in Volume-3 of the IHE CCG
 Profile, as are the calling conventions and data inputs for the QRPH-64:
-Apply Guideline transaction. An implementing jurisdiction (via its
-relevant IHE Deployment Committee) may contextualize these
-specifications and, where applicable, such contextualizations are
-documented in Volume-4 of this IHE Profile. A Guideline Engine SHALL support either the content specifications defined in Volume-3 or an alternate specification defined in Volume-4.
+Apply Guideline transaction and the normative Resulting Data from the processing of the transaction response. One or more alternate content specifications may be documented in Volume-4. A Guideline Engine actor SHALL declare the content model option to which it adheres. 
 
 ## Options
 
-The Publish Guideline transaction includes two options for digitally
+Each CCG actor SHALL declare the common content model it supports. All the actors in a CCG ecosystem SHALL support the same common content model option.
+
+The Guideline Publisher and Guideline Repository each may support two options for digitally
 signed CCGs:
 
 1.  Digitally Signed Folder
 
 2.  Digitally Signed CARD
 
-The Apply Guideline transaction includes a Trusted CCG option.
+The Guideline Engine may support the Trusted CCG option.
+
+### Common Content Model
+
+Each CCG actor SHALL support at least one of the common content options listed below:
+
+1.  Volume-3
+
+2.  An alternate common content model defined in Volume-4
+
+3.  NONE
+
+NOTE: an alternate common content model defined in Volume-4 may alter/augment the content model defined in Volume-3 or it may replace the base model altogether. All of the content models defined by this IHE Profile are peer alternates, *including* the base model defined in Volume-3.
 
 ### Digitally Signed Folder
 
 Guideline Publisher actors supporting this option will include a single
-digital signature that applies to the entire CCG. This signature would
-be applied to the whole “Folder” (note the folders-and-CARDS metaphor
-described in section Folder-and-CARDs Metaphor).
+digital signature that applies to the entire CCG artefact. For actors supporting the common content model in Volume-3, this signature is applied to the whole “Folder” (note the folders-and-CARDS model
+described in section [Folder-and-CARDs Metaphor](CCG_v1_over.html#folder-and-cards-metaphor)).
 
 A Guideline Repository shall support both levels of digital signature on
 the Publish Guidelines transaction: at the Folder level and at the CARD
@@ -321,31 +326,25 @@ repository.
 Guideline Publisher actors supporting this option shall also support the
 Digitally Signed Folder option. In addition to including a digital
 signature on the Folder, a digital signature will also be included for
-each CARD (note the folders-and-CARDS metaphor described in section
-Folder-and-CARDs Metaphor).
+each individual knowledge artefact in the CCG. For actors supporting the common content model in Volume-3, this option operationalizes digital signing at the CARD level (note the folders-and-CARDS model described in section
+[Folder-and-CARDs Metaphor](CCG_v1_over.html#folder-and-cards-metaphor)).
 
 A Guideline Repository shall support both levels of digital signature on
 the Publish Guidelines transaction: at the Folder level and at the CARD
-level. If a digital signature has been included at the Folder level, and
-if the signature does not match the content hash, an exception will be
-returned to the submitter and the content will not be persisted to the
-repository. If a digital signature has been submitted at the CARD level,
-and if the CARD signature does not match its hash on any CARD included
-in the CCG submission, an exception will be returned to the submitter
-and the content will not be persisted to the repository.
+level. If the digital signature on any individual knowledge artefact does not match its hash, an exception will be returned to the submitter
+and none of the submitted CCG content will be persisted to the repository.
 
 ### Trusted CCG
 
 A Guideline Engine actor supporting the Trusted CCG option will verify
-that each CCG CARD is signed by a trusted entity and that the digital
-signature on every CARD matches the CARD’s hash. If the CARD’s digital
-signature is not in the trust list, or if the CARD’s hash doesn’t match
-the digital signature, then an exception will be raised and any CCG
-Folder containing the relevant CARD will be made inactive until the
+that each CCG knowledge artefact is signed by a trusted entity and that the digital
+signature on every artefact matches the artefact's hash. If the artefact's signing certificate is not in the trust list, or if the artefact's hash does not match
+its digital signature, then an exception will be raised and every CCG
+Folder referencing the relevant artefact will be made inactive until the
 issue is resolved.
 
 For clarity: a Guideline Engine actor supporting the Trusted CCG option
-will flag an *unsigned* CARD as an exception.
+will flag an *unsigned* artefact as an exception.
 
 ## Actor groupings
 
@@ -367,12 +366,7 @@ The Guideline Performer actor **SHALL** be able to:
 - Unambiguously identify the care subject, and access related
   demographic attributes;
 
-- Retrieve and/or construct a FHIR-based health summary document for the
-  care subject, based on the IHE International Patient Summary (IPS)
-  content specification and the “FHIR Complete” option defined in that
-  spec. \[NOTE: this requirement is subject to jurisdictional
-  contextualizations that may be defined in Volume-4 of the IHE CCG
-  Profile, as noted previously.\]
+- Retrieve and/or construct the person-centric health content required to support executing a QRPH-64 transaction, based on the selected common content option. 
 
 To support these requirements, the Guideline Performer actor **MAY** be
 grouped with IHE’s Care Services Selective Consumer[^7], Patient
@@ -399,7 +393,7 @@ creating or updating a person-centric care plan for a subject. A digital
 health solution that is claiming conformance as a Guideline Performer
 actor will be able to claim conformance as a **grouped** Care Plan
 Contributor actor and Care Plan Service actor if it can demonstrate that
-it is able to achieve State-C and State-D as defined in the Use Cases
+it is able to achieve State-C and State-D as defined in the [Use Cases](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
 section of this Profile (Figures 7 and 8).
 
 #### Guideline Performer \| Guideline Engine
@@ -411,7 +405,8 @@ claiming conformance as a Guideline Performer actor will be able to
 claim conformance as a **grouped** Guideline Engine actor if it can
 demonstrate that it is able to correctly achieve State-E from a known
 starting point of State-D and State-B (as illustrated by Figure 8 in the
-Use Cases section of this Profile).
+[Use Cases](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
+section of this Profile).
 
 ## Security considerations
 
