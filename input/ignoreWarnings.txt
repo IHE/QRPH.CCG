@@ -4,7 +4,7 @@
 # referring to our own CodeSystem
 %Reference to draft CodeSystem%
 
-# yes, we know
+# Intentional
 %The repeating element has a fixed%
 
 # This is a necessary constraint
@@ -13,5 +13,17 @@
 # yet, just reducing noise during development
 %The Implementation Guide contains no examples for this profile%
 
-# problem with Parent
-%Coding has no system. A code with no system has no defined meaning, and it cannot be validated: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided%
+# Not an HL7 publication, IHE International sets all as "universal"
+%The IG is not for the international realm%
+
+# These extensions are inherited in the dependent IGs.
+%There are multiple different potential matches for the url%
+
+# Only depending on published versions
+%but the most recent version is 2.0.0-ballot%
+
+# Still valid for R4
+INFORMATION: StructureDefinition/ccg-card-adminrx-ad: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+INFORMATION: StructureDefinition/ccg-di-ips-composition: Composition.extension: The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.2.0 is deprecated
+INFORMATION: StructureDefinition/ccg-di-ips-composition: StructureDefinition.snapshot.element[40].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/ccg-di-ips-composition: StructureDefinition.snapshot.element[54].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
