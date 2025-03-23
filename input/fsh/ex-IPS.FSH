@@ -317,7 +317,7 @@ Usage: #inline
 Instance: ZKT9319
 InstanceOf: Patient
 Usage: #inline
-* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier.system = "https://example.org/nhi-id"
 * identifier.value = "ZKT9319"
 * name.use = #usual
 * name.family = "Test-Fuimaono"
@@ -370,7 +370,7 @@ Usage: #inline
 Instance: d4b84a1f-862a-4d8e-884d-a46ac2a3c171
 InstanceOf: Organization
 Usage: #inline
-* identifier.system = "https://standards.digital.health.nz/ns/hpi-facility-id"
+* identifier.system = "https://example.org/hpi-facility-id"
 * identifier.value = "F0U044-C"
 * name = "Fairfield Medical Centre"
 
@@ -392,7 +392,7 @@ Usage: #inline
 Instance: 3fa60707-7c9b-4956-adab-64f792b05d40
 InstanceOf: Organization
 Usage: #inline
-* identifier.system = "https://standards.digital.health.nz/ns/hpi-facility-id"
+* identifier.system = "https://example.org/hpi-facility-id"
 * identifier.value = "F0U044-C"
 * name = "Fairfield Medical Centre"
 
@@ -961,7 +961,7 @@ Usage: #inline
 * status = #active
 * intent = #plan
 * subject = Reference(ZKT9319)
-* activity[0].detail.instantiatesCanonical = "https://example.com/fhir/PlanDefinition/CCG-patient-plans-example"
+* activity[0].detail.instantiatesCanonical = "https://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
 * activity[=].detail.status = #in-progress
 
 Instance: CCG-patient-plans-example
