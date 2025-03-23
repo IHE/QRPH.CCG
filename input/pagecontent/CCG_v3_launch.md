@@ -1,4 +1,4 @@
-Volume-3 (this section) defines the **base** content model for the CCG Profile. All CCG actors SHALL either operationalize **this** content model or an alternate model defined in Volume-4. 
+Volume-3 (this section) defines the **base** content model for the CCG Profile. All CCG actors **SHALL** declare the contextual content model to which they adhere. It may be the one defined in this Volume-3 or an alternate model defined in Volume-4. For clarity: normative statements in this Volume-3 apply to CCG actors that claim conformance to *this* base content model. 
 
 The content specifications in the IHE CCG Profile can be broadly
 categorized as being related to either the **definition** of CCGs or as
@@ -63,12 +63,12 @@ listed in full on the
 
 | ***Content:*** |  |  |
 |----|----|----|
-| CCG Package | [CCG_Deployment_Package](StructureDefinition-ccg-deployment.html) | IG |
-| CCG Folder | [CCG_CARD_Folder](StructureDefinition-ccg-card-folder.html) | PD |
-| CCG Patient Plans | [CCG_Patient_Plans](StructureDefinition-ccg-patient-plans.html) | PD |
+| CCG Package | [CCG_Deployment_Package](StructureDefinition-ccg-deployment.html) | Implementation Guide |
+| CCG Folder | [CCG_CARD_Folder](StructureDefinition-ccg-card-folder.html) | PlanDefinition |
+| CCG Patient Plans | [CCG_Patient_Plans](StructureDefinition-ccg-patient-plans.html) | PlanDefinition |
 | Library | [CCG_CARD_Library](StructureDefinition-ccg-card-library.html) | Library |
 | Digital Signature | [CCG_Signature](StructureDefinition-ccg-signature.html) | Provenance |
-| ***CARD types:*** | ***PD*** |***AD***  |
+| ***CARD types:*** | ***PlanDefinition*** |***ActivityDefinition***  |
 | Provide Information | [CCG_Provide_Information](StructureDefinition-ccg-card-provide.html) | [CCG_Provide_Info_Activity](StructureDefinition-ccg-card-provide-ad.html) |
 | Collect Information | [CCG_Collect_Information](StructureDefinition-ccg-card-collect.html) | [CCG_Collect_Info_Activity](StructureDefinition-ccg-card-collect-ad.html) |
 | Lab Order | [CCG_Request_Service_Lab_Order](StructureDefinition-ccg-card-reqserv-labs.html) | [CCG_Request_Service_Labs_Activity](StructureDefinition-ccg-card-reqlabs-ad.html) |
@@ -118,7 +118,7 @@ that drives it, is illustrated in the figure above.
     content bundle submitted as an input to the next iterative
     invocation of the QRPH-64 transaction.
 
-6.  Based on this ***updated*** Data-in bundle, a RequestGroup is
+6.  Based on this ***uPlanDefinitionated*** Data-in bundle, a RequestGroup is
     returned by the Guideline Engine containing zero or more recommended
     Actions.
 
@@ -126,7 +126,7 @@ that drives it, is illustrated in the figure above.
     Actions to normatively generate Resulting Data. If the RequestGroup
     returned by the QRPH-64 transaction is empty, the processing loop
     ends and the set of Resulting Data is persisted as part of the
-    patient’s updated health record. NOTE: if an empty RequestGroup is
+    patient’s uPlanDefinitionated health record. NOTE: if an empty RequestGroup is
     returned by transaction QRPH-64 at step-4, the processing loop ends
     at this step.
 
@@ -165,7 +165,7 @@ The data-in bundle **SHALL** contain:
   which **SHALL** include *all* content defined in the [**CCG IPS
   composition**](StructureDefinition-ccg-di-ips-composition.html)
   model and available to the Guideline Performer, and which **SHALL**
-  reference the <span class="mark">top-level Folder</span> that lists
+  reference the top-level Folder that lists
   the patient’s applicable CCG(s) in the **CCG Patient Plans** resource referenced in the [**CCG IPS
   CarePlan**](StructureDefinition-ccg-data-in-ips-careplan.html)
   resource,
@@ -440,15 +440,15 @@ The recommended **Action** from this CARD **SHALL** be a Task resource
 based on the CPGStopTask[^25] profile.
 
 After processing the Apply Guidelines transaction response,
-the **Resulting Data** from this CARD **SHALL** be an **updated**
+the **Resulting Data** from this CARD **SHALL** be an **uPlanDefinitionated**
 MedicationRequest resource that **SHALL** have a status =
 stopped, **SHALL** reference the present Encounter, and **SHALL** set
 authoredOn = current timestamp. A Provenance resource **SHOULD** be
 created to log details of the STOP order; specifics of this are out of
 scope for this Profile.
 
-The IPS document in the Data-in Bundle **SHALL** be updated to reflect
-the updated MedicationRequest resource.
+The IPS document in the Data-in Bundle **SHALL** be uPlanDefinitionated to reflect
+the uPlanDefinitionated MedicationRequest resource.
 
 ### Stop Activity (Service Order) CARD
 
@@ -460,15 +460,15 @@ The recommended **Action** from this CARD **SHALL** be a Task resource
 based on the CPGStopTask[^26] profile.
 
 After processing the Apply Guidelines transaction response,
-the **Resulting Data** from this CARD **SHALL** be an updated
+the **Resulting Data** from this CARD **SHALL** be an uPlanDefinitionated
 ServiceRequest resource that **SHALL** have a status =
 revoked, **SHALL** reference the present Encounter, and **SHALL** set
 authoredOn = current timestamp. A Provenance resource **SHOULD** be
 created to log details of the STOP order; specifics of this are out of
 scope for this Profile.
 
-The IPS document in the Data-in Bundle **SHALL** be updated to reflect
-the updated ServiceRequest resource.
+The IPS document in the Data-in Bundle **SHALL** be uPlanDefinitionated to reflect
+the uPlanDefinitionated ServiceRequest resource.
 
 **References:**
 
@@ -482,7 +482,7 @@ the updated ServiceRequest resource.
 
 [^5]: <https://stackoverflow.com/questions/37579152/nested-fhir-bundles>
 
-[^6]: <https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_DCP.pdf>
+[^6]: <https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_DCP.PlanDefinitionf>
 
 [^7]: <https://hl7.org/fhir/uv/cpg/StructureDefinition-cpg-communicationrequest.html>
 

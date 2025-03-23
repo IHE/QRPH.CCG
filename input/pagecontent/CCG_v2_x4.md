@@ -5,7 +5,7 @@ submit a contextual content bundle to a Guideline Engine and to invoke
 the \$CPGPlanDefinitionApply operation, which will be evaluated based on
 the submitted content. The transaction response returns a bundle of
 Request resources representing the proposed activities based on applying
-the relevant CCGs.
+the relevant CCGs. The *details* of the content bundle and of the expected actions will depend upon the contextual content option to which the Guideline Performer actor claims conformance.
 
 ### Actor roles
 
@@ -23,9 +23,9 @@ Transaction QRPH-64 Apply Guideline is based on the following standards:
 
 - CPG STU2 specification: <https://hl7.org/fhir/uv/cpg/STU2/index.html>
 
-- FHIR IPS specification[^1]: <https://hl7.org/fhir/uv/ips/2024Sep/>
+- (Optionally) FHIR IPS specification[^1]: <https://hl7.org/fhir/uv/ips/2024Sep/>
 
-- IHE mCSD Profile: <https://profiles.ihe.net/ITI/mCSD/index.html>
+- (Optionally) IHE mCSD Profile: <https://profiles.ihe.net/ITI/mCSD/index.html>
 
 ### Interactions
 
@@ -75,15 +75,14 @@ The following parameters are relevant to this transaction:
   CCG libraries.
 
 - The contextual content bundle **SHALL** be included as the **data**
-  parameter in the Apply Guideline transaction. This content bundle is
-  specified in the Vol-3 section: Contextual Content Bundle.
+  parameter in the Apply Guideline transaction. This content bundle **SHALL** adhere to the actor's claimed contextual content option.
 
 #### Expected Actions - Initiator
 
 Prior to submitting the transaction, the transaction initiator:
 
 - **SHALL** prepare an up-to-date contextual content bundle adherent to
-  the specification in the Vol-3 section: [**Contextual Content Bundle**](CCG_v3_launch.html#contextual-content-data-in-bundle).
+ the actor's claimed contextual content option.
 
 - **SHALL** create an audit record of the transaction submission (see
   [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
