@@ -19,6 +19,7 @@ Instance: NZ-IPS-20241229230313
 InstanceOf: Bundle
 Usage: #example
 Title: "Example Patient IPS"
+Description: "Example IPS including CCG references in the Care Plan section"
 * language = #en-US
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "ca7cac26-f0ee-42b9-bd98-b102b0365b40"
