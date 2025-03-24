@@ -12,7 +12,7 @@ Usage: #example
 * extension[=].valueCode = #computable
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * extension[=].valueCode = #publishable
-* url = "http://hl7.org/fhir/uv/cpg/ActivityDefinition/activity-example-administermedication-ad"
+* url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-administermedication-ad"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.1"
 * version = "2.0.0"
@@ -29,7 +29,7 @@ Usage: #example
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#adminrx 
 * jurisdiction = $m49.htm#001 "World"
 * kind = #Task
-* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-administermedicationtask"
+* profile = "https://profiles.ihe.net/QRPH/CCG/StructureDefinition/ccg-card-adminrx-ad"
 * code = $cpg-activity-type-cs#administer-medication "Administer a medication"
 * intent = #proposal
 * doNotPerform = false
