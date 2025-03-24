@@ -7,7 +7,6 @@ Description: "Profile to serve as the basis for all CARD PlanDefinitions based o
 * id 1..1
 * url 1..1
 * name 1..1
-* text 1..1
 * title 1..1
 * type = http://terminology.hl7.org/CodeSystem/plan-definition-type#eca-rule (exactly)
 * date 1..1
@@ -22,7 +21,6 @@ RuleSet: CCG_CARD_ActivityDefinition(adtopic)
 * id 1..1
 * url 1..1
 * name 1..1
-* text 1..1
 * title 1..1
 * date 1..1
 * publisher 1..1
@@ -37,7 +35,6 @@ Description: "Profile to serve as the basis for all CARD definitions referencing
 * id 1..1
 * url 1..1
 * name 1..1
-* text 1..1
 * title 1..1
 * date 1..1
 * publisher 1..1
@@ -61,7 +58,6 @@ Description: "Each unique CCG will be expressed as a PlanDefinition (a CCG Folde
 * id 1..1
 * url 1..1
 * name 1..1
-* text 1..1
 * title 1..1
 * date 1..1
 * publisher 1..1
