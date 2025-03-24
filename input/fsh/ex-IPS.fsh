@@ -1,23 +1,5 @@
-Alias: $loinc = http://loinc.org
-Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
-Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $sct = http://snomed.info/sct
-Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
-Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
-Alias: $cvx = http://hl7.org/fhir/sid/cvx
-Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
-
 Instance: NZ-IPS-20241229230313
-InstanceOf: Bundle
-Usage: #example
+InstanceOf: ccg-di-ips-bundle
 Title: "Example Patient IPS"
 Description: "Example IPS including CCG references in the Care Plan section"
 * language = #en-US
@@ -195,7 +177,7 @@ Description: "Example IPS including CCG references in the Care Plan section"
 * entry[=].resource = CCG-patient-plans-example
 
 Instance: 896da41d-578c-4223-90e0-37e167d073f3
-InstanceOf: Composition
+InstanceOf: ccg-di-ips-composition
 Usage: #inline
 * meta.versionId = "1"
 * language = #en-US
@@ -369,14 +351,12 @@ Usage: #inline
 
 Instance: d4b84a1f-862a-4d8e-884d-a46ac2a3c171
 InstanceOf: Organization
-Usage: #inline
 * identifier.system = "https://example.org/hpi-facility-id"
 * identifier.value = "F0U044-C"
 * name = "Fairfield Medical Centre"
 
 Instance: 66ac78e5-4172-46d6-acf4-11148401c6d6
 InstanceOf: PractitionerRole
-Usage: #inline
 * practitioner = Reference(35ed8aa3-eff2-4431-9baa-a15c7a9afef6)
 * code = $sct#158965000 "Doctor"
 
@@ -956,7 +936,7 @@ Usage: #inline
 * subject = Reference(ZKT9319)
 
 Instance: CCG-careplan-example
-InstanceOf: CarePlan
+InstanceOf: ccg-data-in-ips-careplan
 Usage: #inline
 * status = #active
 * intent = #plan

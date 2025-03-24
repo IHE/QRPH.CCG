@@ -1,20 +1,4 @@
-Alias: $loinc = http://loinc.org
-Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
-Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $sct = http://snomed.info/sct
-Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
-Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
-Alias: $cvx = http://hl7.org/fhir/sid/cvx
-Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
-
+/*
 Instance: ZKT9319
 InstanceOf: Patient
 Title: "Example Patient"
@@ -69,3 +53,4 @@ Usage: #example
 * contact[=].address.postalCode = "3214"
 * contact[=].address.country = "NZ"
 * communication.language.text = "en-NZ"
+*/

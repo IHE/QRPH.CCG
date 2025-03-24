@@ -34,7 +34,6 @@ dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.uv.cql: 1.0.0
 
-
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
     - input/resources
@@ -56,7 +55,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 #resources:
 # list every example here with a name, description and that exampleBoolean is true; These are used to populate the artifacts page, and are needed to eliminate build warnings 
 # You may delay filling out this section until you approach publication as it is merely a nice to have and eliminates build warnings -- If you do this then you will need above the autoload-resources true
-
 
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.

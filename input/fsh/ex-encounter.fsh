@@ -1,11 +1,6 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $cpg-activity-type-cs = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs
-
 Instance: activity-example-administermedication-ad
-InstanceOf: ActivityDefinition
+InstanceOf: ccg-card-adminrx-ad
 Usage: #example
-* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-administermedicationactivity"
-* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
 * extension[=].valueCode = #shareable
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
@@ -20,16 +15,12 @@ Usage: #example
 * title = "Activity Example Administer Medication AD"
 * status = #active
 * experimental = true
-* date = "2024-11-26T16:34:39+00:00"
-* publisher = "HL7 International / Clinical Decision Support"
-* contact.name = "HL7 International / Clinical Decision Support"
-* contact.telecom.system = #url
-* contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
+* date = "2024-12-29T23:03:13.2266891+00:00"
+* publisher = "Pyke Health IT Inc."
 * description = "IHE CCG example for medication administration ActivityDefinition Task (based on HL7 CPG example)"
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#adminrx 
 * jurisdiction = $m49.htm#001 "World"
 * kind = #Task
-* profile = "https://profiles.ihe.net/QRPH/CCG/StructureDefinition/ccg-card-adminrx-ad"
 * code = $cpg-activity-type-cs#administer-medication "Administer a medication"
 * intent = #proposal
 * doNotPerform = false
