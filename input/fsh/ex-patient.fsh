@@ -60,7 +60,7 @@ InstanceOf: ccg-data-in-ips-careplan
 Usage: #example
 * status = #active
 * intent = #plan
-* subject = Reference(patient/ZKT9319)
+* subject = Reference(ZKT9319)
 * activity[0].detail.instantiatesCanonical = "https://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
 * activity[=].detail.status = #in-progress
 
