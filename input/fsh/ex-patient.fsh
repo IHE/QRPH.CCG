@@ -57,6 +57,8 @@ Usage: #example
 
 Instance: CCG-careplan-example
 InstanceOf: ccg-data-in-ips-careplan
+Title: "Example CCG Care Plan"
+Description: "An example CarePlan resource including a patient-speicific PlanDefinition (to reference applicable CCG Folders)."
 Usage: #example
 * status = #active
 * intent = #plan
@@ -66,6 +68,8 @@ Usage: #example
 
 Instance: CCG-patient-plans-example
 InstanceOf: ccg-patient-plans
+Title: "Example Patient PlanDefinition"
+Description: "An example person-centric PlanDefinition resource referencing applicable CCG Folders."
 Usage: #example
 * status = #active
 * url = "http://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
