@@ -57,7 +57,7 @@ Usage: #example
 
 Instance: CCG-careplan-example
 InstanceOf: ccg-data-in-ips-careplan
-Usage: #inline
+Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(patient/ZKT9319)
@@ -66,7 +66,7 @@ Usage: #inline
 
 Instance: CCG-patient-plans-example
 InstanceOf: ccg-patient-plans
-Usage: #inline
+Usage: #example
 * status = #active
 * url = "http://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
 * type = http://hl7.org/fhir/ValueSet/plan-definition-type#clinical-protocol 
