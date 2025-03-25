@@ -1,10 +1,10 @@
-/*
+
 Instance: ZKT9319
 InstanceOf: Patient
 Title: "Example Patient"
 Description: "The patient from which all the example relate"
 Usage: #example
-* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier.system = "https://example.org/ids"
 * identifier.value = "ZKT9319"
 * name.use = #usual
 * name.family = "Test-Fuimaono"
@@ -53,4 +53,22 @@ Usage: #example
 * contact[=].address.postalCode = "3214"
 * contact[=].address.country = "NZ"
 * communication.language.text = "en-NZ"
-*/
+
+
+Instance: CCG-careplan-example
+InstanceOf: ccg-data-in-ips-careplan
+Usage: #inline
+* status = #active
+* intent = #plan
+* subject = Reference(patient/ZKT9319)
+* activity[0].detail.instantiatesCanonical = "https://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
+* activity[=].detail.status = #in-progress
+
+Instance: CCG-patient-plans-example
+InstanceOf: ccg-patient-plans
+Usage: #inline
+* status = #active
+* url = "http://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
+* type = http://hl7.org/fhir/ValueSet/plan-definition-type#clinical-protocol 
+* action[0].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Diabetes"
+* action[+].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Hypertension"
