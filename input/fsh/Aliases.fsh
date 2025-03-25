@@ -47,5 +47,4 @@ Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workfl
 Alias: LOINC = http://loinc.org
 Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $cpg-activity-type-cs = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs
