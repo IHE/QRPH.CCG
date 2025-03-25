@@ -1,7 +1,7 @@
 
 Instance: ZKT9319
 InstanceOf: Patient
-Title: "Example Patient"
+Title: "Patient"
 Description: "The patient from which all the example relate"
 Usage: #example
 * identifier.system = "https://example.org/ids"
@@ -57,7 +57,7 @@ Usage: #example
 
 Instance: CCG-careplan-example
 InstanceOf: ccg-data-in-ips-careplan
-Title: "Example CCG Care Plan"
+Title: "Care Plan"
 Description: "An example CarePlan resource including a patient-speicific PlanDefinition (to reference applicable CCG Folders)."
 Usage: #example
 * status = #active
@@ -68,7 +68,7 @@ Usage: #example
 
 Instance: CCG-patient-plans-example
 InstanceOf: ccg-patient-plans
-Title: "Example Patient PlanDefinition"
+Title: "PlanDefinition for Patient CCGs"
 Description: "An example person-centric PlanDefinition resource referencing applicable CCG Folders."
 Usage: #example
 * status = #active

@@ -1,6 +1,6 @@
 Instance: activity-example-administermedication-ad
 InstanceOf: ccg-card-adminrx-ad
-Title: "Example Administer Meds AD"
+Title: "AD Administer Meds "
 Description: "Example ActivityDefinition for Administer Medications CARD"
 Usage: #example
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
@@ -36,7 +36,7 @@ Usage: #example
 
 Instance: activity-example-collectinformation-ad
 InstanceOf: ccg-card-collect-ad
-Title: "Example Collect info AD"
+Title: "AD Collect info "
 Description: "Example ActivityDefinition for Collect Info CARD"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-collectinformationactivity"
@@ -76,7 +76,7 @@ Usage: #example
 Instance: Encounter-1234567
 InstanceOf: Encounter
 Usage: #example
-Title: "Example Encounter"
+Title: "Encounter"
 Description: "Example in-progress outpatient encounter of normal priority"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Encounter-1234567"
@@ -94,7 +94,7 @@ Description: "Example in-progress outpatient encounter of normal priority"
 Instance: Practitioner-123
 InstanceOf: Practitioner
 Usage: #example
-Title: "Example Practitioner"
+Title: "Practitioner"
 Description: "Example practitioner (Family Doctor)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Practitioner-123"
@@ -103,7 +103,7 @@ Description: "Example practitioner (Family Doctor)"
 Instance: PractitionerRole-124
 InstanceOf: PractitionerRole
 Usage: #example
-Title: "Example PractitionerRole"
+Title: "PractitionerRole"
 Description: "Example practitionerRole (Family Doctor in a Family Practice setting)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "PractitionerRole-124"
@@ -114,7 +114,7 @@ Description: "Example practitionerRole (Family Doctor in a Family Practice setti
 Instance: Location-12
 InstanceOf: Location
 Usage: #example
-Title: "Example Location"
+Title: "Location"
 Description: "Example Location (Standalone Primary Care Clinic)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Location-12"
@@ -127,7 +127,7 @@ Description: "Example Location (Standalone Primary Care Clinic)"
 Instance: Organization-14
 InstanceOf: Organization
 Usage: #example
-Title: "Example Organization"
+Title: "Organization"
 Description: "Example organization providing family care services"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Organization-14"
