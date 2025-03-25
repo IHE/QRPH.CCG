@@ -69,6 +69,6 @@ InstanceOf: ccg-patient-plans
 Usage: #example
 * status = #active
 * url = "http://example.org/fhir/PlanDefinition/CCG-patient-plans-example"
-* type = http://hl7.org/fhir/ValueSet/plan-definition-type#clinical-protocol 
+* type = http://terminology.hl7.org/CodeSystem/plan-definition-type#clinical-protocol 
 * action[0].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Diabetes"
 * action[+].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Hypertension"
