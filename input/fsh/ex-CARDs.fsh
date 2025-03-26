@@ -1,3 +1,103 @@
+Instance: card-example-reqproc
+InstanceOf: ccg-card-reqprocserv
+Title: "CARD Recommend Lab Order"
+Description: "Example CCG CARD to Recommend a Procedure"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-reqproc"
+* version = "1.0.0"
+* name = "ExampleCARDreqproc"
+* title = "CCG CARD example - recommend procedure order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Recommend Procedure Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqproc
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/reqproc"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "More than 12 months since last retinal exam"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-proc-ad"
+
+Instance: card-example-reqlab
+InstanceOf: ccg-card-reqserv-labs
+Title: "CARD Recommend Lab Order"
+Description: "Example CCG CARD to Recommend a Lab Order"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-reqlab"
+* version = "1.0.0"
+* name = "ExampleCARDreqlab"
+* title = "CCG CARD example - recommend lab order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Recommend Lab Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqlab
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/reqlab"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "More than 6 months since last HbA1C"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-lab-ad"
+
+Instance: card-example-reqvx
+InstanceOf: ccg-card-reqvx
+Title: "CARD Recommend Immunization"
+Description: "Example CCG CARD to Recommend an Immunization"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-reqvx"
+* version = "1.0.0"
+* name = "ExampleCARDreqvx"
+* title = "CCG CARD example - recommend immunization"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Recommend Immunization CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqvx
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/reqvx"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Recommend COVID booster"
+* action.definitionCanonical = "http://hl7.org/fhir/uv/cpg/ActivityDefinition/activity-example-recommendimmunization-ad"
+
+Instance: card-example-provide
+InstanceOf: ccg-card-provide
+Title: "CARD Provide Information"
+Description: "Example CCG CARD to Provide Information"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-provide"
+* version = "1.0.0"
+* name = "ExampleCARDprovide"
+* title = "CCG CARD example - provide information"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Provide Information CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#provide
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/provide"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Diabetes Educational Materials to be Provided"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-sendmessage-ad"
+
 Instance: card-example-propdx
 InstanceOf: ccg-card-proposedx
 Title: "CARD Order Medication"
