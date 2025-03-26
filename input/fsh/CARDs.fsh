@@ -72,12 +72,12 @@ Title: "CCG CARD Digital Signature"
 Description: "This is a profile on the FHIR Provenance resource to align with CCG requirements for signature"
 * recorded ^short = "timestamp of the signature"
 * agent.who only Reference(Organization)
-* agent.who ^short = "identifier of the CARD&apos;s publisher"
-* signature.type.system = "http://hl7.org/fhir/ValueSet/signature-type"
+* agent.who ^short = "identifier of the CARD's publisher"
+* signature.type.system = "urn:iso-astm:E1762-95:2013"
 * signature.type.code = #1.2.840.10065.1.12.1.1
-* signature.type.display = "Author&apos;s Signature"
+* signature.type.display = "Author's Signature"
 * signature.when ^short = "timestamp of the signature"
-* signature.who ^short = "identifier of the CARD&apos;s publisher"
+* signature.who ^short = "identifier of the CARD's publisher"
 * signature.targetFormat from ccg-signature-target
 * signature.sigFormat from ccg-signature-sigformat
 

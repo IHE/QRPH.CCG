@@ -7,7 +7,7 @@ Usage: #example
 * version = "1.0.0"
 * name = "ExampleCARDadminrx"
 * title = "CCG CARD example - administer medication"
-* type = $PlanDefType#eca-rule "ECA Rule"
+* type = $PlanDefType#eca-rule
 * status = #active
 * experimental = true
 * date = "2024-11-18T17:56:55+00:00"
@@ -31,7 +31,7 @@ Usage: #example
 * target = Reference(ActivityDefinition/activity-example-stopservice-ad)
 * recorded = "2015-08-27T08:39:24+10:00"
 * agent.who = Reference(Organization/Organization-14)
-* signature.type = #1.2.840.10065.1.12.1.1 
+* signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
 * signature.when = "2015-08-27T08:39:24+10:00"
 * signature.who = Reference(Organization/Organization-14)
 * signature.targetFormat = #application/fhir+json
