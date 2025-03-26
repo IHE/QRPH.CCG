@@ -15,12 +15,13 @@ Usage: #example
 * description = "IHE CCG example for Administer Medications CARD (based on HL7 CPG example)"
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#adminrx
 * jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
 * relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
 * library = "http://example.org/Library/adminrx"
 * action.condition.kind = #applicability
 * action.condition.expression.language = #text/cql
 * action.condition.expression.expression = "Insulin Dispensed"
-* action.defintion.definitionCanonical = Reference(ActivityDefinition/activity-example-administermedication-ad)
+* action.definitionCanonical = Reference(ActivityDefinition/activity-example-administermedication-ad)
 
 Instance: example-ccg-CARD-signature
 InstanceOf: ccg-signature
@@ -30,7 +31,7 @@ Usage: #example
 * target = Reference(ActivityDefinition/activity-example-stopservice-ad)
 * recorded = "2015-08-27T08:39:24+10:00"
 * agent.who = Reference(Organization/Organization-14)
-* signature.type = #1.2.840.10065.1.12.1.1 "Author's Signature"
+* signature.type = #1.2.840.10065.1.12.1.1 
 * signature.when = "2015-08-27T08:39:24+10:00"
 * signature.who = Reference(Organization/Organization-14)
 * signature.targetFormat = #application/fhir+json
