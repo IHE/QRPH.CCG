@@ -48,3 +48,4 @@ Alias: LOINC = http://loinc.org
 Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
 Alias: $cpg-activity-type-cs = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs
+Alias: $dose-rate-type = http://terminology.hl7.org/CodeSystem/dose-rate-type

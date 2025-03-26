@@ -1,3 +1,45 @@
+Instance: activity-example-ordermedication-ad
+InstanceOf: ccg-card-orderrx-ad
+Title: "AD Order Meds"
+Description: "Example ActivityDefinition for Order Medications CARD"
+Usage: #example
+* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity"
+* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #computable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-ordermedication-ad"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.10"
+* version = "2.0.0"
+* name = "ActivityExampleOrderMedicationAD"
+* title = "Activity Example Order Medication AD"
+* status = #active
+* experimental = true
+* date = "2024-11-26T16:34:39+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for medication order ActivityDefinition Task (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#orderrx
+* jurisdiction = $m49.htm#001 "World"
+* kind = #MedicationRequest
+* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest"
+* code = $cpg-activity-type-cs#order-medication "Order a medication"
+* intent = #proposal
+* priority = #routine
+* doNotPerform = false
+* productCodeableConcept = $sct#376988009 "Levothyroxine sodium 75 microgram oral tablet"
+* dosage.sequence = 1
+* dosage.text = "75mcg daily"
+* dosage.timing.repeat.frequency = 1
+* dosage.timing.repeat.period = 1
+* dosage.timing.repeat.periodUnit = #d
+* dosage.route = $sct#26643006 "Oral Route (qualifier value)"
+* dosage.doseAndRate.type = $dose-rate-type#ordered "Ordered"
+* dosage.doseAndRate.doseQuantity = 75 'ug' "mcg"
+
 Instance: activity-example-administermedication-ad
 InstanceOf: ccg-card-adminrx-ad
 Title: "AD Administer Meds"
