@@ -1,3 +1,37 @@
+Instance: activity-example-recommendimmunization-ad
+InstanceOf: ccg-card-reqvx-ad
+Title: "AD Recommend Immunization"
+Description: "Example ActivityDefinition for Recommend Immunization CARD"
+Usage: #example
+* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-immunizationactivity"
+* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #computable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* url = "http://hl7.org/fhir/uv/cpg/ActivityDefinition/activity-example-recommendimmunization-ad"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.13"
+* version = "2.0.0"
+* name = "ActivityExampleRecommendImmunizationAD"
+* title = "Activity Example Recommend Immunization AD"
+* status = #active
+* experimental = true
+* date = "2024-11-26T16:34:39+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Recommend Immunization ActivityDefinition (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqvx
+* jurisdiction = $m49.htm#001 "World"
+* kind = #MedicationRequest
+* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-immunizationrequest"
+* code = $cpg-activity-type-cs#recommend-immunization "Recommend an immunization"
+* intent = #proposal
+* priority = #routine
+* doNotPerform = false
+* productCodeableConcept = $sct#871751006 "Vaccine product containing only Hepatitis A virus antigen (medicinal product)"
+
 Instance: activity-example-sendmessage-ad
 InstanceOf: ccg-card-provide-ad
 Title: "AD Provide Information"
