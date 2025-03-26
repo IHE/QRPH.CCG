@@ -1,6 +1,6 @@
 Instance: activity-example-administermedication-ad
 InstanceOf: ccg-card-adminrx-ad
-Title: "AD Administer Meds "
+Title: "AD Administer Meds"
 Description: "Example ActivityDefinition for Administer Medications CARD"
 Usage: #example
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
@@ -36,7 +36,7 @@ Usage: #example
 
 Instance: activity-example-collectinformation-ad
 InstanceOf: ccg-card-collect-ad
-Title: "AD Collect info "
+Title: "AD Collect info"
 Description: "Example ActivityDefinition for Collect Info CARD"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-collectinformationactivity"
