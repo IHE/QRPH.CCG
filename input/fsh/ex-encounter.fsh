@@ -21,7 +21,7 @@ Usage: #example
 * action.condition.kind = #applicability
 * action.condition.expression.language = #text/cql
 * action.condition.expression.expression = "Insulin Dispensed"
-* action.definitionCanonical = Reference(ActivityDefinition/activity-example-administermedication-ad)
+* action.definitionCanonical = Reference(http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-administermedication-ad)
 
 Instance: example-ccg-CARD-signature
 InstanceOf: ccg-signature
