@@ -112,7 +112,7 @@ Usage: #example
 * dynamicValue[=].expression.reference = "http://hl7.org/fhir/uv/cpg/Library/dispensemedication-library"
 
 Instance: Encounter-1234567
-InstanceOf: Encounter
+InstanceOf: ccg-di-encounter
 Usage: #example
 Title: "Encounter"
 Description: "Example in-progress outpatient encounter of normal priority"
@@ -130,16 +130,17 @@ Description: "Example in-progress outpatient encounter of normal priority"
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#HH
 
 Instance: Practitioner-123
-InstanceOf: Practitioner
+InstanceOf: ccg-di-practitioner
 Usage: #example
 Title: "Practitioner"
 Description: "Example practitioner (Family Doctor)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Practitioner-123"
 * name.text = "Doctor Doctor"
+* address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
 
 Instance: PractitionerRole-124
-InstanceOf: PractitionerRole
+InstanceOf: ccg-di-practitionerrole
 Usage: #example
 Title: "PractitionerRole"
 Description: "Example practitionerRole (Family Doctor in a Family Practice setting)"
@@ -150,7 +151,7 @@ Description: "Example practitionerRole (Family Doctor in a Family Practice setti
 * specialty.coding = $sct#419772000 "Family practice (qualifier value)"
 
 Instance: Location-12
-InstanceOf: Location
+InstanceOf: ccg-di-location
 Usage: #example
 Title: "Location"
 Description: "Example Location (Standalone Primary Care Clinic)"
@@ -159,11 +160,14 @@ Description: "Example Location (Standalone Primary Care Clinic)"
 * status = #active
 * name = "Example Location"
 * mode = #instance
+* address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
+* position.latitude = -80.0
+* position.longitude = 45.0 
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PC "Primary Care Clinic"
 * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bu "Building"
 
 Instance: Organization-14
-InstanceOf: Organization
+InstanceOf: ccg-di-organization
 Usage: #example
 Title: "Organization"
 Description: "Example organization providing family care services"
@@ -171,3 +175,6 @@ Description: "Example organization providing family care services"
 * identifier.value = "Organization-14"
 * active = true
 * name = "Example Organization"
+* contact.address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
+* contact.telecom.system = #email
+* contact.telecom.value = "contact@example.org"
