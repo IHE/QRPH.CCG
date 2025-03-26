@@ -6,6 +6,7 @@
 
 # Intentional
 %The repeating element has a fixed%
+%This element does not match any known slice%
 
 # This is a necessary constraint
 %For the complex type CodeableConcept, consider using a pattern rather than a fixed value%
@@ -21,6 +22,9 @@
 
 # Only depending on published versions
 %but the most recent version is 2.0.0-ballot%
+
+# Intentionally not using OIDs 
+%could usefully have an OID assigned%
 
 # Still valid for R4
 INFORMATION: StructureDefinition/ccg-card-adminrx-ad: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
