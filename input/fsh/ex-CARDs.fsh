@@ -1,3 +1,28 @@
+Instance: card-example-orderrx
+InstanceOf: ccg-card-orderrx
+Title: "CARD Order Medication"
+Description: "Example CCG CARD to Order Medication"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-orderrx"
+* version = "1.0.0"
+* name = "ExampleCARDorderrx"
+* title = "CCG CARD example - order medication"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Order Medication CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#orderrx
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/orderrx"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "HbA1C not controlled by diet"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-ordermedication-ad"
+
 Instance: card-example-disprx
 InstanceOf: ccg-card-disprx
 Title: "CARD Dispense Medication"
