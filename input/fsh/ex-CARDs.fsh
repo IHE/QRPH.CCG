@@ -1,3 +1,24 @@
+Instance: ccg-folder-Diabetes
+InstanceOf: ccg-card-folder
+Title: "CCG Folder 1"
+Description: "Example CCG Folder - e.g. Diabetes"
+Usage: #example
+* url = "https://example.org/fhir/PlanDefinition/ccg-folder-Diabetes"
+* version = "1.0.0"
+* name = "ExampleFolder-1"
+* title = "CCG Folder example 1 - e.g. Diabetes"
+* type = $PlanDefType#clinical-protocol
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG Folder example e.g. Diabetes"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#stopsrv
+* jurisdiction = $m49.htm#001 "World"
+* action[0].definitionCanonical = "http://example.org/PlanDefinition/card-example-adminrx"
+* action[+].definitionCanonical = "http://example.org/PlanDefinition/card-example-collect"
+
+
 Instance: card-example-stopsrv
 InstanceOf: ccg-card-stopsrv
 Title: "CARD Stop Service Order"
