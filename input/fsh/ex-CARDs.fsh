@@ -1,6 +1,6 @@
 Instance: card-example-reqproc
 InstanceOf: ccg-card-reqprocserv
-Title: "CARD Recommend Lab Order"
+Title: "CARD Recommend Procedure Order"
 Description: "Example CCG CARD to Recommend a Procedure"
 Usage: #example
 * url = "http://example.org/PlanDefinition/card-example-reqproc"
@@ -100,7 +100,7 @@ Usage: #example
 
 Instance: card-example-propdx
 InstanceOf: ccg-card-proposedx
-Title: "CARD Order Medication"
+Title: "CARD Propose Diagnosis"
 Description: "Example CCG CARD to Propose a Diagnosis"
 Usage: #example
 * url = "http://example.org/PlanDefinition/card-example-propdx"
