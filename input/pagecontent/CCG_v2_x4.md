@@ -92,7 +92,7 @@ Based on receipt of the transaction response, the transaction initiator:
 - **SHALL** create an audit record of the transaction response (see
   [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
 
-- **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats).
+- **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats), for actors claiming adherence to Volume-3, or based on the relevant specifications defined in Volume-4 (for actors claiming such conformance).
 
 #### Trigger Events - Responder
 
