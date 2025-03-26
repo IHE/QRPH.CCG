@@ -1,8 +1,8 @@
 
 Instance: ZKT9319
 InstanceOf: Patient
-Title: "Patient"
-Description: "The patient from which all the example relate"
+Title: "Data-in Patient"
+Description: "Example patient to which all the Data-in example content relates"
 Usage: #example
 * identifier.system = "https://example.org/ids"
 * identifier.value = "ZKT9319"
@@ -57,7 +57,7 @@ Usage: #example
 
 Instance: CCG-careplan-example
 InstanceOf: ccg-data-in-ips-careplan
-Title: "Care Plan"
+Title: "Data-in Care Plan"
 Description: "Example CarePlan resource including a patient-speicific PlanDefinition (to reference applicable CCG Folders)."
 Usage: #example
 * status = #active
@@ -68,7 +68,7 @@ Usage: #example
 
 Instance: CCG-patient-plans-example
 InstanceOf: ccg-patient-plans
-Title: "PlanDefinition for Patient CCGs"
+Title: "Data-in PlanDefinition for Patient CCGs"
 Description: "An example person-centric PlanDefinition resource referencing applicable CCG Folders."
 Usage: #example
 * status = #active
@@ -81,7 +81,7 @@ Usage: #example
 Instance: Encounter-1234567
 InstanceOf: ccg-di-encounter
 Usage: #example
-Title: "Encounter"
+Title: "Data-in Encounter"
 Description: "Example in-progress outpatient encounter of normal priority"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Encounter-1234567"
@@ -99,7 +99,7 @@ Description: "Example in-progress outpatient encounter of normal priority"
 Instance: Practitioner-123
 InstanceOf: ccg-di-practitioner
 Usage: #example
-Title: "Practitioner"
+Title: "Data-in Practitioner"
 Description: "Example practitioner (Family Doctor)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Practitioner-123"
@@ -109,7 +109,7 @@ Description: "Example practitioner (Family Doctor)"
 Instance: PractitionerRole-124
 InstanceOf: ccg-di-practitionerrole
 Usage: #example
-Title: "PractitionerRole"
+Title: "Data-in PractitionerRole"
 Description: "Example practitionerRole (Family Doctor in a Family Practice setting)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "PractitionerRole-124"
@@ -120,7 +120,7 @@ Description: "Example practitionerRole (Family Doctor in a Family Practice setti
 Instance: Location-12
 InstanceOf: ccg-di-location
 Usage: #example
-Title: "Location"
+Title: "Data-in Location"
 Description: "Example Location (Standalone Primary Care Clinic)"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Location-12"
@@ -136,7 +136,7 @@ Description: "Example Location (Standalone Primary Care Clinic)"
 Instance: Organization-14
 InstanceOf: ccg-di-organization
 Usage: #example
-Title: "Organization"
+Title: "Data-in Organization"
 Description: "Example organization providing family care services"
 * identifier.system = "http://example.org/ids"
 * identifier.value = "Organization-14"

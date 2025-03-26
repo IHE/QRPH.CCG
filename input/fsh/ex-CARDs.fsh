@@ -1,3 +1,28 @@
+Instance: card-example-propdx
+InstanceOf: ccg-card-proposedx
+Title: "CARD Order Medication"
+Description: "Example CCG CARD to Propose a Diagnosis"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-propdx"
+* version = "1.0.0"
+* name = "ExampleCARDpropdx"
+* title = "CCG CARD example - propose a diagnosis"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Propose Diagnosis CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#propdx
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/propdx"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "HbA1C results indicate Diabetes"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-proposediagnosis-ad"
+
 Instance: card-example-orderrx
 InstanceOf: ccg-card-orderrx
 Title: "CARD Order Medication"
