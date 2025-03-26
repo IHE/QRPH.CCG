@@ -1,3 +1,28 @@
+Instance: card-example-collect
+InstanceOf: ccg-card-collect
+Title: "CARD Collect Information Example"
+Description: "Example CCG CARD to Collect Information"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-collect"
+* version = "1.0.0"
+* name = "ExampleCARDcollect"
+* title = "CCG CARD example - collect information"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Collect Information CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#collect
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/southeastasia/publications/i/item/who-ucn-ncd-20.1"
+* library = "http://example.org/Library/collect"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Measure and Record BP"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-collectinformation-ad"
+
 Instance: card-example-adminrx
 InstanceOf: ccg-card-adminrx
 Title: "CARD Administer Medication Example"
