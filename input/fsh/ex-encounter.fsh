@@ -51,7 +51,7 @@ Usage: #example
 * extension[=].valueCode = #publishable
 * url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-ref-ad"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.11"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.93"
 * version = "2.0.0"
 * name = "ActivityExampleOrderServiceRefAD"
 * title = "Activity Example Order Service (Referral) AD"
@@ -85,7 +85,7 @@ Usage: #example
 * extension[=].valueCode = #publishable
 * url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-rad-ad"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.11"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.92"
 * version = "2.0.0"
 * name = "ActivityExampleOrderServiceRadAD"
 * title = "Activity Example Order Service (Radiology) AD"
@@ -119,7 +119,7 @@ Usage: #example
 * extension[=].valueCode = #publishable
 * url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-proc-ad"
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.11"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.91"
 * version = "2.0.0"
 * name = "ActivityExampleOrderServiceProcAD"
 * title = "Activity Example Order Service (Procedure) AD"
