@@ -2,7 +2,7 @@
 
 Transaction QRPH-63 Publish Guideline is used to submit an NPM package
 containing a well-formed CCG to a Guideline Repository. The transaction
-response returns a confirmation or an exception message.
+response returns a confirmation or an exception message. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher and Guideline Repository actors claim conformance.
 
 ### Actor roles
 

@@ -3,7 +3,7 @@ Transaction QRPH-61 Search for Guidelines is used to query for CCGs that have
 been published to a Guideline Repository. The query parameters can be
 employed, for example, to search for CCGs published (or updated) since a
 given timestamp. The transaction response will be a list of CCGs that
-meet the search criteria.
+meet the search criteria. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
 
 ### Actor roles
 

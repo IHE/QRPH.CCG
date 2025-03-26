@@ -3,7 +3,7 @@
 Transaction QRPH-62 Retrieve Guideline is used to download and ingest a CCG
 that has been published to a Guideline Repository. The query parameters
 denote the specific CCG. The transaction response is the CCG package
-(FHIR IG) that meets the search criteria.
+(FHIR IG) that meets the search criteria. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
 
 ### Actor roles
 
