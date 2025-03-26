@@ -58,7 +58,7 @@ Usage: #example
 Instance: CCG-careplan-example
 InstanceOf: ccg-data-in-ips-careplan
 Title: "Care Plan"
-Description: "An example CarePlan resource including a patient-speicific PlanDefinition (to reference applicable CCG Folders)."
+Description: "Example CarePlan resource including a patient-speicific PlanDefinition (to reference applicable CCG Folders)."
 Usage: #example
 * status = #active
 * intent = #plan

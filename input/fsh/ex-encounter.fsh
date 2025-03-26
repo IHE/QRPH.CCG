@@ -1,6 +1,6 @@
 Instance: card-example-adminrx
 InstanceOf: ccg-card-adminrx
-Title: "Example CARD Administer Medication"
+Title: "CARD Administer Medication Example"
 Description: "Example CCG CARD to Administer Medication"
 Usage: #example
 * url = "http://example.org/PlanDefinition/card-example-adminrx"
