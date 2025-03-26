@@ -1,3 +1,19 @@
+Instance: example-ccg-CARD-signature
+InstanceOf: ccg-signature
+Title: "CCG CARD Digital Signature example"
+Description: "Example FHIR Provenance resource for CARD digital signature"
+Usage: #example
+* target = Reference(ActivityDefinition/activity-example-stopservice-ad)
+* recorded = "2015-08-27T08:39:24+10:00"
+* agent.who = Reference(Organization/Organization-14)
+* signature.type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1 "Author's Signature"
+* signature.when = "2015-08-27T08:39:24+10:00"
+* signature.who = Reference(Organization/Organization-14)
+* signature.targetFormat = #application/fhir+json
+* signature.sigFormat = #application/signature+json
+* signature.data = "Li4u"
+
+
 Instance: activity-example-stopservice-ad
 InstanceOf: ccg-card-stopsrv-ad
 Title: "AD Stop Task (Service Order)"

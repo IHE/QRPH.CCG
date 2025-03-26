@@ -49,3 +49,6 @@ Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
 Alias: $cpg-activity-type-cs = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs
 Alias: $dose-rate-type = http://terminology.hl7.org/CodeSystem/dose-rate-type
+Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
+Alias: $v3-DocumentCompletion = http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion
+Alias: $contractsignertypecodes = http://terminology.hl7.org/CodeSystem/contractsignertypecodes
