@@ -1,7 +1,41 @@
+Instance: activity-example-orderservice-rad-ad
+InstanceOf: ccg-card-reqradserv-ad
+Title: "AD Service Request (Radiology Order)"
+Description: "Example ActivityDefinition for Recommend Radiology Order CARD"
+Usage: #example
+* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"
+* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #computable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-rad-ad"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.11"
+* version = "2.0.0"
+* name = "ActivityExampleOrderServiceRadAD"
+* title = "Activity Example Order Service (Radiology) AD"
+* status = #active
+* experimental = true
+* date = "2024-11-26T16:34:39+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Radiology Order ActivityDefinition (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqrad
+* jurisdiction = $m49.htm#001 "World"
+* kind = #ServiceRequest
+* code = $cpg-activity-type-cs#order-service "Order a service"
+* intent = #proposal
+* doNotPerform = false
+* dynamicValue.path = "status"
+* dynamicValue.expression.language = #text/cql
+* dynamicValue.expression.expression = "'draft radiology order'"
+
 Instance: activity-example-orderservice-proc-ad
 InstanceOf: ccg-card-reqprocserv-ad
 Title: "AD Service Request (Procedure Order)"
-Description: "Example ActivityDefinition for Recommend Immunization CARD"
+Description: "Example ActivityDefinition for Recommend Procedure Order CARD"
 Usage: #example
 * meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"
 * meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
@@ -21,7 +55,7 @@ Usage: #example
 * experimental = true
 * date = "2024-11-26T16:34:39+00:00"
 * publisher = "Pyke Health IT Inc."
-* description = "IHE CCG example for Lab Order ActivityDefinition (based on HL7 CPG example)"
+* description = "IHE CCG example for Procedure Order ActivityDefinition (based on HL7 CPG example)"
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqproc
 * jurisdiction = $m49.htm#001 "World"
 * kind = #ServiceRequest
