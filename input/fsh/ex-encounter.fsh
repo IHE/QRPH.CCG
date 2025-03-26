@@ -1,3 +1,37 @@
+Instance: activity-example-orderservice-lab-ad
+InstanceOf: ccg-card-reqlabs-ad
+Title: "AD Service Request (Lab Order)"
+Description: "Example ActivityDefinition for Recommend Immunization CARD"
+Usage: #example
+* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"
+* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #computable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-lab-ad"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.11"
+* version = "2.0.0"
+* name = "ActivityExampleOrderServiceLabAD"
+* title = "Activity Example Order Service (Lab) AD"
+* status = #active
+* experimental = true
+* date = "2024-11-26T16:34:39+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Lab Order ActivityDefinition (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqlab
+* jurisdiction = $m49.htm#001 "World"
+* kind = #ServiceRequest
+* code = $cpg-activity-type-cs#order-service "Order a service"
+* intent = #proposal
+* doNotPerform = false
+* dynamicValue.path = "status"
+* dynamicValue.expression.language = #text/cql
+* dynamicValue.expression.expression = "'draft lab order'"
+
 Instance: activity-example-recommendimmunization-ad
 InstanceOf: ccg-card-reqvx-ad
 Title: "AD Recommend Immunization"
@@ -25,7 +59,6 @@ Usage: #example
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqvx
 * jurisdiction = $m49.htm#001 "World"
 * kind = #MedicationRequest
-* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-immunizationrequest"
 * code = $cpg-activity-type-cs#recommend-immunization "Recommend an immunization"
 * intent = #proposal
 * priority = #routine
@@ -59,7 +92,6 @@ Usage: #example
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#provide
 * jurisdiction = $m49.htm#001 "World"
 * kind = #CommunicationRequest
-* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest"
 * code = $cpg-activity-type-cs#send-message "Send a message"
 * intent = #proposal
 * doNotPerform = false
@@ -97,7 +129,6 @@ Usage: #example
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#propdx
 * jurisdiction = $m49.htm#001 "World"
 * kind = #Task
-* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-proposediagnosistask"
 * code = $cpg-activity-type-cs#propose-diagnosis "Propose a diagnosis"
 * intent = #proposal
 * doNotPerform = false
@@ -135,7 +166,6 @@ Usage: #example
 * topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#orderrx
 * jurisdiction = $m49.htm#001 "World"
 * kind = #MedicationRequest
-* profile = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest"
 * code = $cpg-activity-type-cs#order-medication "Order a medication"
 * intent = #proposal
 * priority = #routine
