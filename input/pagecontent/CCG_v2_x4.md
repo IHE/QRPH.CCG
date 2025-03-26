@@ -5,7 +5,7 @@ submit a contextual content bundle to a Guideline Engine and to invoke
 the \$CPGPlanDefinitionApply operation, which will be evaluated based on
 the submitted content. The transaction response returns a bundle of
 Request resources representing the proposed activities based on applying
-the relevant CCGs. The specific transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Performer and Guideline Engineactors claim conformance.
+the relevant CCGs. The specific transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Performer and Guideline Engine actors claim conformance.
 
 ### Actor roles
 
