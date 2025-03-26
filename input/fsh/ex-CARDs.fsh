@@ -1,3 +1,103 @@
+Instance: card-example-stopsrv
+InstanceOf: ccg-card-stopsrv
+Title: "CARD Stop Service Order"
+Description: "Example CCG CARD to Recommend Stopping a Service Order"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-stopsrv"
+* version = "1.0.0"
+* name = "ExampleCARDstopsrv"
+* title = "CCG CARD example - recommend stopping a service order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Stop Service Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#stopsrv
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/publications/i/item/9789240033986"
+* library = "http://example.org/Library/stopsrv"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Cancel Outpatient Electrocardiogram Order"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-stopservice-ad"
+
+Instance: card-example-stoprx
+InstanceOf: ccg-card-stoprx
+Title: "CARD Stop Medication Order"
+Description: "Example CCG CARD to Recommend Stopping a Medication Order"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-stoprx"
+* version = "1.0.0"
+* name = "ExampleCARDstoprx"
+* title = "CCG CARD example - recommend stopping a medication order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Stop Medication Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#stoprx
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/publications/i/item/9789240033986"
+* library = "http://example.org/Library/stoprx"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Second-line Hypertension Meds Recommended to Replace First-line"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-stopmedication-ad"
+
+Instance: card-example-reqref
+InstanceOf: ccg-card-reqrefserv
+Title: "CARD Recommend Referral Order"
+Description: "Example CCG CARD to Recommend a Referral Order"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-reqref"
+* version = "1.0.0"
+* name = "ExampleCARDreqref"
+* title = "CCG CARD example - recommend referral order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Recommend Referral Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqref
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/publications/i/item/9789240033986"
+* library = "http://example.org/Library/reqref"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "Referral to Hospital Recommended"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-ref-ad"
+
+Instance: card-example-reqrad
+InstanceOf: ccg-card-reqradserv
+Title: "CARD Recommend Radiology Order"
+Description: "Example CCG CARD to Recommend a Radiology Order"
+Usage: #example
+* url = "http://example.org/PlanDefinition/card-example-reqrad"
+* version = "1.0.0"
+* name = "ExampleCARDreqrad"
+* title = "CCG CARD example - recommend radiology order"
+* type = $PlanDefType#eca-rule
+* status = #active
+* experimental = true
+* date = "2024-11-18T17:56:55+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for a Recommend Radiology Order CARD (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#reqrad
+* jurisdiction = $m49.htm#001 "World"
+* relatedArtifact.type = #documentation
+* relatedArtifact.url = "https://www.who.int/publications/i/item/9789240033986"
+* library = "http://example.org/Library/reqrad"
+* action.condition.kind = #applicability
+* action.condition.expression.language = #text/cql
+* action.condition.expression.expression = "DI recommended"
+* action.definitionCanonical = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-orderservice-rad-ad"
+
 Instance: card-example-reqproc
 InstanceOf: ccg-card-reqprocserv
 Title: "CARD Recommend Procedure Order"
