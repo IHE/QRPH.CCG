@@ -1,3 +1,41 @@
+Instance: activity-example-stopservice-ad
+InstanceOf: ccg-card-stopsrv-ad
+Title: "AD Stop Task (Service Order)"
+Description: "Example ActivityDefinition for Stop Service Order CARD"
+Usage: #example
+* meta.profile[0] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-stopactivity"
+* meta.profile[+] = "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #shareable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #computable
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability"
+* extension[=].valueCode = #publishable
+* url = "http://example.org/fhir/uv/cpg/ActivityDefinition/activity-example-stopservice-ad"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:oid:2.16.840.1.113883.4.642.40.48.11.99"
+* version = "2.0.0"
+* name = "ActivityExampleStopServiceAD"
+* title = "Activity Example Stop Service AD"
+* status = #active
+* experimental = true
+* date = "2024-11-26T16:34:39+00:00"
+* publisher = "Pyke Health IT Inc."
+* description = "IHE CCG example for Stop Service Order ActivityDefinition (based on HL7 CPG example)"
+* topic.coding = https://profiles.ihe.net/QRPH/CCG/CodeSystem/ccg-card-type-cs#stopsrv
+* jurisdiction = $m49.htm#001 "World"
+* kind = #Task
+* code = $cpg-activity-type-cs#stop-activity "Stop (discontinue) an activity in progress"
+* intent = #proposal
+* doNotPerform = false
+* dynamicValue[0].path = "input.type"
+* dynamicValue[=].expression.language = #text/cql
+* dynamicValue[=].expression.expression = "code"
+* dynamicValue[+].path = "input.value"
+* dynamicValue[=].expression.language = #text/cql
+* dynamicValue[=].expression.expression = "Service Request"
+* dynamicValue[=].expression.reference = "http://example.org/fhir/uv/cpg/Library/stopservice-library"
+
 Instance: activity-example-stopmedication-ad
 InstanceOf: ccg-card-stoprx-ad
 Title: "AD Stop Task (Medication Order)"
@@ -34,7 +72,7 @@ Usage: #example
 * dynamicValue[+].path = "input.value"
 * dynamicValue[=].expression.language = #text/cql
 * dynamicValue[=].expression.expression = "Medication Order"
-* dynamicValue[=].expression.reference = "http://hl7.org/fhir/uv/cpg/Library/stopmedication-library"
+* dynamicValue[=].expression.reference = "http://example.org/fhir/uv/cpg/Library/stopmedication-library"
 
 Instance: activity-example-orderservice-ref-ad
 InstanceOf: ccg-card-reqrefserv-ad
