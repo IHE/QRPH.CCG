@@ -37,7 +37,7 @@ Usage: #example
 * dynamicValue[=].expression.expression = "'Hello!'"
 
 Instance: activity-example-proposediagnosis-ad
-InstanceOf: ccg-card-proposedx
+InstanceOf: ccg-card-proposedx-ad
 Title: "AD Propose Diagnosis"
 Description: "Example ActivityDefinition for Propose Diagnosis CARD"
 Usage: #example
