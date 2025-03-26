@@ -76,3 +76,72 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/plan-definition-type#clinical-protocol 
 * action[0].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Diabetes"
 * action[+].definitionCanonical = "https://example.org/fhir/PlanDefinition/CCG-CARD-Folder-Hypertension"
+
+
+Instance: Encounter-1234567
+InstanceOf: ccg-di-encounter
+Usage: #example
+Title: "Encounter"
+Description: "Example in-progress outpatient encounter of normal priority"
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Encounter-1234567"
+* status = #in-progress
+* type.coding = $sct#371883000 "Outpatient procedure (procedure)"
+* priority.coding = $sct#394848005 "Normal Priority"
+* subject = Reference(Patient/ZKT9319)
+* participant[0].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
+* participant[=].individual = Reference(Practitioner/Practitioner-123)
+* location[0].location = Reference(Location/Location-12)
+* period.start = 2024-02-18
+* serviceProvider = Reference(Organization/Organization-14)
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#HH
+
+Instance: Practitioner-123
+InstanceOf: ccg-di-practitioner
+Usage: #example
+Title: "Practitioner"
+Description: "Example practitioner (Family Doctor)"
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Practitioner-123"
+* name.text = "Doctor Doctor"
+* address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
+
+Instance: PractitionerRole-124
+InstanceOf: ccg-di-practitionerrole
+Usage: #example
+Title: "PractitionerRole"
+Description: "Example practitionerRole (Family Doctor in a Family Practice setting)"
+* identifier.system = "http://example.org/ids"
+* identifier.value = "PractitionerRole-124"
+* practitioner = Reference(Practitioner/Practitioner-123)
+* organization = Reference(Organization/Organization-14)
+* specialty.coding = $sct#419772000 "Family practice (qualifier value)"
+
+Instance: Location-12
+InstanceOf: ccg-di-location
+Usage: #example
+Title: "Location"
+Description: "Example Location (Standalone Primary Care Clinic)"
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Location-12"
+* status = #active
+* name = "Example Location"
+* mode = #instance
+* address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
+* position.latitude = -80.0
+* position.longitude = 45.0 
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PC "Primary Care Clinic"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bu "Building"
+
+Instance: Organization-14
+InstanceOf: ccg-di-organization
+Usage: #example
+Title: "Organization"
+Description: "Example organization providing family care services"
+* identifier.system = "http://example.org/ids"
+* identifier.value = "Organization-14"
+* active = true
+* name = "Example Organization"
+* contact.address.text = "123 Anystreet, Yourtown, Ontario, Canada M0P4H1"
+* contact.telecom.system = #email
+* contact.telecom.value = "contact@example.org"
