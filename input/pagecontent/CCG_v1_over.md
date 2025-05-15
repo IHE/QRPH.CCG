@@ -61,6 +61,7 @@ realized.
 style="max-width: 75%; object-fit: contain" />
 <figcaption><strong>Figure 1 - Care Delivery in the "Green" Zone</strong></figcaption>
 </figure>
+<br clear="all">
 
 We are better and better able to collect information about **what
 happened** on a client’s health journey. This can be illustrated,
@@ -124,6 +125,7 @@ account for **58% of Canada’s total healthcare spend**.[^7]
 <figcaption><strong>Figure 2 - Co-morbidities in Canadians over 35 years of
 age</strong></figcaption>
 </figure>
+<br clear="all">
 
 “Health care in all global settings today suffers from **high levels of
 defects in quality** across many domains, and this poor-quality care
@@ -176,6 +178,7 @@ attestation related to the source content, including bibliographic citations of 
 style="width: 75%; object-fit: contain" />
 <figcaption><strong>Figure 3 - Danish GP Decision Support Workflow</strong></figcaption>
 </figure>
+<br clear="all">
 
 Informed by these examples and others, the IHE CCG Profile constrains the **content** that
 may be employed to define CCG logic. The (optional) base CCG content specification is defined in Volume 3 of this profile. In this base content specification, an
@@ -217,6 +220,7 @@ described by a **CARD**. This model is illustrated in Figure 4.
 style="width: 75%; object-fit: contain" />
 <figcaption><strong>Figure 4 - Folder-and-CARDs Metaphor</strong></figcaption>
 </figure>
+<br clear="all">
 
 Here, CARD is an acronym. The recommendation is ***applicable*** when a
 set of defined **<u>C</u>**onditions are met. The recommendation
@@ -297,6 +301,7 @@ a flowchart centric approach for describing CCG-supported workflows.
 style="height: 100%; width: 100%; object-fit: contain" />
 <figcaption><strong>Figure 5 - Flowchart-centric CCG expressions</strong></figcaption>
 </figure>
+<br clear="all">
 
 In a flowchart or tree-diagram approach, **trigger** events are associated with workflow
 states. This means that for a CARD to evaluate to true, its trigger event must be true
@@ -313,6 +318,7 @@ style="height: 100%; width: 100%; object-fit: contain" />
 <figcaption><strong>Figure 6 - Flattened Folder-and-CARDs CCG
 expression</strong</figcaption>
 </figure>
+<br clear="all">
 
 Figure 6 illustrates the “flattened stack” of CARDs resulting from the
 Folder-and-CARDs content model. For each CARD, the trigger event is
@@ -394,6 +400,7 @@ style="height: 100%; width: 100%; object-fit: contain" />
 -->
 <figcaption><strong>Figure 7 - Graphical Depiction of Use Cases 1, 2 & 3</strong></figcaption>
 </figure>
+<br clear="all">
 
 The operation of this ecosystem is pictorially depicted in Figure 7 and
 Figure 8. From Figure 7 we can note the following:
@@ -427,6 +434,7 @@ style="height: 100%; width: 100%; object-fit: contain" />
 <figcaption><strong>Figure 8 - Graphical Depiction of a CCG-supported Care
 Encounter</strong></figcaption>
 </figure>
+<br clear="all">
 
 The activities relevant to the CCG-supported care encounter are
 illustrated by Figure 8. From this figure, we can note the following:
@@ -493,6 +501,7 @@ model** is the basis for CCGs that will be published by the ACE.
 style="height: 100%; width: 100%; object-fit: contain" />
 <figcaption><strong>Figure 9 - MOH-supported CCG Ecosystem</strong></figcaption>
 </figure>
+<br clear="all">
 
 Amalgaland’s MOH wishes to leverage its CCG initiative, alongside its
 **national HIE**, as part of a larger value-based health services[^18]
@@ -586,6 +595,7 @@ System[^21] (LHS) strategy.
 style="width: 70%; object-fit: contain" />
 <figcaption><strong>Figure 10 - Learning Health System</strong></figcaption>
 </figure>
+<br clear="all">
 
 As an integrated provider, IH will operationalize and govern **all
 four** of the key use cases IHE CCG Profile:
@@ -631,6 +641,7 @@ style="width: 80%; object-fit: contain" />
 <figcaption><strong>Figure 11 - Analyses of Data Outside the "Green
 Zone"</strong></figcaption>
 </figure>
+<br clear="all">
 
 IH’s CCG-supported approach will leverage the naturally occurring
 variation across its large care network. At the same time the broad
@@ -664,6 +675,7 @@ will fund her plans to implement a new EMR.
 style="width: 80%; object-fit: contain" />
 <figcaption><strong>Figure 12 - Reducing Cognitive Load</strong></figcaption>
 </figure>
+<br clear="all">
 
 Dr. Black appreciates there will be two complementary aspects to
 employing CCGs in her practice:
