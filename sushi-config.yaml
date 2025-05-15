@@ -99,7 +99,7 @@ pages:
     generation: markdown
 
 menu:
-  Computable Care Guidelines (CCG) Home: index.html
+  CCG Home: index.html
   Volume 1:
     Business Description: CCG_v1_over.html
     Actors: CCG_v1_actor.html
