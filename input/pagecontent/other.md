@@ -10,22 +10,10 @@ This section modifies other IHE profiles or the General Introduction Appendices 
 
 | Actor                         | Definition                                                                                |
 | ----------------------------- | ------------------------------------------------------------------------------------------|
-| Guideline Engine | an actor that can ingest a submitted bundle of relevant contextual and person-centric content and execute the
-  processing logic needed to return the appropriate response(s)
-  indicating what care actions are recommended |
-| Guideline Performer | n actor that can directly or indirectly
-  interact with a human user, construct appropriate encounter-specific
-  artifacts (e.g., a bundle containing relevant contextual and
-  person-centric content), manage the iterative invocation of
-  \$apply operations that will concurrently process one or more relevant
-  CCGs, and appropriately process the transaction responses |
-| Guideline Publisher | an actor that may find and retrieve an
-  existing CCG from a Guideline Repository and can publish a CCG to a
-  Guideline Repository |
-| Guideline Repository | an actor that can receive and catalog a
-  submitted CCG and can respond to searches / requests for CCGs and
-  return relevant lists / artifacts to a requester |
-
+| Guideline Engine | an actor that can ingest a submitted bundle of relevant contextual and person-centric content and execute the processing logic needed to return the appropriate response(s) indicating what care actions are recommended |
+| Guideline Performer | an actor that can directly or indirectly interact with a human user, construct appropriate encounter-specific artifacts (e.g., a bundle containing relevant contextual and person-centric content), manage the iterative invocation of \$apply operations that will concurrently process one or more relevant  CCGs, and appropriately process the transaction responses |
+| Guideline Publisher | an actor that may find and retrieve an existing CCG from a Guideline Repository and can publish a CCG to a Guideline Repository |
+| Guideline Repository | an actor that can receive and catalog a submitted CCG and can respond to searches / requests for CCGs and return relevant lists / artifacts to a requester |
 {:.grid .table-striped}
 
 
