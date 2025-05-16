@@ -76,7 +76,7 @@ The data-in bundle **SHALL** be composed of:
      - status = active
      - zero or more action.definitionCanonical.planDefinition entries will be used to reference applicable CCG Folders
 
-- **All** resources which reference the present Encounter (e.g. which
+- **All** resources which reference the present Encounter (e.g., which
   may have been created by the Guideline Performer as the result of
   processing CARDs returned by the Guideline Engine as part of an Apply
   Guidelines transaction response).
@@ -93,5 +93,5 @@ The data-in bundle **SHALL** be composed of:
 
 [^5]: <https://hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html>
 
-[^6]: These constraints support the FHIR **Complete** option, as defined
+[^6]: These constraints support the FHIR **Complete** Option, as defined
     by the IHE IPS Profile.
