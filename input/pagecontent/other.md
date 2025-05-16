@@ -10,7 +10,22 @@ This section modifies other IHE profiles or the General Introduction Appendices 
 
 | Actor                         | Definition                                                                                |
 | ----------------------------- | ------------------------------------------------------------------------------------------|
-| none |  |
+| Guideline Engine | an actor that can ingest a submitted bundle of relevant contextual and person-centric content and execute the
+  processing logic needed to return the appropriate response(s)
+  indicating what care actions are recommended |
+| Guideline Performer | n actor that can directly or indirectly
+  interact with a human user, construct appropriate encounter-specific
+  artifacts (e.g., a bundle containing relevant contextual and
+  person-centric content), manage the iterative invocation of
+  \$apply operations that will concurrently process one or more relevant
+  CCGs, and appropriately process the transaction responses |
+| Guideline Publisher | an actor that may find and retrieve an
+  existing CCG from a Guideline Repository and can publish a CCG to a
+  Guideline Repository |
+| Guideline Repository | an actor that can receive and catalog a
+  submitted CCG and can respond to searches / requests for CCGs and
+  return relevant lists / artifacts to a requester |
+
 {:.grid .table-striped}
 
 
@@ -22,9 +37,12 @@ This section modifies other IHE profiles or the General Introduction Appendices 
 {:.grid .bg-info}
 
 
-| Transaction                    | Definition                                                                              |
-| ------------------------------ | --------------------------------------------------------------------------------------- |
-| none |  |
+| Transaction Name and Number        | Definition                                                                              |
+| ---------------------------------- | --------------------------------------------------------------------------------------- |
+| Search for Guidelines \[QRPH-61\]  |                                                       |
+| Retrieve Guideline \[QRPH-62\]     | Used to download and ingest a CCG that has been published to a Guideline Repository     |
+| Publish Guideline \[QRPH-63\]      |                                                       |
+| Apply Guideline \[QRPH-64\]        |                                                       |
 {:.grid .table-striped}
 
 ## IHE Technical Frameworks General Introduction Appendix D: Glossary
