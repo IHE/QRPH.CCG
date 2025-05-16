@@ -1,11 +1,11 @@
 ### Scope
 
-Transaction QRPH-62 Retrieve Guideline is used to download and ingest a CCG
+Transaction Retrieve Guideline \[QRPH-62\] is used to download and ingest a CCG
 that has been published to a Guideline Repository. The query parameters
 denote the specific CCG. The transaction response is the CCG package
-(FHIR IG) that meets the search criteria. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
+(FHIR IG) that meets the search criteria. The transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
 
-### Actor roles
+### Actor Roles
 
 | **Actor** | **Role** |
 |----|----|
@@ -14,9 +14,9 @@ denote the specific CCG. The transaction response is the CCG package
 | Guideline Repository | Responds with the CCG package that meets the query criteria |
 {:.grid}
 
-### Referenced standard(s)
+### Referenced Standard(s)
 
-Transaction QRPH-62 Retrieve Guideline is based on the following standards:
+Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -29,7 +29,7 @@ Transaction QRPH-62 Retrieve Guideline is based on the following standards:
 - CPG Computable Guideline STU2 specification:
   <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-computableguideline.html>
 
-### Interactions
+### Messages
 
 <figure>
 {% include image15.svg %}
@@ -37,9 +37,9 @@ Transaction QRPH-62 Retrieve Guideline is based on the following standards:
 <img src="image15.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 15- QRPH-62 Retrieve Guideline Interaction
-Diagram</p></figcaption>
+<figcaption><strong>Figure 15- Retrieve Guideline \[QRPH-62\] Interaction Diagram</strong></figcaption>
 </figure>
+<br clear="all">
 
 #### Trigger Events - Initiator
 
@@ -109,7 +109,7 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and audit considerations
+### Security and Audit Considerations
 
 This transaction does **not** convey personal health information (PHI).
 
