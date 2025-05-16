@@ -315,8 +315,7 @@ true and a CARD may be inadvertently missed.
 <figure>
 <img src="image6.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><strong>Figure 6 - Flattened Folder-and-CARDs CCG
-expression</strong</figcaption>
+<figcaption><strong>Figure 6 - Flattened Folder-and-CARDs CCG expression</strong></figcaption>
 </figure>
 <br clear="all">
 
