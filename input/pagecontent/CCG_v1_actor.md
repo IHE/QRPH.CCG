@@ -360,7 +360,7 @@ For clarity: a Guideline Engine supporting the Trusted CCG Option
 
 ## Actor Groupings
 
-### Groupings related to Security and Auditing
+### Groupings Related to Security and Auditing
 
 To support the trusted execution of transactions within a regulated
 healthcare domain, all actors in this specification are implicitly
@@ -374,7 +374,7 @@ Demographics Consumer[^8], and Content Creator (IPS)[^9] Actors, and
 support IPS-related transaction processing behaviors described in the
 ITI Sharing IPS (sIPS) Profile[^10].
 
-### Implications of Digital Health Solutions composed of Multiple Grouped Actors
+### Implications of Digital Health Solutions Composed of Multiple Grouped Actors
 
 As noted in the *Actors, Transactions, and Content Modules* section, a
 *single* digital health solution may choose to incorporate the
@@ -407,7 +407,7 @@ starting point of State-D and State-B (as illustrated by Figure 8 in the
 [Use Cases](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
 section of this profile).
 
-## Security considerations
+## Security Considerations
 
 All person-centric health information is a potential target for hackers.
 In recent years, the security of multiple hospital information systems,
