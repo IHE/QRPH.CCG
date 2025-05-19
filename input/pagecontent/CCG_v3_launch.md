@@ -177,7 +177,7 @@ The data-in bundle **SHALL** contain:
   transaction. At the first invocation of \[QRPH-64\], this content will be
   zero.
 
->Note: [UC-3](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
+>Note: [UC-3](CCG_v1_over.html#the-four-use-cases-in-the-ccg-ecosystem)
 describes how one or more CCGs may be associated with the patient and
 referenced in the patient’s top-level Folder using transactions defined
 by the IHE Dynamic Care Planning (DCP)[^6] Profile.
