@@ -392,7 +392,7 @@ An electronic medical records (EMR) solution is likely to be capable of
 creating or updating a person-centric care plan for a subject. A digital
 health solution that is claiming conformance as a Guideline Performer will be able to claim conformance as a **grouped** Care Plan
 Contributor and Care Plan Service if it can demonstrate that
-it is able to achieve State-C and State-D as defined in the [Use Cases](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
+it is able to achieve State-C and State-D as defined in the [Use Cases](CCG_v1_over.html#the-four-use-cases-in-the-ccg-ecosystem)
 section of this profile (Figures 7 and 8).
 
 #### Guideline Performer \| Guideline Engine
@@ -404,7 +404,7 @@ claiming conformance as a Guideline Performer will be able to
 claim conformance as a **grouped** Guideline Engine if it can
 demonstrate that it is able to correctly achieve State-E from a known
 starting point of State-D and State-B (as illustrated by Figure 8 in the
-[Use Cases](CCG_v1_over.html#the-4-use-cases-in-the-ccg-ecosystem)
+[Use Cases](CCG_v1_over.html#the-four-use-cases-in-the-ccg-ecosystem)
 section of this profile).
 
 ## Security Considerations
