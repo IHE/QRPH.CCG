@@ -1,11 +1,11 @@
 ### Scope
-Transaction QRPH-61 Search for Guidelines is used to query for CCGs that have
+Transaction Search for Guidelines \[QRPH-61\] is used to query for CCGs that have
 been published to a Guideline Repository. The query parameters can be
 employed, for example, to search for CCGs published (or updated) since a
 given timestamp. The transaction response will be a list of CCGs that
-meet the search criteria. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
+meet the search criteria. The transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
 
-### Actor roles
+### Actor Roles
 
 | **Actor** | **Role** |
 |----|----|
@@ -14,9 +14,9 @@ meet the search criteria. The transaction content and behaviour related to this 
 | Guideline Repository | Responds with a list of CCGs that meet the query criteria |
 {:.grid}
 
-### Referenced standard(s)
+### Referenced Standard(s)
 
-Transaction QRPH-61 Search for Guidelines is based on the following
+Transaction \[QRPH-61\] Search for Guidelines is based on the following
 standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
@@ -24,7 +24,7 @@ standards:
 - Node Package Manager version 10.9.0
   <https://docs.npmjs.com/cli/v10/commands/npm-search>
 
-### Interactions
+### Messages
 
 <figure>
 {% include image14.svg %}
@@ -32,9 +32,10 @@ standards:
 <img src="image14.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 14 - QRPH-61 Search for Guidelines Interaction
-Diagram</p></figcaption>
+<figcaption><strong>Figure 14 - Search for Guidelines \[QRPH-61\] Interaction
+Diagram</strong></figcaption>
 </figure>
+<br clear="all">
 
 #### Trigger Events - Initiator
 
@@ -79,7 +80,7 @@ transactions as they are received.
 The search results are a JSON array of objects with the following
 fields:
 
-- name (ie the package name)
+- name (i.e., the package name)
 
 - description
 
@@ -109,7 +110,7 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and audit considerations
+### Security and Audit Considerations
 
 This transaction does **not** convey personal health information (PHI).
 

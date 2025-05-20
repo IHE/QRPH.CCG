@@ -1,13 +1,13 @@
 ### Scope
 
-Transaction QRPH-64 Apply Guideline is used by a Guideline Performer to
+Transaction Apply Guideline \[QRPH-64\] is used by a Guideline Performer to
 submit a contextual content bundle to a Guideline Engine and to invoke
 the \$CPGPlanDefinitionApply operation, which will be evaluated based on
 the submitted content. The transaction response returns a bundle of
 Request resources representing the proposed activities based on applying
-the relevant CCGs. The specific transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Performer and Guideline Engine actors claim conformance.
+the relevant CCGs. The specific transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Performer and Guideline Engine actors claim conformance.
 
-### Actor roles
+### Actor Roles
 
 | **Actor** | **Role** |
 |----|----|
@@ -15,9 +15,9 @@ the relevant CCGs. The specific transaction content and behaviour related to thi
 | Guideline Engine | Executes the CPGPlanDefinitionApply operation on the submitted content bundle and returns a bundle of Request resources, one for each of the relevant CCG CARDs that has fired true. |
 {:.grid}
 
-### Referenced standard(s)
+### Referenced Standard(s)
 
-Transaction QRPH-64 Apply Guideline is based on the following standards:
+Transaction Apply Guideline \[QRPH-64\] is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -27,7 +27,7 @@ Transaction QRPH-64 Apply Guideline is based on the following standards:
 
 - (Optionally) IHE mCSD Profile: <https://profiles.ihe.net/ITI/mCSD/index.html>
 
-### Interactions
+### Messages
 
 <figure>
 {% include image17.svg %}
@@ -35,14 +35,15 @@ Transaction QRPH-64 Apply Guideline is based on the following standards:
 <img src="image17.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 17 – QRPH-64 Apply Guideline Interaction
-Diagram</p></figcaption>
+<figcaption><strong>Figure 17 – QRPH-64 Apply Guideline Interaction
+Diagram</strong></figcaption>
 </figure>
+<br clear="all">
 
 #### Trigger Events - Initiator
 
 There **SHOULD** be a **human** in the loop. With human input, a
-Guideline Performer actor triggers the initiation of an Apply Guideline
+Guideline Performer triggers the initiation of an Apply Guideline
 transaction loop during a person-centric care encounter to
 operationalize the application of relevant CCGs and provide
 recommendations to a **human** actor that will inform the course of the
@@ -92,7 +93,7 @@ Based on receipt of the transaction response, the transaction initiator:
 - **SHALL** create an audit record of the transaction response (see
   [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
 
-- **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats), for actors claiming adherence to Volume-3, or based on the relevant specifications defined in Volume-4 (for actors claiming such conformance).
+- **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats), for actors claiming adherence to Volume 3, or based on the relevant specifications defined in Volume 4 (for actors claiming such conformance).
 
 #### Trigger Events - Responder
 
@@ -133,7 +134,7 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and Audit considerations
+### Security and Audit Considerations
 
 This transaction **does** convey personal health information (**PHI**);
 it is present in the data content conveyed by the Guideline Performer to
@@ -236,10 +237,9 @@ Patient Subject**.
 [^1]: The use of the IPS specification in this context is based on the
     IHE IPS Profile and the **COMPLETE option** defined therein.
 
-[^2]: NOTE: it is anticipated that there is a **human** in the loop to
+[^2]: Note: it is anticipated that there is a **human** in the loop to
     action the care recommendations. In some jurisdictions, a digital
-    health solution playing the role of a Guideline Performer actor
-    and/or a Guideline Engine actor may meet the definition of Software
+    health solution playing the role of a Guideline Performer and/or a Guideline Engine may meet the definition of Software
     as a Medical Device (SaMD).
 
 [^3]: <https://hl7.org/fhir/uv/cpg/STU2/OperationDefinition-cpg-plandefinition-apply.html>

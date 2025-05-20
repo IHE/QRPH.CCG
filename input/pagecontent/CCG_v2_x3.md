@@ -1,20 +1,20 @@
 ### Scope
 
-Transaction QRPH-63 Publish Guideline is used to submit an NPM package
+Transaction Publish Guideline \[QRPH-63\] is used to submit an NPM package
 containing a well-formed CCG to a Guideline Repository. The transaction
-response returns a confirmation or an exception message. The transaction content and behaviour related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher and Guideline Repository actors claim conformance.
+response returns a confirmation or an exception message. The transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher and Guideline Repository actors claim conformance.
 
-### Actor roles
+### Actor Roles
 
 | **Actor** | **Role** |
 |----|----|
-| Guideline Publisher | Submits a well-formed CCG package to be persisted and catalogued by the Guideline Repository |
-| Guideline Repository | Persists and catalogues the submitted CCG package or returns an exception message indicating the reason for rejecting the submission. |
+| Guideline Publisher | Submits a well-formed CCG package to be persisted and cataloged by the Guideline Repository |
+| Guideline Repository | Persists and catalogs the submitted CCG package or returns an exception message indicating the reason for rejecting the submission. |
 {:.grid}
 
-### Referenced standard(s)
+### Referenced Standard(s)
 
-Transaction QRPH-63 Publish Guideline is based on the following standards:
+Transaction Publish Guideline \[QRPH-63\] is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -27,7 +27,7 @@ Transaction QRPH-63 Publish Guideline is based on the following standards:
 - CPG Computable Guideline STU2 specification:
   <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-computableguideline.html>
 
-### Interactions
+### Messages
 
 <figure>
 {% include image16.svg %}
@@ -35,9 +35,10 @@ Transaction QRPH-63 Publish Guideline is based on the following standards:
 <img src="image16.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><p>Figure 16 – QRPH-63 Publish Guideline Interaction
-Diagram</p></figcaption>
+<figcaption><strong>Figure 16 – Publish Guideline \[QRPH-63\] Interaction 
+Diagram</strong></figcaption>
 </figure>
+<br clear="all">
 
 #### Trigger Events - Initiator
 
@@ -68,7 +69,7 @@ Prior to submitting the transaction, the transaction initiator:
 - **SHALL** execute npm-shrinkwrap.
 
 - **MAY** digitally sign the CCG Deployment Package (IG) leveraging the relevant npm methods
-  defined in Volume 3 of this Profile.
+  defined in Volume 3 of this profile.
 
 Based on receipt of the transaction response, the transaction initiator:
 
@@ -114,7 +115,7 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and audit considerations
+### Security and Audit Considerations
 
 This transaction does **not** convey personal health information (PHI).
 

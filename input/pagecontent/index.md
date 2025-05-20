@@ -16,24 +16,24 @@ This guide is organized into the following sections:
    1. [Business Description](CCG_v1_over.html)
    1. [Actors](CCG_v1_actor.html)
 2. Volume 2: Transaction Detail
-   1. [QRPH-61 - Search for Guidelines](CCG_v2_x1.html)
-   1. [QRPH-62 - Retrieve Guideline](CCG_v2_x2.html)
-   1. [QRPH-63 - Publish Guidelines](CCG_v2_x3.html)
-   1. [QRPH-64 - Apply Guidelines](CCG_v2_x4.html)
+   1. [Search for Guidelines \[QRPH-61\]](CCG_v2_x1.html)
+   1. [Retrieve Guideline \[QRPH-62\]](CCG_v2_x2.html)
+   1. [Publish Guidelines \[QRPH-63\]](CCG_v2_x3.html)
+   1. [Apply Guidelines \[QRPH-64\]](CCG_v2_x4.html)
 3. Volume 3: Metadata and Content
-   1. [CCG Content Specs](CCG_v3_launch.html)
+   1. [Content Specifications](CCG_v3_launch.html)
 4. Volume 4: National Extensions
    1. [Jurisdictional Contextualizations](CCG_v4.html)
 5. Other
-   1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html)
+   1. [Test Plan](testplan.html)
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
 ### Conformance Expectations
 
-IHE uses the normative words: Shall, Should, and May according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
+IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
 #### Must Support
 

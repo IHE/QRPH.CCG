@@ -4,8 +4,8 @@ CARDs. All CCG CARDs are composed of a **PlanDefinition** plus an
 **ActivityDefinition** resource. A CARD’s PlanDefinition may also
 reference a **CQL** **library** and possibly other required resources.
 
-For Guideline Publisher actors that support the **Digitally Signed
-CARD** option, a digital signature for each of the CARD’s resources
+For Guideline Publisher Actors that support the **Digitally Signed
+CARD** Option, a digital signature for each of the CARD’s resources
 **SHALL** be carried by a Provenance[^1] resource that **SHALL** be
 included in the CCG’s deployment package (the Implementation Guide).
 

@@ -24,8 +24,8 @@ which the following constraints **SHALL** be abided:
 
   - action.definition.PlanDefinition.url = id of the relevant CCG CARD PlanDefinition
 
-For Guideline Publisher actors that support the **Digitally Signed
-CARD** option, the CCG Folder’s signature **SHALL** be carried by a
+For Guideline Publisher Actors that support the **Digitally Signed
+CARD** Option, the CCG Folder’s signature **SHALL** be carried by a
 Provenance[^2] resource that will accompany the CCG Folder in the
 deployment package (the Implementation Guide). Details of the signature are described in the **CCG CARD Digital Signature** section.
 

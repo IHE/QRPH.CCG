@@ -14,36 +14,34 @@ following key things:
     solutions across the whole of the care delivery network.
 
 3.  It defines a normative pattern for **processing** CCG
-    recommendations that will ensure multiple CCGs (e.g. for multiple health conditions) can be concurrently
+    recommendations that will ensure multiple CCGs (e.g., for multiple health conditions) can be concurrently
     executed and that all relevant care recommendations will be proposed to
     the end-user in support of their care decision-making.
 
-4.  It documents a base **health data content model** that provides all ecosystem actors with a common underlying framework for defining, sharing, and executing CCG artefacts. It is anticipated that implementing jurisdictions may replace this base model with their national or regional continuity of care content specifications.
+4.  It documents a base **health data content model** that provides all ecosystem actors with a common underlying framework for defining, sharing, and executing CCG artifacts. It is anticipated that implementing jurisdictions may replace this base model with their national or regional continuity of care content specifications.
 
 The digital health ecosystem of CCG actors and transactions is designed
 to satisfy four use cases:
 
 1.  **UC-1**: A person who is a guideline *author* uses a digital health
-    tool (which plays the role of a **Guideline Publisher** actor) to retrieve
+    tool (which plays the role of a **Guideline Publisher**) to retrieve
     and edit an existing CCG or to create a brand-new CCG (L3)[^1]
-    artefact. Maybe she digitally signs the artefact (at the top level,
+    artifact. Maybe she digitally signs the artifact (at the top level,
     or every recommendation). She then **publishes the CCG (L3)
-    artefact** to a **Guideline Repository** actor.
+    artifact** to a **Guideline Repository**.
 
-2.  **UC-2**: A digital health solution that executes CCGs (e.g. a **Guideline Engine** actor) 
-    **refreshes its local cache** of CCGs from a **Guideline Repository**
-    actor.
+2.  **UC-2**: A digital health solution that executes CCGs (e.g., a **Guideline Engine**) 
+    **refreshes its local cache** of CCGs from a **Guideline Repository**.
 
 3.  **UC-3**: A person who is a care provider leverages her digital
-    health solution (e.g. an EMR) to **associate a patient** with one or more
-    CCG-supported, evidence-based care programmes.
+    health solution (e.g., an EMR) to **associate a patient** with one or more
+    CCG-supported, evidence-based care programs.
 
 4.  **UC-4**: A person who is a care provider has an ambulatory
     encounter with a patient who is enrolled in one or more
     CCG-supported care plans. During the encounter, she leverages her
-    digital health solution (e.g. EMR, playing the role of a **Guideline
-    Performer** actor) to invoke processing by a **Guideline Engine**
-    actor to **concurrently execute the relevant CCGs.** She acts upon
+    digital health solution (e.g., EMR, playing the role of a **Guideline
+    Performer**) to invoke processing by a **Guideline Engine** to **concurrently execute the relevant CCGs.** She acts upon
     the recommendations to provide person-centric, guideline-adherent
     care.
 
@@ -61,8 +59,9 @@ realized.
 <figure>
 <img src="image1.png"
 style="max-width: 75%; object-fit: contain" />
-<figcaption><p>Figure 1 - Care Delivery in the "Green" Zone</p></figcaption>
+<figcaption><strong>Figure 1 - Care Delivery in the "Green" Zone</strong></figcaption>
 </figure>
+<br clear="all">
 
 We are better and better able to collect information about **what
 happened** on a client’s health journey. This can be illustrated,
@@ -84,7 +83,7 @@ to treat the absence of a signal as a signal.
 
 **Broadly scaling CCGs**, however, faces a set of key challenges:
 
-- To support patients with **co-morbidities**, multiple CCG artefacts
+- To support patients with **co-morbidities**, multiple CCG artifacts
   must be **concurrently** executable.
 
 - To ensure **interoperability** across entire care networks, CCGs must
@@ -97,7 +96,7 @@ to treat the absence of a signal as a signal.
   multiple CCGs.
 
 - To meet **adherence** to relevant software-as-a-medical-device
-  (**SaMD**) regulations, CCG artefacts and transaction processing workflows must
+  (**SaMD**) regulations, CCG artifacts and transaction processing workflows must
   be **conformance-testable**.
 
 Significant progress has been made by HL7 and IHE as
@@ -123,9 +122,10 @@ account for **58% of Canada’s total healthcare spend**.[^7]
 <figure>
 <img src="image2.png" style="height: 100%; width: 100%; object-fit: contain"
  />
-<figcaption><p>Figure 2 - Co-morbidities in Canadians over 35 years of
-age</p></figcaption>
+<figcaption><strong>Figure 2 - Co-morbidities in Canadians over 35 years of
+age</strong></figcaption>
 </figure>
+<br clear="all">
 
 “Health care in all global settings today suffers from **high levels of
 defects in quality** across many domains, and this poor-quality care
@@ -176,12 +176,13 @@ attestation related to the source content, including bibliographic citations of 
 <figure>
 <img src="image3.png"
 style="width: 75%; object-fit: contain" />
-<figcaption><p>Figure 3 - Danish GP Decision Support Workflow</p></figcaption>
+<figcaption><strong>Figure 3 - Danish GP Decision Support Workflow</strong></figcaption>
 </figure>
+<br clear="all">
 
 Informed by these examples and others, the IHE CCG Profile constrains the **content** that
-may be employed to define CCG logic. The (optional) base CCG content specification is defined in Volume-3 of this Profile. In this base content specification, an
-approach is favoured that allows care logic to take into account both patient health data *and* contextual attributes of the care encounter:
+may be employed to define CCG logic. The (optional) base CCG content specification is defined in Volume 3 of this profile. In this base content specification, an
+approach is favored that allows care logic to take into account both patient health data *and* contextual attributes of the care encounter:
 
 - In the base specification, **person-centric content** is defined in terms of
   the IHE International Patient Summary (**IPS**) Profile (*Complete*
@@ -198,8 +199,8 @@ approach is favoured that allows care logic to take into account both patient he
   the content specified by the IHE mobile Care Services Discovery
   (**mCSD)** Profile may *also* be employed to drive CCG care logic.
 
-It is anticipated that implementing jurisdictions will adopt the base common content model or may define an alternate common content model based on their domestic care continuity specifications (e.g. for the USA: UCSDI, for Canada: PS:CA, for Europe:
-the European Patient Summary, etc.). An alterative common content model SHALL be defined in a relevant **Volume-4** section of the IHE CCG Profile. Each ecosystem actor SHALL declare its support for a content model option. As a practical constraint, **all** actors in a CCG-conformant **ecosystem** SHALL support the **same** common content model option.
+It is anticipated that implementing jurisdictions will adopt the base common content model or may define an alternate common content model based on their domestic care continuity specifications (e.g., for the USA: UCSDI, for Canada: PS:CA, for Europe:
+the European Patient Summary, etc.). An alterative common content model SHALL be defined in a relevant **Volume 4** section of the IHE CCG Profile. Each ecosystem actor SHALL declare its support for a content model option. As a practical constraint, **all** actors in a CCG-conformant **ecosystem** SHALL support the **same** common content model option.
 
 IHE's choice of IPS as the foundation of the base common content model is intended to be risk-mitigating. It is noteworthy that many countries (Canada, Sri Lanka,
 Botswana, New Zealand, etc.) and many multilateral organizations (Asia
@@ -209,16 +210,17 @@ health summary specification. The joint EU-USA **Trillium II** project reported 
 
 ### Folder-and-CARDs Metaphor 
 
-Included in the base common content model is a normative grammar related to how CCG artefacts are *defined*. Action research into CCG formats was conducted by a joint team from Canada Health Infoway, Cancer Care Ontario, and Hamilton Health Sciences. A working prototype was demonstrated at the 2020 IHE North American Connectathon. Informed by this research, and to support the concurrent execution of multiple CCGs, a **Folder-and-CARDs**
-metaphor is documented in Volume-3. Leveraging this model, one can think
+Included in the base common content model is a normative grammar related to how CCG artifacts are *defined*. Action research into CCG formats was conducted by a joint team from Canada Health Infoway, Cancer Care Ontario, and Hamilton Health Sciences. A working prototype was demonstrated at the 2020 IHE North American Connectathon. Informed by this research, and to support the concurrent execution of multiple CCGs, a **Folder-and-CARDs**
+metaphor is documented in Volume 3. Leveraging this model, one can think
 of a CCG as a set of care recommendations where each recommendation is
 described by a **CARD**. This model is illustrated in Figure 4.
 
 <figure>
 <img src="image4.png"
 style="width: 75%; object-fit: contain" />
-<figcaption><p>Figure 4 - Folder-and-CARDs Metaphor</p></figcaption>
+<figcaption><strong>Figure 4 - Folder-and-CARDs Metaphor</strong></figcaption>
 </figure>
+<br clear="all">
 
 Here, CARD is an acronym. The recommendation is ***applicable*** when a
 set of defined **<u>C</u>**onditions are met. The recommendation
@@ -242,19 +244,19 @@ authoring of CCGs and their subsequent execution.
 - The CARD’s PlanDefinition resource declaritively defines the Condition
   statement(s) that must evaluate to TRUE for the CARD to be
   **applicable**. The condition statements’ **logic** must be expressed
-  in terms of the common content model (either the base defined in Volume-3 or an alternate model documented in Volume-4). 
+  in terms of the common content model (either the base defined in Volume 3 or an alternate model documented in Volume 4). 
 
 - The CARD’s **resulting data** must *also* be expressed in terms of the
-  common content model (in Volume-3 or Volume-4).
+  common content model (in Volume 3 or Volume 4).
 
 - A CCG **Folder** is defined using a FHIR PlanDefinition resource. This
   PlanDefinition will act as a container and reference the full set of
-  relevant CARDs for a particular care plan (e.g. diabetes care, or antenatal care, etc.).
+  relevant CARDs for a particular care plan (e.g., diabetes care, or antenatal care, etc.).
 
-The set of **13 CARD *types*** defined by the base common content model in Volume-3 is listed
+The set of **13 CARD *types*** defined by the base common content model in Volume 3 is listed
 below:
 
-1.  **Provide Information** – provide information, counselling, or
+1.  **Provide Information** – provide information, counseling, or
     instructions to the patient. 
 
 2.  **Collect Information** – capture information about the patient.
@@ -269,7 +271,7 @@ below:
     Service Request.
 
 6.  **Request a Service (Referral)** – create a Service Request to refer
-    a patient to another care provider (e.g. perhaps to escalate to a
+    a patient to another care provider (e.g., perhaps to escalate to a
     higher level of care).
 
 7.  **Propose a Diagnosis** – record the patient&apos;s diagnosis as a
@@ -297,8 +299,9 @@ a flowchart centric approach for describing CCG-supported workflows.
 <figure>
 <img src="image5.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><p>Figure 5 - Flowchart-centric CCG expressions</p></figcaption>
+<figcaption><strong>Figure 5 - Flowchart-centric CCG expressions</strong></figcaption>
 </figure>
+<br clear="all">
 
 In a flowchart or tree-diagram approach, **trigger** events are associated with workflow
 states. This means that for a CARD to evaluate to true, its trigger event must be true
@@ -307,20 +310,20 @@ may be leveraged by a digital health solution to inform when it should
 invoke a CCG evaluation operation (\$apply). However, such an approach relies on
 each individual workflow process being followed in its entirety so that each state
 in the workflow is reached; otherwise, associated trigger events will not have a chance to fire
-true and a CARD may be inadvertantly missed.
+true and a CARD may be inadvertently missed.
 
 <figure>
 <img src="image6.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><p>Figure 6 - Flattened Folder-and-CARDs CCG
-expression</p></figcaption>
+<figcaption><strong>Figure 6 - Flattened Folder-and-CARDs CCG expression</strong></figcaption>
 </figure>
+<br clear="all">
 
 Figure 6 illustrates the “flattened stack” of CARDs resulting from the
 Folder-and-CARDs content model. For each CARD, the trigger event is
 omitted and only the condition statements are declaratively defined. Such an approach
 de-couples the CCG recommendations from the workflow. A CARD fires true when its condition statements are true. This greatly
-simplifies the concurrent processing of multiple CCGs (e.g. Folders F1
+simplifies the concurrent processing of multiple CCGs (e.g., Folders F1
 and F2, as illustrated in Figure 5 and Figure 6).
 
 Notionally, we can think of associating a set of relevant Folders with a
@@ -332,7 +335,7 @@ illustrative.
 
 To ensure CARDs are not missed, it is expected that the
 ***entire CARD stack*** is iteratively processed over the course of the
-encounter. In the first pass, all the CARDs in the stack are procssed and those that fire true are processed. As an example, there could be CARDs indicating that, at every encounter, the subject's blood pressure, weight, heart rate, and spirometry measures should be recorded. For each CARD that fired TRUE, there is new ***resulting data***; either the reading is recorded or a data-absent reason is recorded.
+encounter. In the first pass, all the CARDs in the stack are processed and those that fire true are processed. As an example, there could be CARDs indicating that, at every encounter, the subject's blood pressure, weight, heart rate, and spirometry measures should be recorded. For each CARD that fired TRUE, there is new ***resulting data***; either the reading is recorded or a data-absent reason is recorded.
 
 This new data is taken into account as the entire stack-of-CARDs is
 *again* processed. This is illustrated by the successive invocations of
@@ -355,32 +358,30 @@ statements.
 
 ## Use Cases
 
-### The 4 Use Cases in the CCG Ecosystem
+### The Four Use Cases in the CCG Ecosystem
 
 As noted in the introduction, the CCG specification is designed to
 satisfy four use cases:
 
 1.  **UC-1**: A person who is a guideline *author* uses a digital health
-    tool (which plays the role of a **Guideline Publisher** actor) to retrieve
+    tool (which plays the role of a **Guideline Publisher**) to retrieve
     and edit an existing CCG or to create a brand-new CCG (L3)[^1]
-    artefact. Maybe she digitally signs the artefact (at the top level,
+    artifact. Maybe she digitally signs the artifact (at the top level,
     or every recommendation). She then **publishes the CCG (L3)
-    artefact** to a **Guideline Repository** actor.
+    artifact** to a **Guideline Repository**.
 
-2.  **UC-2**: A digital health solution that executes CCGs (a **Guideline Engine** actor) 
-    **refreshes its local cache** of CCGs from a **Guideline Repository**
-    actor.
+2.  **UC-2**: A digital health solution that executes CCGs (a **Guideline Engine**) 
+    **refreshes its local cache** of CCGs from a **Guideline Repository**.
 
 3.  **UC-3**: A person who is a care provider leverages her digital
-    health solution (e.g. an EMR) to **associate a patient** with one or more
-    CCG-supported, evidence-based care programmes.
+    health solution (e.g., an EMR) to **associate a patient** with one or more
+    CCG-supported, evidence-based care programs.
 
 4.  **UC-4**: A person who is a care provider has an ambulatory
     encounter with a patient who is enrolled in one or more
     CCG-supported care plans. During the encounter, she leverages her
-    digital health solution (e.g. EMR, playing the role of a **Guideline
-    Performer** actor) to invoke processing by a **Guideline Engine**
-    actor to **concurrently execute the relevant CCGs.** She acts upon
+    digital health solution (e.g., EMR, playing the role of a **Guideline
+    Performer**) to invoke processing by a **Guideline Engine** to **concurrently execute the relevant CCGs.** She acts upon
     the recommendations to provide person-centric, guideline-adherent
     care.
 
@@ -396,28 +397,29 @@ execution of CCG-supported care encounters, at scale.
 <img src="image7.png"
 style="height: 100%; width: 100%; object-fit: contain" />
 -->
-<figcaption><p>Figure 7 - Graphical Depiction of Use Cases 1, 2 & 3</p></figcaption>
+<figcaption><strong>Figure 7 - Graphical Depiction of Use Cases 1, 2 & 3</strong></figcaption>
 </figure>
+<br clear="all">
 
 The operation of this ecosystem is pictorially depicted in Figure 7 and
 Figure 8. From Figure 7 we can note the following:
 
-- In use case 1 (UC-1), a Guideline Publisher actor executes the
-  transaction processing needed to author or update a well-formed CCG artefact.
+- In use case 1 (UC-1), a Guideline Publisher executes the
+  transaction processing needed to author or update a well-formed CCG artifact.
   At the successful conclusion of the workflow, the well-formed CCGs are
-  submitted to and ingested and cataloged by a Guideline Repository actor
+  submitted to and ingested and cataloged by a Guideline Repository
   **(State-A)**.
 
-- In UC-2, a Guideline Engine actor executes the transaction processing
+- In UC-2, a Guideline Engine executes the transaction processing
   needed to refresh its local cache of well-formed CCGs from the content
-  managed by the Guideline Repository actor. At the successful
-  conclusion of the workflow, the up-to-date CCG artefacts are ingested by the
+  managed by the Guideline Repository. At the successful
+  conclusion of the workflow, the up-to-date CCG artifacts are ingested by the
   Guideline Engine **(State-B)** and may be leveraged to support
   evidence-based care encounters.
 
 - In UC-3, a digital health solution (playing the role of a Care Plan
-  Contributor actor) creates or updates a subject’s Care Plan (persisted
-  and managed by the Care Plan Service actor). At
+  Contributor) creates or updates a subject’s Care Plan (persisted
+  and managed by the Care Plan Service). At
   the successful conclusion of UC-3’s workflow, one or more CCG Folders have
   been associated with the care subject and are referenced in the
   subject’s Care Plan **(State-C)**.
@@ -428,9 +430,10 @@ Figure 8. From Figure 7 we can note the following:
 <img src="image8.png"
 style="height: 100%; width: 100%; object-fit: contain" />
 -->
-<figcaption><p>Figure 8 - Graphical Depiction of a CCG-supported Care
-Encounter</p></figcaption>
+<figcaption><strong>Figure 8 - Graphical Depiction of a CCG-supported Care
+Encounter</strong></figcaption>
 </figure>
+<br clear="all">
 
 The activities relevant to the CCG-supported care encounter are
 illustrated by Figure 8. From this figure, we can note the following:
@@ -441,16 +444,16 @@ illustrated by Figure 8. From this figure, we can note the following:
   Regardless of the timing – State-A, State-B and State-C are
   **pre-conditions** to the commencement of UC-4.
 
-- The Guideline Performer actor must be able to establish the data set
+- The Guideline Performer must be able to establish the data set
   that reflects the context of the care encounter. This includes
   up-to-date person-centric health data pertaining to the care subject
   *plus* pertinent information related to the encounter context such as
   relevant information about the care provider, the care location, etc.
   This **initial contextual data** must be expressed according to the
-  **common data model** defined in either Volume-3 or Volume-4 of this IHE CCG Profile **(State-D)**.
+  **common data model** defined in either Volume 3 or Volume 4 of this IHE CCG Profile **(State-D)**.
 
 - During the care encounter, content will be exchanged between the
-  Guideline Performer actor and Guideline Engine actor and the engine’s CCG
+  Guideline Performer and Guideline Engine and the engine’s CCG
   transaction processing will evaluate this content and return
   appropriate care recommendations. The Guideline Performer will
   facilitate the actioning of these recommendations (to generate the CARD's Resulting Data) and the iterative
@@ -458,12 +461,12 @@ illustrated by Figure 8. From this figure, we can note the following:
 
 - At the conclusion, the **results** of the care encounter are
   **persisted** by the Guideline Performer in adherence with the data
-  models defined by either Volume-3 or Volume-4 of this IHE CCG Profile **(State-E)**.
+  models defined by either Volume 3 or Volume 4 of this IHE CCG Profile **(State-E)**.
 
 - It should be noted that a single digital health solution *may*
   **group** together and incorporate the functionality of both the
-  Guideline Performer and Guideline Engine actors. Where this is the
-  case, the transaction processing behaviours of this solution represent
+  Guideline Performer and Guideline Engine Actors. Where this is the
+  case, the transaction processing behaviors of this solution represent
   a black box. In such a scenario, the software solution’s
   **conformance** may be established by giving a starting State-D and
   confirming that ending State-E is achieved.
@@ -487,7 +490,7 @@ of countries, Amalgaland has adopted the FHIR-based International
 Patient Summary (**IPS**) as the basis of its national person-centric
 health data model. The IPS specification has been profiled to reflect
 Amalgaland’s national code systems. Through its **IHE Amalgaland
-Deployment Committee**, the ACE publishes a section in **Volume-4** of
+Deployment Committee**, the ACE publishes a section in **Volume 4** of
 the IHE IPS Profile, the IHE mCSD Profile, and the IHE CCG Profile that
 documents its national core data model. This **domestic health data
 model** is the basis for CCGs that will be published by the ACE.
@@ -495,8 +498,9 @@ model** is the basis for CCGs that will be published by the ACE.
 <figure>
 <img src="image9.png"
 style="height: 100%; width: 100%; object-fit: contain" />
-<figcaption><p>Figure 9 - MOH-supported CCG Ecosystem</p></figcaption>
+<figcaption><strong>Figure 9 - MOH-supported CCG Ecosystem</strong></figcaption>
 </figure>
+<br clear="all">
 
 Amalgaland’s MOH wishes to leverage its CCG initiative, alongside its
 **national HIE**, as part of a larger value-based health services[^18]
@@ -507,10 +511,10 @@ revised healthcare provider claims adjudication and **payment** scheme.
 
 To help ensure its CCGs can be leveraged in this way, the ACE will:
 
-- Adopt an internal **conformance-testing** regime that ensures its CCG artefacts
+- Adopt an internal **conformance-testing** regime that ensures its CCG artifacts
   are well-formed and are adherent to the national core data model; and
 
-- **Digitally sign** all its published artefacts.
+- **Digitally sign** all its published artifacts.
 
 To be eligible for the VBHS payments scheme, care providers will need to
 demonstrate:
@@ -588,8 +592,9 @@ System[^21] (LHS) strategy.
 <figure>
 <img src="image10.png"
 style="width: 70%; object-fit: contain" />
-<figcaption><p>Figure 10 - Learning Health System</p></figcaption>
+<figcaption><strong>Figure 10 - Learning Health System</strong></figcaption>
 </figure>
+<br clear="all">
 
 As an integrated provider, IH will operationalize and govern **all
 four** of the key use cases IHE CCG Profile:
@@ -604,8 +609,8 @@ four** of the key use cases IHE CCG Profile:
     Health[^22] (ICF) codes.
 
   - To ensure it remains eligible for federal quality payment
-    programmes, the IH team will continuously augment its existing CCGs
-    and develop new CCGs as additional federal incentive programmes
+    programs, the IH team will continuously augment its existing CCGs
+    and develop new CCGs as additional federal incentive programs
     emerge.
 
   - All IH’s CCGs (and all its health databases) are based on the
@@ -632,9 +637,10 @@ four** of the key use cases IHE CCG Profile:
 <figure>
 <img src="image11.png"
 style="width: 80%; object-fit: contain" />
-<figcaption><p>Figure 11 - Analyses of Data Outside the "Green
-Zone"</p></figcaption>
+<figcaption><strong>Figure 11 - Analyses of Data Outside the "Green
+Zone"</strong></figcaption>
 </figure>
+<br clear="all">
 
 IH’s CCG-supported approach will leverage the naturally occurring
 variation across its large care network. At the same time the broad
@@ -651,13 +657,13 @@ for her family medicine practice. A key reason for Dr. Black wanting to
 switch out her existing EMR is the significant amount of time and effort
 she finds herself expending on “busy work” and seemingly endless data
 entry. This is time she would rather spend with her patients, or with
-her young family (she finds herself, now, doing a lot of catch-up data entry outside of clinlic hours). The relentlessness of the problem is putting her in
+her young family (she finds herself, now, doing a lot of catch-up data entry outside of clinic hours). The relentlessness of the problem is putting her in
 danger of physician burnout. Dr. Black has learned about CCGs and
 believes in their potential to reduce her cognitive load while
 simultaneously reducing her data entry burden.
 
 The Provincial MOH has published a set of CCGs targeted at particularly
-prevalent health concerns. An incentive payment programme has been put
+prevalent health concerns. An incentive payment program has been put
 in place to encourage adoption of these new CCGs with additional bonuses
 for multi-chronic-condition patients. Dr. Black has many such patients
 in her practice and she has determined that the first year of incentives
@@ -666,8 +672,9 @@ will fund her plans to implement a new EMR.
 <figure>
 <img src="image12.png"
 style="width: 80%; object-fit: contain" />
-<figcaption><p>Figure 12 - Reducing Cognitive Load</p></figcaption>
+<figcaption><strong>Figure 12 - Reducing Cognitive Load</strong></figcaption>
 </figure>
+<br clear="all">
 
 Dr. Black appreciates there will be two complementary aspects to
 employing CCGs in her practice:
@@ -701,7 +708,7 @@ all her patients.
 [^1]: The four levels of knowledge representation are described in the
     CPG-on-FHIR IG:
     <https://hl7.org/fhir/uv/cpg/documentation-approach-02-04-knowledge-representation.html>.
-    A CCG is a level-3 (L3) artefact.
+    A CCG is a level-3 (L3) artifact.
 
 [^2]: <https://build.fhir.org/ig/HL7/cqf-recommendations/index.html>
 
@@ -738,7 +745,7 @@ all her patients.
 [^15]: The four levels of knowledge representation are described in the
     CPG-on-FHIR IG:
     <https://hl7.org/fhir/uv/cpg/documentation-approach-02-04-knowledge-representation.html>.
-    A CCG is a level-3 (L3) artefact.
+    A CCG is a level-3 (L3) artifact.
 
 [^16]: The Institute for Health Metrics and Evaluation (IHME) is a
     trusted research body. Country profiles related to burden of disease

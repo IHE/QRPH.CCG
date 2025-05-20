@@ -7,7 +7,7 @@ canonical: https://profiles.ihe.net/QRPH/CCG
 version: 0.0.1-current
 name: IHE_QRPH_CCG
 title: "Computable Care Guidelines"
-description: The IHE CCG Profile distills and constrains relevant underlying standards (e.g. FHIR, SNOMED, etc.) as a normative interoperability spec. The spec defines a CCG grammar and stipulates normative actor behaviours that operationalize CCG publishing and transaction processing. The conformance tests for this spec will be published and incorporated by IHE Catalyst into IHE’s test tooling (Gazelle).
+description: The IHE CCG Profile distills and constrains relevant underlying standards (e.g., FHIR, SNOMED, etc.) as a normative interoperability spec. The spec defines a CCG grammar and stipulates normative actor behaviors that operationalize CCG publishing and transaction processing. The conformance tests for this spec will be published and incorporated by IHE Catalyst into IHE’s test tooling (Gazelle).
 releaseLabel: ci-build
 #releaseLabel: ballot
 #releaseLabel: trial-use
@@ -59,13 +59,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: Home
+    title: Computable Care Guidelines (CCG) Home
     generation: markdown
   CCG_v1_over.md:
-    title: "Volume-1: Business Description"
+    title: "Business Description"
     generation: markdown
   CCG_v1_actor.md:
-    title: "Volume-1: Actors"
+    title: "Actors"
     generation: markdown
   CCG_v2_x1.md:
     title: 2:3.61 Search for Guidelines [QRPH-61]
@@ -80,7 +80,7 @@ pages:
     title: 2:3.64 Apply Guideline [QRPH-64]
     generation: markdown
   CCG_v3_launch.md:
-    title: CCG Content Specifications
+    title: Content Specifications
     generation: markdown
   CCG_v4.md:
     title: Jurisdictional Contextualizations
@@ -99,16 +99,19 @@ pages:
     generation: markdown
 
 menu:
-  Home: index.html
-  Vol-1 - Business Description: CCG_v1_over.html
-  Vol-1 - Actors: CCG_v1_actor.html
-  Vol-2 - Transactions:
+  CCG Home: index.html
+  Volume 1:
+    Business Description: CCG_v1_over.html
+    Actors: CCG_v1_actor.html
+  Volume 2:
     "Search for Guidelines [QRPH-61]": CCG_v2_x1.html
     "Retrieve Guideline [QRPH-62]": CCG_v2_x2.html
     "Publish Guideline [QRPH-63]": CCG_v2_x3.html
     "Apply Guideline [QRPH-64]": CCG_v2_x4.html
-  Vol-3 - Content: CCG_v3_launch.html
-  Vol-4 - Contextualizations: CCG_v4.html
+  Volume 3:
+    Content Specifications: CCG_v3_launch.html
+  Volume 4:
+    Jurisdictional Contextualizations: CCG_v4.html
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html

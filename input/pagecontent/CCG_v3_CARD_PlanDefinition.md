@@ -72,7 +72,7 @@ re-published, the library **SHALL** be assigned a new library.id and
 library.url and the CARD’s PlanDefinition **SHALL** be updated with the
 new library.url.
 
-For Guideline Publisher actors that support the Digitally Signed CARDs option, Provenance[^3] resources **SHALL** be created as described in the **CCG CARD Digital Signature** section.
+For Guideline Publisher Actors that support the Digitally Signed CARDs Option, Provenance[^3] resources **SHALL** be created as described in the **CCG CARD Digital Signature** section.
 
 **Footnotes:**
 

@@ -16,8 +16,8 @@ CPGComputableGuideline[^1] profile on which the following constraints
 - publisher = name of the CCG publisher, required to match the CCG
   Folder publisher
 
-Guideline Publisher actors that support either the Digitally Signed
-Folder or the Digitally Signed CARD option **SHALL** sign the CCG
+Guideline Publisher Actors that support either the Digitally Signed
+Folder or the Digitally Signed CARD Option **SHALL** sign the CCG
 Deployment Package using an ECDSA signature as described in the relevant
 npm documentation.[^3]
 
