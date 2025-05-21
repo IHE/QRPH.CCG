@@ -1,15 +1,16 @@
 {
-    "package-id" : "{pid} -- ihe.qrph.ccg",
-    "version" : "{version to release}",
-    "path" : "{path} -- https://profiles.ihe.net/QRPH/CCG/1.0.0",
+    "package-id" : "ihe.qrph.ccg",
+    "version" : "1.0.0-comment",
+    "path" : "https://profiles.ihe.net/QRPH/CCG/1.0.0-comment",
     "mode" : "milestone",
-    "status" : "release",
-    "sequence" : "Releases",
-    "desc" : "{desc of release} (optional)",
-    "descmd" : "{markdown desc of release} (optional)",
-    "changes" : "{relative link to description of changes} (optional)",
-    "title" : "{title} (only for first release)",
-    "ci-build" : "{link to ci-build location} (only for first release) -- http://build.fhir.org/ig/IHE/Profile",
-    "category" : "{category} (only for first release)",
-    "introduction" : "{intro} (only for first release)"
+    "status" : "ballot",
+    "sequence" : "Publication",
+    "desc" : "Public-Comment",
+    "descmd" : "Public-Comment",
+    "changes" : "issues.html",
+    "first" : true,
+    "title" : "Computable Care Guidelines (CCG)",
+    "ci-build" : "https://build.fhir.org/ig/IHE/QRPH.CCG/",
+    "category" : "Computable Care Guidelines",
+    "introduction" : "The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar and a normative transaction processing model that allows evidence-based care recommendations to be expressed in a way that a digital health solution can ingest and operationalize. This is an implementable and conformance-testable specification. It is targeted to regulated healthcare markets where the support for multiple conditions is an important requirement. The CCG Profile supports jurisdictions that want to leverage digital health to systemically improve the adoption of guideline-adherent best practices across an entire care delivery network."
   }
