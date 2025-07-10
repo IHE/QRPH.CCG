@@ -11,7 +11,7 @@ Usage: #example
 * status = #active
 * experimental = true
 * date = "2024-11-18T17:56:55+00:00"
-* publisher = "Pyke Health IT Inc."
+* publisher = "Pyke Health IT Inc.."
 * description = "IHE CCG Folder example e.g. Hypertension"
 * jurisdiction = $m49.htm#001 "World"
 * action[0].definitionCanonical = "http://example.org/PlanDefinition/card-example-reqref"
