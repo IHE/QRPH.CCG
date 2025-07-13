@@ -109,7 +109,7 @@ operation.
 Each Request resource returned in the transaction response bundle
 **SHALL** reference the relevant “CARD’s” PlanDefinition resource in the
 \[resource\].instantiatesCanonical or the
-\[resource\].extension:instantiatesCanonical element, as applicable.
+\[resource\].extension:instantiatesCanonical element, as applicable. For Request resources based on the FHIR *Task* resource, the relevant "CARD's" PlanDefinition resource **SHALL** be referenced in the \[resource\].instantiatesUri element.
 
 #### Expected Actions - Responder
 
