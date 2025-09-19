@@ -4,15 +4,15 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.qrph.ccg
 canonical: https://profiles.ihe.net/QRPH/CCG
-version: 1.0.0-current
+version: 1.0.0
 name: IHE_QRPH_CCG
 title: "Computable Care Guidelines"
 description: The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar and a normative transaction processing model that allows evidence-based care recommendations to be expressed in a way that a digital health solution can ingest and operationalize. This is an implementable and conformance-testable specification. It is targeted to regulated healthcare markets where the support for multiple conditions is an important requirement. The CCG Profile supports jurisdictions that want to leverage digital health to systemically improve the adoption of guideline-adherent best practices across an entire care delivery network.
-releaseLabel: ci-build
+#releaseLabel: ci-build
 #releaseLabel: ballot
-#releaseLabel: trial-use
+releaseLabel: Trial-Implementation
 #releaseLabel: release
-#date: 2022-01-02
+date: 2025-09-25
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
