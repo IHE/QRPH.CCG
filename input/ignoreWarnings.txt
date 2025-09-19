@@ -26,6 +26,15 @@
 # Intentionally not using OIDs 
 %could usefully have an OID assigned%
 
+# Intentionally profiling HL7 specifications that are not the current release
+%is getting old%
+
+# Intentionally referencing made-up URLs for links to supporting documents in example plandefs
+%No definition could be found for URL%
+
+# Intentionally not being strict about MS on slices
+%is not marked as 'must-support' which is not consistent with the element that defines the slicing%
+
 # Still valid for R4
 INFORMATION: StructureDefinition/ccg-card-adminrx-ad: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 INFORMATION: StructureDefinition/ccg-di-ips-composition: Composition.extension: The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.2.0 is deprecated

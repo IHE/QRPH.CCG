@@ -441,7 +441,7 @@ support engines as hosted services. With such an approach, the security
 practices of the host would defend the integrity of both the CCGs and
 their processing engine.
 
-Another important security aspect relates to CCG Engines’ audit records.
+Another important security aspect relates to CCG Perfromers' and CCG Engines’ audit records.
 It should be expected that such records could be of medico-legal
 importance. In a malpractice case, for example, such audit records are a
 potential source of evidence. To be trusted, these records should be
@@ -449,6 +449,8 @@ demonstrably *faithful* and *tamper-proof*. Of note – detailed audit
 logs are also a useful instrument of conformance-testing. Since passing
 conformance tests may be a requirement of market entry – this also
 augers for the importance of credible audit logging.
+
+Finally, it should be noted that in some jurisdictions, it will be important to obtain explicit patient consent for the data sharing necessary to execute CCG-supported care workflows. Where this is so, IHE's Privacy Consent on FHIR (PCF[^14]) may be leveraged to support companion workflows related to capturing and documenting this consent.
 
 **Footnotes**
 
@@ -477,3 +479,5 @@ augers for the importance of credible audit logging.
 [^12]: <https://en.wikipedia.org/wiki/Certificate_authority>
 
 [^13]: <https://www.hcinnovationgroup.com/interoperability-hie/fast-healthcare-interoperability-resources-fhir/news/53071423/cdc-leads-initiative-to-develop-computable-clinical-practice-guidelines>
+
+[^14]: <https://profiles.ihe.net/ITI/PCF/index.html>
