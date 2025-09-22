@@ -18,7 +18,7 @@ denote the specific CCG. The transaction response is the CCG package
 
 ### 2:3.62.3 Referenced Standard(s)
 
-Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
+Transaction Retrieve Guideline [QRPH-62] is based on the following standards:
 
 - HL7 FHIR standard Release 4 <http://hl7.org/fhir/R4/index.html>
 
@@ -39,7 +39,7 @@ Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
 <img src="image15.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><strong>Figure 2:3.62.4-1 - Retrieve Guideline \[QRPH-62\] Interaction Diagram</strong></figcaption>
+<figcaption><strong>Figure 2:3.62.4-1 - Retrieve Guideline [QRPH-62] Interaction Diagram</strong></figcaption>
 </figure>
 <br clear="all">
 
