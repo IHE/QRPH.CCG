@@ -3,7 +3,7 @@ The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar a
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open and Closed Issues](issues.html) |
+| [Significant Changes; Open and Closed Issues](issues.html) |
 {: .grid}
 
 </div>
