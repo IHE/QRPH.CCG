@@ -1,11 +1,13 @@
-### Scope
+### 2:3.62.1 Scope
 
 Transaction Retrieve Guideline \[QRPH-62\] is used to download and ingest a CCG
 that has been published to a Guideline Repository. The query parameters
 denote the specific CCG. The transaction response is the CCG package
 (FHIR IG) that meets the search criteria. The transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Publisher, Guideline Engine and Guideline Repository actors claim conformance.
 
-### Actor Roles
+### 2:3.62.1 Actor Roles
+
+**Table 2:3.62.2-1: Actor Roles**
 
 | **Actor** | **Role** |
 |----|----|
@@ -14,7 +16,7 @@ denote the specific CCG. The transaction response is the CCG package
 | Guideline Repository | Responds with the CCG package that meets the query criteria |
 {:.grid}
 
-### Referenced Standard(s)
+### 2:3.62.3 Referenced Standard(s)
 
 Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
 
@@ -29,7 +31,7 @@ Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
 - CPG Computable Guideline STU2 specification:
   <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-computableguideline.html>
 
-### Messages
+### 2:3.62.4 Messages
 
 <figure>
 {% include image15.svg %}
@@ -37,11 +39,11 @@ Transaction Retrieve Guideline \[QRPH-62\] is based on the following standards:
 <img src="image15.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><strong>Figure 15- Retrieve Guideline \[QRPH-62\] Interaction Diagram</strong></figcaption>
+<figcaption><strong>Figure 2:3.62.4-1 - Retrieve Guideline \[QRPH-62\] Interaction Diagram</strong></figcaption>
 </figure>
 <br clear="all">
 
-#### Trigger Events - Initiator
+#### 2:3.62.4.1 Trigger Events - Initiator
 
 A Guideline Publisher may trigger a Retrieve Guideline transaction to
 download and ingest a specific CCG for subsequent editing. The specific
@@ -54,7 +56,7 @@ automated process that operates on a periodic basis. The CCG to be
 retrieved may be based on the results from a prior Search for Guidelines
 transaction.
 
-#### Message Semantics - Initiator
+#### 2:3.62.4.2 Message Semantics - Initiator
 
 The command to retrieve a CCG is submitted by the Guideline Publisher or
 Guideline Engine to the Guideline Repository using the **npm install**
@@ -62,37 +64,37 @@ command and grammar.
 
 npm install \[\<package-spec\> ...\]
 
-#### Expected Actions - Initiator
+#### 2:3.62.4.3 Expected Actions - Initiator
 
 Prior to submitting the transaction, the transaction initiator:
 
-- SHALL correctly configure npm to point to the Guideline Repository
+- **SHALL** correctly configure npm to point to the Guideline Repository
   registry URL;
 
-- MAY authenticate to the Guideline Repository.
+- **MAY** authenticate to the Guideline Repository.
 
 Based on receipt of the transaction response, the transaction initiator:
 
-- MAY execute an *npm audit signatures* command;
+- **MAY** execute an *npm audit signatures* command;
 
-- MAY create an audit record;
+- **MAY** create an audit record;
 
 - Processes the response in accordance with its application and user
   interface logic.
 
-#### Trigger Events - Responder
+#### 2:3.62.4.4 Trigger Events - Responder
 
 The Guideline Repository responds to inbound Retrieve Guideline
 transactions as they are received.
 
-#### Message Semantics - Responder
+#### 2:3.62.4.5 Message Semantics - Responder
 
 The transaction result is a FHIR package (tarball) containing an
 Implementation Guide adherent to the CPG Computable Guideline STU2
 specification:
 <https://hl7.org/fhir/uv/cpg/STU2/StructureDefinition-cpg-computableguideline.html>.
 
-#### Expected Actions - Responder
+#### 2:3.62.4.6 Expected Actions - Responder
 
 Upon receiving a submitted transaction, the transaction responder:
 
@@ -109,12 +111,12 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and Audit Considerations
+### 2:3.62.5 Security and Audit Considerations
 
 This transaction does **not** convey personal health information (PHI).
 
 FHIR-related security considerations SHOULD be adopted as described in
-IHE Appendix Z[^2].
+[IHE ITI Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations).
 
 **Footnotes**
 
@@ -122,4 +124,4 @@ IHE Appendix Z[^2].
     be updated to the STU2 version upon completion and balloting of this
     work item within the HL7 working group
 
-[^2]: <https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations>
+
