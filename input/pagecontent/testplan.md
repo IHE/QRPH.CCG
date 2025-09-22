@@ -1,15 +1,15 @@
 <div markdown="1" class="stu-note">
 
-This Test Plan page is a prototype.   We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
+This Test Plan page is a prototype. We expect the maturity of the content will improve over time. For now, we summarize high level testing scope and available tools. Comments are welcome.
 </div>
 
 ## Introduction
 
-The IHE CCG Profile is participating in an experiment being undertaken by IHE regarding the use of **Gherkin** scripts to normatively define conformance tests. In support of this experiment, scenarios have been defined related to Actor behaviors (including in support of declared options), processing patterns for each of the CCG Profile's transactions, and content definitions (based on the specifications included in Volume-3 of this Profile). These scenarios follow Gherkin's *Given-When-Then* format.
+The IHE CCG Profile is participating in an experiment being undertaken by IHE regarding the use of **Gherkin** scripts to normatively define conformance tests. In support of this experiment, scenarios have been defined related to Actor behaviors (including in support of declared options), processing patterns for each of the CCG Profile's transactions, and content definitions (based on the specifications included in Volume 3 of this Profile). These scenarios follow Gherkin's *Given-When-Then* format.
 
-A common content model is explicitly defined in Volume-3 of the IHE CCG Profile. Among other content specs, this *default* model leverages the HL7 FHIR-based International Patient Summary (IPS) and the person-centric data model it specifies. The test scripts defined in this section reflect the default choice. 
+A common content model is explicitly defined in Volume 3 of the IHE CCG Profile. Among other content specs, this *default* model leverages the HL7 FHIR-based International Patient Summary (IPS) and the person-centric data model it specifies. The test scripts defined in this section reflect the default choice. 
 
-It is expected that an implementing jurisdiction may define a *different* common content model and, furthermore, that all CCG actors in the jurisdictional care ecosystem would adopt this model. Where this is the case, the test scripts defined below would need to be appropriately udpated and included in the jurisdiction's subsection in Volume-4.
+It is expected that an implementing jurisdiction may define a *different* common content model and, furthermore, that all CCG actors in the jurisdictional care ecosystem would adopt this model. Where this is the case, the test scripts defined below would need to be appropriately udpated and included in the jurisdiction's subsection in Volume 4.
 
 ## Actor Capability Tests 
 
