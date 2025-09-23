@@ -1,4 +1,4 @@
-### Scope
+### 2:3.64.1 Scope
 
 Transaction Apply Guideline \[QRPH-64\] is used by a Guideline Performer to
 submit a contextual content bundle to a Guideline Engine and to invoke
@@ -7,7 +7,9 @@ the submitted content. The transaction response returns a bundle of
 Request resources representing the proposed activities based on applying
 the relevant CCGs. The specific transaction content and behavior related to this content will depend upon the [Common Content Model](CCG_v1_actor.html#common-content-model) option to which the Guideline Performer and Guideline Engine actors claim conformance.
 
-### Actor Roles
+### 2:3.64.2 Actor Roles
+
+**Table 2:3.64.2-1: Actor Roles**
 
 | **Actor** | **Role** |
 |----|----|
@@ -15,7 +17,7 @@ the relevant CCGs. The specific transaction content and behavior related to this
 | Guideline Engine | Executes the CPGPlanDefinitionApply operation on the submitted content bundle and returns a bundle of Request resources, one for each of the relevant CCG CARDs that has fired true. |
 {:.grid}
 
-### Referenced Standard(s)
+### 2:3.64.3 Referenced Standard(s)
 
 Transaction Apply Guideline \[QRPH-64\] is based on the following standards:
 
@@ -27,7 +29,7 @@ Transaction Apply Guideline \[QRPH-64\] is based on the following standards:
 
 - (Optionally) IHE mCSD Profile: <https://profiles.ihe.net/ITI/mCSD/index.html>
 
-### Messages
+### 2:3.64.4 Messages
 
 <figure>
 {% include image17.svg %}
@@ -35,12 +37,12 @@ Transaction Apply Guideline \[QRPH-64\] is based on the following standards:
 <img src="image17.png" style="height: 100%; width: 100%; object-fit: contain"
  />
  -->
-<figcaption><strong>Figure 17 – QRPH-64 Apply Guideline Interaction
+<figcaption><strong>Figure 2:3.64.4-1 - Apply Guideline [QRPH-64] Interaction
 Diagram</strong></figcaption>
 </figure>
 <br clear="all">
 
-#### Trigger Events - Initiator
+#### 2:3.64.4.1 Trigger Events - Initiator
 
 There **SHOULD** be a **human** in the loop. With human input, a
 Guideline Performer triggers the initiation of an Apply Guideline
@@ -49,7 +51,7 @@ operationalize the application of relevant CCGs and provide
 recommendations to a **human** actor that will inform the course of the
 patient’s care.[^2]
 
-#### Message Semantics - Initiator
+#### 2:3.64.4.2 Message Semantics - Initiator
 
 The command to apply the relevant CCG(s) for a patient during a care
 encounter **SHALL** be submitted by the Guideline Performer to the
@@ -65,8 +67,8 @@ The following parameters are relevant to this transaction:
   contextual content bundle.
 
 - The **subject** **SHALL** be supplied as a parameter. The subject
-  SHALL be a patient.id reference and the identified patient resource
-  SHALL be included in the contextual content bundle.
+  **SHALL** be a patient.id reference and the identified patient resource
+  **SHALL** be included in the contextual content bundle.
 
 - The **encounter** **SHALL** be supplied as a parameter. The encounter
   **SHALL** be an encounter.id reference and the identified encounter
@@ -78,7 +80,7 @@ The following parameters are relevant to this transaction:
 - The contextual content bundle **SHALL** be included as the **data**
   parameter in the Apply Guideline transaction. This content bundle **SHALL** adhere to the actor's claimed contextual content option.
 
-#### Expected Actions - Initiator
+#### 2:3.64.4.3 Expected Actions - Initiator
 
 Prior to submitting the transaction, the transaction initiator:
 
@@ -95,12 +97,12 @@ Based on receipt of the transaction response, the transaction initiator:
 
 - **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats), for actors claiming adherence to Volume 3, or based on the relevant specifications defined in Volume 4 (for actors claiming such conformance).
 
-#### Trigger Events - Responder
+#### 2:3.64.4.4 Trigger Events - Responder
 
 The Guideline Engine responds to inbound Apply Guideline transactions as
 they are received.
 
-#### Message Semantics - Responder
+#### 2:3.64.4.5 Message Semantics - Responder
 
 The transaction result returned by the Guideline Engine **SHALL**
 conform to the content defined for the CPGPlanDefinitionApply[^12]
@@ -111,7 +113,7 @@ Each Request resource returned in the transaction response bundle
 \[resource\].instantiatesCanonical or the
 \[resource\].extension:instantiatesCanonical element, as applicable. For Request resources based on the FHIR *Task* resource, the relevant "CARD's" PlanDefinition resource **SHALL** be referenced in the \[resource\].instantiatesUri element.
 
-#### Expected Actions - Responder
+#### 2:3.64.4.6 Expected Actions - Responder
 
 Upon receiving a submitted transaction, the transaction responder:
 
@@ -134,7 +136,7 @@ Based on the returned transaction response, the transaction responder:
 
 - Executes other processes in accordance with its application logic.
 
-### Security and Audit Considerations
+### 2:3.64.5 Security and Audit Considerations
 
 This transaction **does** convey personal health information (**PHI**);
 it is present in the data content conveyed by the Guideline Performer to
@@ -176,12 +178,12 @@ included:
 - AuditEvent.purposeOfEvent = “TREAT”
 
 - AuditEvent.agent.source.who = software name and version \# of
-  Guideline Performer; where applicable, SHALL match the software name
+  Guideline Performer; where applicable, **SHALL** match the software name
   and version \# named in the conformance statement resulting from
   participation at Connectathon test events.
 
 - AuditEvent.agent.recipient.who = software name and version \# of
-  Guideline Engine; where applicable, SHALL match the software name and
+  Guideline Engine; where applicable, **SHALL** match the software name and
   version \# named in the conformance statement resulting from
   participation at Connectathon test events.
 
@@ -207,12 +209,12 @@ included:
 - AuditEvent.purposeOfEvent = “TREAT”
 
 - AuditEvent.agent.source.who = software name and version \# of
-  Guideline Performer; where applicable, SHALL match the software name
+  Guideline Performer; where applicable, **SHALL** match the software name
   and version \# named in the conformance statement resulting from
   participation at Connectathon test events.
 
 - AuditEvent.agent.recipient.who = software name and version \# of
-  Guideline Engine; where applicable, SHALL match the software name and
+  Guideline Engine; where applicable, **SHALL** match the software name and
   version \# named in the conformance statement resulting from
   participation at Connectathon test events.
 
@@ -229,8 +231,7 @@ Audit Creator to persist a Basic AuditEvent for a **successful**
 A Guideline Engine **MAY**, per its CCG transaction processing design,
 enduringly persist content submitted in the Apply Guideline transaction.
 Where this is so, the Guideline Engine **SHALL** act as an Audit Creator
-to persist a Basic AuditEvent for a **successful** **Create with known
-Patient Subject**.
+to persist a Basic AuditEvent for a **successful** **Create with known Patient Subject**.
 
 **Footnotes**
 
