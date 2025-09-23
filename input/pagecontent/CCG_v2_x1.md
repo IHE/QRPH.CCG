@@ -60,14 +60,14 @@ npm search \<search term\> \[\<search term\> ...\]
 
 Prior to submitting the query, the transaction initiator:
 
-- SHALL correctly configure npm to point to the Guideline Repository
+- **SHALL** correctly configure npm to point to the Guideline Repository
   registry URL;
 
-- MAY authenticate to the Guideline Repository.
+- **MAY** authenticate to the Guideline Repository.
 
 Based on receipt of the transaction response, the transaction initiator:
 
-- MAY create an audit record;
+- **MAY** create an audit record;
 
 - Processes the response in accordance with its application and user
   interface logic.
@@ -97,18 +97,18 @@ least recent.
 
 Upon receiving a submitted query, the transaction responder:
 
-- MAY confirm the transaction initiator’s authentication to the
+- **MAY** confirm the transaction initiator’s authentication to the
   Guideline Repository and their authority to execute the submitted
   transaction;
 
-- SHALL develop a search results response in accordance with its
+- **SHALL** develop a search results response in accordance with its
   application logic;
 
-- SHALL return the search results response to the transaction initiator.
+- **SHALL** return the search results response to the transaction initiator.
 
 Based on the returned transaction response, the transaction responder:
 
-- MAY create an audit record;
+- **MAY** create an audit record;
 
 - Executes other processes in accordance with its application logic.
 
