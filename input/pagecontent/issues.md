@@ -1,9 +1,9 @@
 
 ## Significant Changes
 
-### Significant Changes from Revision x.x
+### Significant Changes from Previous Revisions
 
-- not applicable
+Not applicable, this is the initial release.
 
 ## Issues
 
@@ -33,4 +33,4 @@ During the authoring process, numerous commenters voiced dissenting views regard
 
 ### Closed Issues
 
-- Not applicable
+None

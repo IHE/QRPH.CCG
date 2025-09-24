@@ -39,22 +39,22 @@ actors</strong></figcaption>
 To operationalize use cases 1, 2 and 4, four *new* IHE actors are
 defined in this profile:
 
-- **Guideline Publisher:** an actor that may find and retrieve an
+- **Guideline Publisher:** may find and retrieve an
   existing CCG from a Guideline Repository and can publish a CCG to a
   Guideline Repository.
 
-- **Guideline Repository:** an actor that can receive and catalog a
+- **Guideline Repository:** can receive and catalog a
   submitted CCG and can respond to searches / requests for CCGs and
   return relevant lists / artifacts to a requester.
 
-- **Guideline Performer:** an actor that can directly or indirectly
+- **Guideline Performer:** can directly or indirectly
   interact with a human user, construct appropriate encounter-specific
   artifacts (e.g., a bundle containing relevant contextual and
   person-centric content), manage the iterative invocation of
   \$apply operations that will concurrently process one or more relevant
   CCGs, and appropriately process the transaction responses.
 
-- **Guideline Engine:** an actor that can ingest a submitted bundle of
+- **Guideline Engine:** can ingest a submitted bundle of
   relevant contextual and person-centric content and execute the
   processing logic needed to return the appropriate response(s)
   indicating what care actions are recommended.
@@ -63,11 +63,11 @@ Use case 3 is operationalized by two *existing* IHE actors defined in
 the IHE Dynamic Care Planning (DCP) Profile[^1] published by IHE’s
 Patient Care Coordination (PCC) technical committee:
 
-- **Care Plan Contributor**: an actor that can search for and retrieve
+- **Care Plan Contributor**: can search for and retrieve
   an existing Care Plan and can submit an updated Care Plan to a Care
   Plan Service.
 
-- **Care Plan Service**: an actor that acts as a repository of Care
+- **Care Plan Service**: acts as a repository of Care
   Plans and which can respond to requests from Care Plan Contributors.
 
 The conformance-testable behaviors of the Care Plan Contributor and

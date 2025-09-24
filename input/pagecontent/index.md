@@ -3,7 +3,7 @@ The IHE Computable Care Guidelines (CCG) Profile specifies a normative grammar a
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open and Closed Issues](issues.html) |
+| [Significant Changes; Open and Closed Issues](issues.html) |
 {: .grid}
 
 </div>
@@ -33,7 +33,7 @@ See also the [Table of Contents](toc.html) and the index of [Artifacts](artifact
 
 ### Conformance Expectations
 
-IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
+IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
 #### Must Support
 
