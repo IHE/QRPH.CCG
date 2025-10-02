@@ -88,12 +88,12 @@ Prior to submitting the transaction, the transaction initiator:
  the actor's claimed contextual content option.
 
 - **SHALL** create an audit record of the transaction submission (see
-  [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
+  [Security section](CCG_v2_x4.html#23645-security-and-audit-considerations)).
 
 Based on receipt of the transaction response, the transaction initiator:
 
 - **SHALL** create an audit record of the transaction response (see
-  [Security section](CCG_v2_x4.html#security-and-audit-considerations)).
+  [Security section](CCG_v2_x4.html#23645-security-and-audit-considerations)).
 
 - **SHALL** process each of the Action resources in the RequestGroup and generate Resulting Data based on the [CARD type](CCG_v3_launch.html#normative-action-and-resulting-data-formats), for actors claiming adherence to Volume 3, or based on the relevant specifications defined in Volume 4 (for actors claiming such conformance).
 
